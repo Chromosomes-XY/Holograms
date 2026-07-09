@@ -57,6 +57,7 @@ def design_hologram_single_plane(
     km,
     actuator_radius,
     n_iter=300,
+    Tmin=0.4e-3,
     Tmax=3e-3,
 ):
     N = p0_amp.shape[0]
@@ -68,7 +69,7 @@ def design_hologram_single_plane(
     p_in = actuator_mask.astype(np.complex128)
 
     T = np.zeros_like(p0_amp, dtype=float)
-    T[actuator_mask] = Tmax
+    T[actuator_mask] = Tmin
     T[~actuator_mask] = np.nan
 
     A_tgt = np.asarray(target_at_z, dtype=float)
@@ -96,14 +97,114 @@ def design_hologram_single_plane(
         dK = km - kh
         phase = np.angle(H_req)
         T = np.mod(phase, 2 * np.pi) / (dK + eps)
+        T[actuator_mask] = np.clip(T[actuator_mask], Tmin, Tmax)
         T[~actuator_mask] = np.nan
 
     return T, history
 
 
+def facet_normal(v1, v2, v3):
+    normal = np.cross(v2 - v1, v3 - v1)
+    norm = np.linalg.norm(normal)
+    if norm == 0:
+        return np.zeros(3)
+    return normal / norm
+
+
+def write_ascii_stl(path, triangles, solid_name="hologram"):
+    with open(path, "w", encoding="ascii") as f:
+        f.write(f"solid {solid_name}\n")
+        for tri in triangles:
+            v1, v2, v3 = tri
+            normal = facet_normal(v1, v2, v3)
+            f.write(
+                f"  facet normal {normal[0]:.9e} {normal[1]:.9e} {normal[2]:.9e}\n"
+            )
+            f.write("    outer loop\n")
+            for vertex in tri:
+                f.write(
+                    f"      vertex {vertex[0]:.9e} {vertex[1]:.9e} {vertex[2]:.9e}\n"
+                )
+            f.write("    endloop\n")
+            f.write("  endfacet\n")
+        f.write(f"endsolid {solid_name}\n")
+
+
+def export_hologram_stl(T, dx, output_path="hologram_output.stl"):
+    """
+    Export the circular hologram height field as a closed ASCII STL solid body.
+
+    STL coordinates are written in millimeters. NaN values in T are treated as
+    outside the printable hologram footprint. T is expected to already include
+    the physical base/minimum thickness.
+    """
+    height_mm = np.asarray(T, dtype=float) * 1e3
+    valid_vertices = np.isfinite(height_mm)
+    n = height_mm.shape[0]
+
+    x_mm = (np.arange(n) - n / 2) * dx * 1e3
+    y_mm = (np.arange(n) - n / 2) * dx * 1e3
+
+    top = np.zeros((n, n, 3), dtype=float)
+    bottom = np.zeros((n, n, 3), dtype=float)
+    for i, y in enumerate(y_mm):
+        for j, x in enumerate(x_mm):
+            z = height_mm[i, j] if valid_vertices[i, j] else 0.0
+            top[i, j] = (x, y, z)
+            bottom[i, j] = (x, y, 0.0)
+
+    valid_cells = (
+        valid_vertices[:-1, :-1]
+        & valid_vertices[1:, :-1]
+        & valid_vertices[:-1, 1:]
+        & valid_vertices[1:, 1:]
+    )
+
+    triangles = []
+    for i in range(n - 1):
+        for j in range(n - 1):
+            if not valid_cells[i, j]:
+                continue
+
+            tl = top[i, j]
+            tr = top[i, j + 1]
+            bl = top[i + 1, j]
+            br = top[i + 1, j + 1]
+            btl = bottom[i, j]
+            btr = bottom[i, j + 1]
+            bbl = bottom[i + 1, j]
+            bbr = bottom[i + 1, j + 1]
+
+            # Top surface, outward normal generally +z.
+            triangles.append((tl, tr, bl))
+            triangles.append((tr, br, bl))
+
+            # Flat bottom, outward normal -z.
+            triangles.append((btl, bbl, btr))
+            triangles.append((btr, bbl, bbr))
+
+            # Boundary walls. Each side is emitted only when its neighboring
+            # cell is outside the circular footprint, making a closed shell.
+            if i == 0 or not valid_cells[i - 1, j]:
+                triangles.append((tl, btl, tr))
+                triangles.append((tr, btl, btr))
+            if i == n - 2 or not valid_cells[i + 1, j]:
+                triangles.append((bl, br, bbl))
+                triangles.append((br, bbr, bbl))
+            if j == 0 or not valid_cells[i, j - 1]:
+                triangles.append((tl, bl, btl))
+                triangles.append((bl, bbl, btl))
+            if j == n - 2 or not valid_cells[i, j + 1]:
+                triangles.append((tr, btr, br))
+                triangles.append((br, btr, bbr))
+
+    write_ascii_stl(output_path, triangles)
+    return len(triangles)
+
+
 def main():
     N = 256
-    L = 0.02
+    L = 0.025
     dx = L / N
     x = (np.arange(N) - N / 2) * dx
     xv, yv = np.meshgrid(x, x, indexing="xy")
@@ -114,7 +215,7 @@ def main():
     lam_m = c_m / f
     km = 2 * np.pi / lam_m
 
-    c_h = 2400.0
+    c_h = 2550.0
     lam_h = c_h / f
     kh = 2 * np.pi / lam_h
 
@@ -123,7 +224,7 @@ def main():
     Zh = rho_h * c_h
     Zt = rho_t * 5900.0
 
-    actuator_radius = 7.5e-3
+    actuator_radius = 10e-3
     p0_amp = np.zeros_like(r, dtype=float)
     p0_amp[r <= actuator_radius] = 1.0
 
@@ -144,15 +245,18 @@ def main():
         km=km,
         actuator_radius=actuator_radius,
         n_iter=300,
+        Tmin=0.3e-3,
         Tmax=3e-3,
     )
 
     p_in = p0_amp.astype(np.complex128)
     p_exit = apply_hologram(p_in, T, Zt, Zh, Zm, kh, km)
-    p_img = propagate_ASM(p_exit, dx=dx, lam=lam_m, z=z_target)
+    p_img = propagate_ASM(p_exit, dx=dx, lam=lam_m, z=z_target)#####
+    n_facets = export_hologram_stl(T, dx)
 
     print("Final amp MSE:", hist["amp_mse"][-1])
     print("Final amp corr:", hist["amp_corr"][-1])
+    print(f"Saved STL to hologram_output.stl ({n_facets} facets)")
 
     fig, axs = plt.subplots(1, 2, figsize=(11, 4.8), constrained_layout=True)
 
