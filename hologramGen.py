@@ -3,14 +3,57 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from collections import Counter
 from numpy.fft import fft2, ifft2, fftfreq
 
 
+def make_grid(n, width_m):
+    dx = width_m / n
+    x = (np.arange(n) - n / 2) * dx
+    xv, yv = np.meshgrid(x, x, indexing="xy")
+    return x, xv, yv, dx
+
+
+def make_square_pzt(xv, yv, side_m):
+    half_side = side_m / 2
+    return ((np.abs(xv) <= half_side) & (np.abs(yv) <= half_side)).astype(float)
+
+
+def make_center_dot_target(xv, yv, diameter_m):
+    r = np.sqrt(xv**2 + yv**2)
+    return (r <= diameter_m / 2).astype(float)
+
+
+def acoustic_params(frequency_hz, c_medium=1500.0, c_hologram=2550.0):
+    lam_m = c_medium / frequency_hz
+    lam_h = c_hologram / frequency_hz
+    return {
+        "lam_m": lam_m,
+        "km": 2 * np.pi / lam_m,
+        "kh": 2 * np.pi / lam_h,
+    }
+
+
+def impedance_params(
+    rho_medium=1000.0,
+    rho_hologram=1200.0,
+    rho_transducer=7800.0,
+    c_medium=1500.0,
+    c_hologram=2550.0,
+    c_transducer=5900.0,
+):
+    return {
+        "Zm": rho_medium * c_medium,
+        "Zh": rho_hologram * c_hologram,
+        "Zt": rho_transducer * c_transducer,
+    }
+
+
 def propagate_ASM(U0, dx, lam, z):
-    N = U0.shape[0]
+    n = U0.shape[0]
     A = fft2(U0)
 
-    kx = 2 * np.pi * fftfreq(N, d=dx)
+    kx = 2 * np.pi * fftfreq(n, d=dx)
     kxv, kyv = np.meshgrid(kx, kx, indexing="xy")
 
     k = 2 * np.pi / lam
@@ -55,18 +98,12 @@ def design_hologram_single_plane(
     Zm,
     kh,
     km,
-    actuator_radius,
     n_iter=300,
     Tmin=0.4e-3,
     Tmax=3e-3,
 ):
-    N = p0_amp.shape[0]
-    x = (np.arange(N) - N / 2) * dx
-    xv, yv = np.meshgrid(x, x, indexing="xy")
-    r = np.sqrt(xv**2 + yv**2)
-    actuator_mask = r <= actuator_radius
-
-    p_in = actuator_mask.astype(np.complex128)
+    actuator_mask = np.asarray(p0_amp) > 0
+    p_in = np.asarray(p0_amp, dtype=np.complex128)
 
     T = np.zeros_like(p0_amp, dtype=float)
     T[actuator_mask] = Tmin
@@ -103,6 +140,12 @@ def design_hologram_single_plane(
     return T, history
 
 
+def project_hologram(p0_amp, T, dx, lam_m, z_target, Zt, Zh, Zm, kh, km):
+    p_in = np.asarray(p0_amp, dtype=np.complex128)
+    p_exit = apply_hologram(p_in, T, Zt, Zh, Zm, kh, km)
+    return propagate_ASM(p_exit, dx=dx, lam=lam_m, z=z_target)
+
+
 def facet_normal(v1, v2, v3):
     normal = np.cross(v2 - v1, v3 - v1)
     norm = np.linalg.norm(normal)
@@ -130,14 +173,7 @@ def write_ascii_stl(path, triangles, solid_name="hologram"):
         f.write(f"endsolid {solid_name}\n")
 
 
-def export_hologram_stl(T, dx, output_path="hologram_output.stl"):
-    """
-    Export the circular hologram height field as a closed ASCII STL solid body.
-
-    STL coordinates are written in millimeters. NaN values in T are treated as
-    outside the printable hologram footprint. T is expected to already include
-    the physical base/minimum thickness.
-    """
+def build_stl_triangles(T, dx):
     height_mm = np.asarray(T, dtype=float) * 1e3
     valid_vertices = np.isfinite(height_mm)
     n = height_mm.shape[0]
@@ -175,16 +211,12 @@ def export_hologram_stl(T, dx, output_path="hologram_output.stl"):
             bbl = bottom[i + 1, j]
             bbr = bottom[i + 1, j + 1]
 
-            # Top surface, outward normal generally +z.
             triangles.append((tl, tr, bl))
             triangles.append((tr, br, bl))
 
-            # Flat bottom, outward normal -z.
             triangles.append((btl, bbl, btr))
             triangles.append((btr, bbl, bbr))
 
-            # Boundary walls. Each side is emitted only when its neighboring
-            # cell is outside the circular footprint, making a closed shell.
             if i == 0 or not valid_cells[i - 1, j]:
                 triangles.append((tl, btl, tr))
                 triangles.append((tr, btl, btr))
@@ -198,66 +230,33 @@ def export_hologram_stl(T, dx, output_path="hologram_output.stl"):
                 triangles.append((tr, btr, br))
                 triangles.append((br, btr, bbr))
 
+    return triangles
+
+
+def count_nonmanifold_edges(triangles, precision=6):
+    edges = Counter()
+    for tri in triangles:
+        rounded = [tuple(round(float(v), precision) for v in vertex) for vertex in tri]
+        for a, b in ((rounded[0], rounded[1]), (rounded[1], rounded[2]), (rounded[2], rounded[0])):
+            edges[tuple(sorted((a, b)))] += 1
+    return sum(1 for count in edges.values() if count != 2)
+
+
+def export_hologram_stl(T, dx, output_path="hologram_output.stl"):
+    triangles = build_stl_triangles(T, dx)
     write_ascii_stl(output_path, triangles)
-    return len(triangles)
+    return len(triangles), count_nonmanifold_edges(triangles)
 
 
-def main():
-    N = 256
-    L = 0.025
-    dx = L / N
-    x = (np.arange(N) - N / 2) * dx
-    xv, yv = np.meshgrid(x, x, indexing="xy")
-    r = np.sqrt(xv**2 + yv**2)
-
-    f = 2.2e6
-    c_m = 1500.0
-    lam_m = c_m / f
-    km = 2 * np.pi / lam_m
-
-    c_h = 2550.0
-    lam_h = c_h / f
-    kh = 2 * np.pi / lam_h
-
-    rho_m, rho_h, rho_t = 1000.0, 1200.0, 7800.0
-    Zm = rho_m * c_m
-    Zh = rho_h * c_h
-    Zt = rho_t * 5900.0
-
-    actuator_radius = 10e-3
-    p0_amp = np.zeros_like(r, dtype=float)
-    p0_amp[r <= actuator_radius] = 1.0
-
-    dot_diameter = 0.1e-3
-    target_amp = (r <= dot_diameter / 2).astype(float)
-    z_target = 20e-3
-
-    T, hist = design_hologram_single_plane(
-        p0_amp=p0_amp,
-        target_at_z=target_amp,
-        z_target=z_target,
-        dx=dx,
-        lam_m=lam_m,
-        Zt=Zt,
-        Zh=Zh,
-        Zm=Zm,
-        kh=kh,
-        km=km,
-        actuator_radius=actuator_radius,
-        n_iter=300,
-        Tmin=0.3e-3,
-        Tmax=3e-3,
-    )
-
-    p_in = p0_amp.astype(np.complex128)
-    p_exit = apply_hologram(p_in, T, Zt, Zh, Zm, kh, km)
-    p_img = propagate_ASM(p_exit, dx=dx, lam=lam_m, z=z_target)#####
-    n_facets = export_hologram_stl(T, dx)
-
-    print("Final amp MSE:", hist["amp_mse"][-1])
-    print("Final amp corr:", hist["amp_corr"][-1])
-    print(f"Saved STL to hologram_output.stl ({n_facets} facets)")
-
+def plot_hologram_outputs(
+    xv,
+    yv,
+    T,
+    p_img,
+    z_target,
+    output_path="hologram_output.png",
+    projected_domain_mm=None,
+):
     fig, axs = plt.subplots(1, 2, figsize=(11, 4.8), constrained_layout=True)
 
     im0 = axs[0].pcolormesh(xv * 1e3, yv * 1e3, np.abs(T) * 1e3, shading="auto")
@@ -271,14 +270,14 @@ def main():
         xv * 1e3, yv * 1e3, np.abs(p_img), shading="auto", cmap="inferno"
     )
     axs[1].set_aspect("equal")
-    axs[1].set_title("Projected image at z = 20 mm")
+    axs[1].set_title(f"Projected image at z = {z_target * 1e3:.0f} mm")
     axs[1].set_xlabel("x [mm]")
     axs[1].set_ylabel("y [mm]")
+    if projected_domain_mm is not None:
+        xmin, xmax, ymin, ymax = projected_domain_mm
+        axs[1].set_xlim(xmin, xmax)
+        axs[1].set_ylim(ymin, ymax)
     fig.colorbar(im1, ax=axs[1], label="amplitude")
 
-    fig.savefig("hologram_output.png", dpi=200)
-    print("Saved plot to hologram_output.png")
-
-
-if __name__ == "__main__":
-    main()
+    fig.savefig(output_path, dpi=200)
+    plt.close(fig)
