@@ -24,7 +24,7 @@ def make_spiral_segments(
     x_start_m=10e-3,
     x_end_m=30e-3,
     radius_m=10e-3,
-    turns=1.5,
+    turns=3,
     n_points=140,
 ):
     theta = np.linspace(0.0, 2.0 * np.pi * turns, n_points)
@@ -170,8 +170,8 @@ def main():
         target_count,
         wavelength_m,
         target_extent_m,
-        n_iter=160,
-        learning_rate=0.04,
+        n_iter=100,
+        learning_rate=0.15,
         initial_aperture_fields=aperture_fields,
         distance_bin_m=distance_bin_m,
     )
@@ -187,7 +187,7 @@ def main():
     pressure_amp = np.abs(pressure)
 
     output_path = SCRIPT_DIR / "three_holograms_spiral_pressure.png"
-    plot_pressure_percentile = 99.6
+    plot_pressure_percentile = 99.0
     plot_results(
         x=x,
         y=y,

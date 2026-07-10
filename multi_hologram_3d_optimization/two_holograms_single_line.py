@@ -51,7 +51,7 @@ def main():
         (np.array((20e-3, -15e-3, 0.0)), np.array((20e-3, 15e-3, 0.0))),
         (np.array((20e-3, 0e-3,  -15e-3)), np.array((20e-3, 0e-3, 15e-3))),
          (np.array((10e-3, 0e-3,  0e-3)), np.array((30e-3, 0e-3, 0e-3))),
-         (np.array((20e-3, 0e-3,  0e-3)), np.array((30e-3, 15e-3, 15e-3)))
+         #(np.array((20e-3, 0e-3,  0e-3)), np.array((30e-3, 15e-3, 15e-3)))
     ]
     line_tube_radius_m = 0.5e-3
     target_center_m = np.vstack(line_segments_m).mean(axis=0)
