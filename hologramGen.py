@@ -19,9 +19,33 @@ def make_square_pzt(xv, yv, side_m):
     return ((np.abs(xv) <= half_side) & (np.abs(yv) <= half_side)).astype(float)
 
 
+def make_circular_pzt(xv, yv, diameter_m):
+    """Return a unit-amplitude circular piston mask."""
+    if diameter_m <= 0.0:
+        raise ValueError("PZT diameter must be positive.")
+    return (xv**2 + yv**2 <= (diameter_m / 2.0) ** 2).astype(float)
+
+
 def make_center_dot_target(xv, yv, diameter_m):
     r = np.sqrt(xv**2 + yv**2)
     return (r <= diameter_m / 2).astype(float)
+
+
+def make_ring_target(xv, yv, radius_m, width_m):
+    """Return a smooth, unit-amplitude annular pressure target.
+
+    ``width_m`` is the full width at half maximum of the ring.  A smooth ring
+    is preferable to a one-pixel binary annulus because it remains well
+    sampled as the cone narrows toward its apex.
+    """
+    if radius_m < 0.0:
+        raise ValueError("Ring radius must be non-negative.")
+    if width_m <= 0.0:
+        raise ValueError("Ring width must be positive.")
+
+    radius = np.sqrt(xv**2 + yv**2)
+    sigma = width_m / (2.0 * np.sqrt(2.0 * np.log(2.0)))
+    return np.exp(-0.5 * ((radius - radius_m) / sigma) ** 2)
 
 
 def acoustic_params(frequency_hz, c_medium=1500.0, c_hologram=2550.0):
@@ -50,6 +74,14 @@ def impedance_params(
 
 
 def propagate_ASM(U0, dx, lam, z):
+    """Propagate a field with the angular-spectrum method.
+
+    Forward propagation includes the physical exponential decay of evanescent
+    components.  Back propagation retains only propagating components: trying
+    to invert evanescent decay is ill-conditioned, while setting their axial
+    wavenumber to zero would incorrectly pass non-propagating target detail
+    back to the hologram unchanged.
+    """
     n = U0.shape[0]
     A = fft2(U0)
 
@@ -59,14 +91,17 @@ def propagate_ASM(U0, dx, lam, z):
     k = 2 * np.pi / lam
     k_perp2 = kxv**2 + kyv**2
 
-    kz = np.sqrt(np.maximum(0.0, k**2 - k_perp2)) + 1j * np.sqrt(
-        np.maximum(0.0, k_perp2 - k**2)
-    )
+    propagating = k_perp2 <= k**2
+    transfer = np.zeros_like(A, dtype=np.complex128)
+    kz_propagating = np.sqrt(np.maximum(0.0, k**2 - k_perp2[propagating]))
+    transfer[propagating] = np.exp(1j * z * kz_propagating)
+    if z >= 0:
+        evanescent_decay = np.sqrt(
+            np.maximum(0.0, k_perp2[~propagating] - k**2)
+        )
+        transfer[~propagating] = np.exp(-z * evanescent_decay)
 
-    if z < 0:
-        kz = np.real(kz)
-
-    return ifft2(A * np.exp(1j * z * kz))
+    return ifft2(A * transfer)
 
 
 def apply_hologram(p_in, T, Zt, Zh, Zm, kh, km):
@@ -136,6 +171,119 @@ def design_hologram_single_plane(
         T = np.mod(phase, 2 * np.pi) / (dK + eps)
         T[actuator_mask] = np.clip(T[actuator_mask], Tmin, Tmax)
         T[~actuator_mask] = np.nan
+
+    return T, history
+
+
+def design_hologram_multi_plane(
+    p0_amp,
+    targets_at_z,
+    z_targets,
+    dx,
+    lam_m,
+    Zt,
+    Zh,
+    Zm,
+    kh,
+    km,
+    n_iter=200,
+    Tmin=0.4e-3,
+    Tmax=3e-3,
+    plane_weights=None,
+    vortex_charge=0,
+    enforce_uniform_target_phase=False,
+):
+    """Design one hologram against amplitude targets at several depths.
+
+    Each target plane is projected back to the hologram and the resulting
+    complex fields are coherently combined.  This multi-plane
+    Gerchberg-Saxton update lets one passive plate form a genuinely 3-D target
+    such as a stack of shrinking rings, rather than a ring at only one depth.
+    """
+    targets = np.asarray(targets_at_z, dtype=float)
+    distances = np.asarray(z_targets, dtype=float)
+    if targets.ndim != 3 or targets.shape[1:] != np.shape(p0_amp):
+        raise ValueError("targets_at_z must have shape (planes, rows, columns).")
+    if distances.ndim != 1 or distances.size != targets.shape[0]:
+        raise ValueError("Provide one propagation distance per target plane.")
+    if np.any(distances <= 0.0):
+        raise ValueError("All target planes must be in front of the hologram.")
+
+    if plane_weights is None:
+        weights = np.ones(distances.size, dtype=float)
+    else:
+        weights = np.asarray(plane_weights, dtype=float)
+        if weights.shape != distances.shape or np.any(weights < 0.0):
+            raise ValueError("plane_weights must be non-negative and match z_targets.")
+    if not np.any(weights > 0.0):
+        raise ValueError("At least one plane weight must be positive.")
+    weights = weights / np.sum(weights)
+
+    actuator_mask = np.asarray(p0_amp) > 0
+    p_in = np.asarray(p0_amp, dtype=np.complex128)
+    eps = 1e-12
+    T = np.full_like(p0_amp, np.nan, dtype=float)
+    vortex_basis = None
+    if vortex_charge:
+        rows, columns = p0_amp.shape
+        x = (np.arange(columns) - columns / 2) * dx
+        y = (np.arange(rows) - rows / 2) * dx
+        xv, yv = np.meshgrid(x, y, indexing="xy")
+        vortex_basis = np.exp(1j * vortex_charge * np.arctan2(yv, xv))
+        vortex_phase = np.mod(
+            vortex_charge * np.arctan2(yv, xv) + np.pi,
+            2.0 * np.pi,
+        )
+        vortex_thickness = vortex_phase / (km - kh + eps)
+        T[actuator_mask] = np.clip(
+            vortex_thickness[actuator_mask], Tmin, Tmax
+        )
+    else:
+        T[actuator_mask] = Tmin
+    history = {"amp_mse": [], "amp_corr": [], "plane_corr": []}
+
+    for _ in range(n_iter):
+        p_exit = apply_hologram(p_in, T, Zt, Zh, Zm, kh, km)
+        combined_back = np.zeros_like(p_exit)
+        plane_mse = []
+        plane_corr = []
+
+        for weight, distance, target in zip(weights, distances, targets):
+            p_img = propagate_ASM(p_exit, dx=dx, lam=lam_m, z=float(distance))
+            amplitude = np.abs(p_img)
+            plane_mse.append(float(np.mean((amplitude - target) ** 2)))
+            amplitude0 = amplitude - amplitude.mean()
+            target0 = target - target.mean()
+            denominator = np.sqrt(
+                np.sum(amplitude0**2) * np.sum(target0**2) + eps
+            )
+            plane_corr.append(float(np.sum(amplitude0 * target0) / denominator))
+
+            if vortex_basis is None and not enforce_uniform_target_phase:
+                constrained = target * np.exp(1j * np.angle(p_img))
+            else:
+                # Keep a circularly uniform charge-q phase winding on every
+                # ring.  Only the global phase is taken from the current
+                # propagated field, allowing coherent multi-plane updates
+                # without permitting the annulus to fragment into hot arcs.
+                target_mode = target if vortex_basis is None else target * vortex_basis
+                global_phase = np.angle(np.vdot(target_mode, p_img))
+                constrained = target_mode * np.exp(1j * global_phase)
+            combined_back += weight * propagate_ASM(
+                constrained,
+                dx=dx,
+                lam=lam_m,
+                z=-float(distance),
+            )
+
+        required_transfer = combined_back / (p_in + eps)
+        phase = np.angle(required_transfer)
+        thickness = np.mod(phase, 2.0 * np.pi) / (km - kh + eps)
+        T[actuator_mask] = np.clip(thickness[actuator_mask], Tmin, Tmax)
+
+        history["amp_mse"].append(float(np.average(plane_mse, weights=weights)))
+        history["amp_corr"].append(float(np.average(plane_corr, weights=weights)))
+        history["plane_corr"].append(plane_corr)
 
     return T, history
 
@@ -278,6 +426,136 @@ def plot_hologram_outputs(
         axs[1].set_xlim(xmin, xmax)
         axs[1].set_ylim(ymin, ymax)
     fig.colorbar(im1, ax=axs[1], label="amplitude")
+
+    fig.savefig(output_path, dpi=200)
+    plt.close(fig)
+
+
+def plot_cone_hologram_outputs(
+    xv,
+    yv,
+    T,
+    p0_amp,
+    z_samples,
+    target_z,
+    target_radii,
+    dx,
+    lam_m,
+    Zt,
+    Zh,
+    Zm,
+    kh,
+    km,
+    output_path="cone_hologram_output.png",
+    transverse_limit_m=None,
+):
+    """Plot the plate and a longitudinal slice through its 3-D pressure cone."""
+    p_in = np.asarray(p0_amp, dtype=np.complex128)
+    p_exit = apply_hologram(p_in, T, Zt, Zh, Zm, kh, km)
+    center_row = p_exit.shape[0] // 2
+    longitudinal = np.stack(
+        [
+            np.abs(propagate_ASM(p_exit, dx=dx, lam=lam_m, z=float(z)))[center_row]
+            for z in z_samples
+        ]
+    )
+    longitudinal /= np.max(longitudinal) + 1e-12
+
+    if len(target_z) == 2:
+        intermediate_z = 0.5 * (target_z[0] + target_z[1])
+        intermediate_radius = 0.5 * (target_radii[0] + target_radii[1])
+        display_planes = (
+            (target_z[0], target_radii[0], "Ring plane"),
+            (intermediate_z, intermediate_radius, "Between targets"),
+            (target_z[1], target_radii[1], "Focal spot"),
+        )
+    else:
+        middle_index = len(target_z) // 2
+        display_planes = (
+            (
+                target_z[middle_index],
+                target_radii[middle_index],
+                "Mid-cone ring",
+            ),
+            (target_z[-1], target_radii[-1], "Minimum ring"),
+        )
+
+    display_fields = []
+    for plane_z, _, _ in display_planes:
+        plane_field = np.abs(
+            propagate_ASM(
+                p_exit,
+                dx=dx,
+                lam=lam_m,
+                z=float(plane_z),
+            )
+        )
+        display_fields.append(plane_field / (np.max(plane_field) + 1e-12))
+
+    panel_count = 2 + len(display_planes)
+    fig, axs = plt.subplots(
+        1,
+        panel_count,
+        figsize=(4.6 * panel_count, 4.8),
+        constrained_layout=True,
+    )
+    im0 = axs[0].pcolormesh(
+        xv * 1e3, yv * 1e3, np.abs(T) * 1e3, shading="auto"
+    )
+    axs[0].set_aspect("equal")
+    axs[0].set_title("Hologram thickness")
+    axs[0].set_xlabel("x [mm]")
+    axs[0].set_ylabel("y [mm]")
+    fig.colorbar(im0, ax=axs[0], label="thickness [mm]")
+
+    x_mm = xv[center_row] * 1e3
+    im1 = axs[1].pcolormesh(
+        z_samples * 1e3,
+        x_mm,
+        longitudinal.T,
+        shading="auto",
+        cmap="inferno",
+        vmin=0.0,
+        vmax=1.0,
+    )
+    axs[1].plot(target_z * 1e3, target_radii * 1e3, "c--", linewidth=1.2)
+    axs[1].plot(target_z * 1e3, -target_radii * 1e3, "c--", linewidth=1.2)
+    axs[1].set_title("Normalised longitudinal pressure")
+    axs[1].set_xlabel("distance from hologram [mm]")
+    axs[1].set_ylabel("transverse position [mm]")
+    if transverse_limit_m is not None:
+        limit_mm = transverse_limit_m * 1e3
+        axs[1].set_ylim(-limit_mm, limit_mm)
+    fig.colorbar(im1, ax=axs[1], label="normalised amplitude")
+
+    for panel_index, ((plane_z, target_radius, title_prefix), plane_field) in enumerate(
+        zip(display_planes, display_fields), start=2
+    ):
+        image = axs[panel_index].pcolormesh(
+            xv * 1e3,
+            yv * 1e3,
+            plane_field,
+            shading="auto",
+            cmap="inferno",
+            vmin=0.0,
+            vmax=1.0,
+        )
+        axs[panel_index].set_aspect("equal")
+        axs[panel_index].set_title(
+            f"{title_prefix} at z = {plane_z * 1e3:.1f} mm\n"
+            f"reference radius = {target_radius * 1e3:.2f} mm"
+        )
+        axs[panel_index].set_xlabel("x [mm]")
+        axs[panel_index].set_ylabel("y [mm]")
+        if transverse_limit_m is not None:
+            limit_mm = transverse_limit_m * 1e3
+            axs[panel_index].set_xlim(-limit_mm, limit_mm)
+            axs[panel_index].set_ylim(-limit_mm, limit_mm)
+        fig.colorbar(
+            image,
+            ax=axs[panel_index],
+            label="normalised amplitude",
+        )
 
     fig.savefig(output_path, dpi=200)
     plt.close(fig)

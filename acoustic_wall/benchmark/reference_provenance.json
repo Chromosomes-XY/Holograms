@@ -1,0 +1,23 @@
+{
+  "source": "/var/folders/lr/jhxj6sc57135vjzd356wp8w80000gp/T/codex-clipboard-bf42a992-57e9-4e80-a747-80984c03b7a9.png",
+  "original_size": [
+    2008,
+    2358
+  ],
+  "resized_width": 1471,
+  "x_pixels": [
+    75,
+    722
+  ],
+  "frequency_hz": [
+    1700,
+    2300
+  ],
+  "top_bottom_pixels": [
+    61,
+    862
+  ],
+  "note": "Digitised user-provided Figure 5a, stacked traces each span T=0..1. No digitisation of field colours.",
+  "approximate_T_uncertainty": 0.02,
+  "approximate_frequency_uncertainty_hz": 3
+}

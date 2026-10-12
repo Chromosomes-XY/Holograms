@@ -1,0 +1,137 @@
+[
+  {
+    "frequency_hz": 800,
+    "angle_deg": -30,
+    "T": 0.7781262121322304,
+    "R": 0.22187378786776457,
+    "energy_error": 4.9960036108132044e-15,
+    "residual": 3.7234634086039996e-13,
+    "incident_mode_index": 0
+  },
+  {
+    "frequency_hz": 1000,
+    "angle_deg": -30,
+    "T": 0.15759393719517573,
+    "R": 0.8424060628048261,
+    "energy_error": 1.7763568394002505e-15,
+    "residual": 2.368307604456987e-13,
+    "incident_mode_index": 0
+  },
+  {
+    "frequency_hz": 1250,
+    "angle_deg": -30,
+    "T": 0.1158800953307944,
+    "R": 0.8841199046692048,
+    "energy_error": 8.881784197001252e-16,
+    "residual": 2.683613547993004e-13,
+    "incident_mode_index": 1
+  },
+  {
+    "frequency_hz": 800,
+    "angle_deg": -15,
+    "T": 0.42848699722940137,
+    "R": 0.5715130027705968,
+    "energy_error": 1.7763568394002505e-15,
+    "residual": 4.719504415192548e-13,
+    "incident_mode_index": 0
+  },
+  {
+    "frequency_hz": 1000,
+    "angle_deg": -15,
+    "T": 0.1510221295401606,
+    "R": 0.8489778704598382,
+    "energy_error": 1.2212453270876722e-15,
+    "residual": 2.301398309458048e-13,
+    "incident_mode_index": 0
+  },
+  {
+    "frequency_hz": 1250,
+    "angle_deg": -15,
+    "T": 0.13708394678016586,
+    "R": 0.8629160532198347,
+    "energy_error": 4.440892098500626e-16,
+    "residual": 2.756864122497677e-13,
+    "incident_mode_index": 0
+  },
+  {
+    "frequency_hz": 800,
+    "angle_deg": 0,
+    "T": 0.8083842521177736,
+    "R": 0.191615747882225,
+    "energy_error": 1.3322676295501878e-15,
+    "residual": 3.109539585857413e-13,
+    "incident_mode_index": 0
+  },
+  {
+    "frequency_hz": 1000,
+    "angle_deg": 0,
+    "T": 0.1320371511334167,
+    "R": 0.8679628488665795,
+    "energy_error": 3.774758283725532e-15,
+    "residual": 2.4050541024782577e-13,
+    "incident_mode_index": 0
+  },
+  {
+    "frequency_hz": 1250,
+    "angle_deg": 0,
+    "T": 0.22583501057783098,
+    "R": 0.7741649894221678,
+    "energy_error": 1.2212453270876722e-15,
+    "residual": 2.153233632634362e-13,
+    "incident_mode_index": 0
+  },
+  {
+    "frequency_hz": 800,
+    "angle_deg": 15,
+    "T": 0.428486997229422,
+    "R": 0.5715130027705783,
+    "energy_error": 2.220446049250313e-16,
+    "residual": 3.6683370214481877e-13,
+    "incident_mode_index": 0
+  },
+  {
+    "frequency_hz": 1000,
+    "angle_deg": 15,
+    "T": 0.17743363751209795,
+    "R": 0.8225663624879018,
+    "energy_error": 2.220446049250313e-16,
+    "residual": 2.7376265608871544e-13,
+    "incident_mode_index": 0
+  },
+  {
+    "frequency_hz": 1250,
+    "angle_deg": 15,
+    "T": 0.09305483871678162,
+    "R": 0.9069451612832178,
+    "energy_error": 5.551115123125783e-16,
+    "residual": 2.360981574439065e-13,
+    "incident_mode_index": 0
+  },
+  {
+    "frequency_hz": 800,
+    "angle_deg": 30,
+    "T": 0.7616904524154433,
+    "R": 0.2383095475845531,
+    "energy_error": 3.552713678800501e-15,
+    "residual": 3.5134581229291083e-13,
+    "incident_mode_index": 0
+  },
+  {
+    "frequency_hz": 1000,
+    "angle_deg": 30,
+    "T": 0.19812323826565384,
+    "R": 0.8018767617343446,
+    "energy_error": 1.5543122344752192e-15,
+    "residual": 2.941753490775939e-13,
+    "incident_mode_index": 0
+  },
+  {
+    "frequency_hz": 1250,
+    "angle_deg": 30,
+    "T": 0.05557419852748778,
+    "R": 0.9444258014725111,
+    "energy_error": 1.1102230246251565e-15,
+    "residual": 2.296916898295984e-13,
+    "incident_mode_index": 1
+  }
+]

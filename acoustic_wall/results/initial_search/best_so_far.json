@@ -1,0 +1,97 @@
+{
+  "geometry": {
+    "pitch": 0.2,
+    "core_depth": 0.224,
+    "guide_length": 0.094,
+    "central_fraction": 0.75,
+    "wall": 0.004,
+    "rib_thickness": 0.01,
+    "rib_count": 10,
+    "slit_left": 0.008,
+    "slit_right": 0.004
+  },
+  "score": 0.6600832036004145,
+  "rows": [
+    {
+      "frequency_hz": 900.0,
+      "angle_deg": 0.0,
+      "transmission": 0.05513539623474658,
+      "reflection": 0.9448646037652547,
+      "tl_db": 12.585694999878985,
+      "energy_error": 1.3322676295501878e-15,
+      "residual": 3.2779519548096104e-13
+    },
+    {
+      "frequency_hz": 900.0,
+      "angle_deg": 30.0,
+      "transmission": 0.16141091305942806,
+      "reflection": 0.8385890869405698,
+      "tl_db": 7.920671057894904,
+      "energy_error": 2.220446049250313e-15,
+      "residual": 3.338541670211934e-13
+    },
+    {
+      "frequency_hz": 900.0,
+      "angle_deg": -30.0,
+      "transmission": 0.16141091305940036,
+      "reflection": 0.8385890869405976,
+      "tl_db": 7.92067105789565,
+      "energy_error": 1.9984014443252818e-15,
+      "residual": 3.0376105599550283e-13
+    },
+    {
+      "frequency_hz": 1000.0,
+      "angle_deg": 0.0,
+      "transmission": 0.9654395378880329,
+      "reflection": 0.03456046211195401,
+      "tl_db": 0.1527491938205843,
+      "energy_error": 1.3100631690576847e-14,
+      "residual": 2.0609063002728675e-13
+    },
+    {
+      "frequency_hz": 1000.0,
+      "angle_deg": 30.0,
+      "transmission": 0.9920811461082866,
+      "reflection": 0.007918853891710572,
+      "tl_db": 0.0345280378759867,
+      "energy_error": 2.886579864025407e-15,
+      "residual": 2.2947053606370637e-13
+    },
+    {
+      "frequency_hz": 1000.0,
+      "angle_deg": -30.0,
+      "transmission": 0.9920811461082852,
+      "reflection": 0.007918853891711998,
+      "tl_db": 0.034528037875992526,
+      "energy_error": 2.7755575615628914e-15,
+      "residual": 2.0959267543671708e-13
+    },
+    {
+      "frequency_hz": 1100.0,
+      "angle_deg": 0.0,
+      "transmission": 0.5412197895779964,
+      "reflection": 0.45878021042200623,
+      "tl_db": 2.666263319055435,
+      "energy_error": 2.6645352591003757e-15,
+      "residual": 2.1514141622834426e-13
+    },
+    {
+      "frequency_hz": 1100.0,
+      "angle_deg": 30.0,
+      "transmission": 0.39570324891859104,
+      "reflection": 0.6042967510814107,
+      "tl_db": 4.026303839477105,
+      "energy_error": 1.7763568394002505e-15,
+      "residual": 2.6209918604383254e-13
+    },
+    {
+      "frequency_hz": 1100.0,
+      "angle_deg": -30.0,
+      "transmission": 0.3957032489185993,
+      "reflection": 0.6042967510814019,
+      "tl_db": 4.0263038394770145,
+      "energy_error": 1.3322676295501878e-15,
+      "residual": 2.6906633551606146e-13
+    }
+  ]
+}

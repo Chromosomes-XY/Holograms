@@ -1,0 +1,7 @@
+name,side,start_from_front_mm,recess_length_mm,cut_penetration_from_side_mm,mouth_length_mm,cover_length_mm,cover_thickness_mm
+L1,left,45.0,80.0,35.0,35.0,45.0,5
+R1,right,65.0,95.0,25.0,50.0,45.0,5
+L2,left,185.0,85.0,35.0,40.0,45.0,5
+R2,right,205.0,120.0,20.0,40.0,80.0,5
+L3,left,305.0,115.0,30.0,30.0,85.0,5
+R3,right,345.0,65.0,30.0,30.0,35.0,5

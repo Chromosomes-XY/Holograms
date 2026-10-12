@@ -1,0 +1,43 @@
+{
+  "geometry": {
+    "pitch": 0.2,
+    "core_depth": 0.216,
+    "guide_length": 0.074,
+    "central_fraction": 0.75,
+    "wall": 0.004,
+    "rib_thickness": 0.01,
+    "rib_count": 10,
+    "slit_left": 0.01,
+    "slit_right": 0.004
+  },
+  "score": 0.06624163693849378,
+  "rows": [
+    {
+      "frequency_hz": 1000.0,
+      "angle_deg": 0.0,
+      "transmission": 0.11374723635588357,
+      "reflection": 0.8862527636440984,
+      "tl_db": 9.440591463189403,
+      "energy_error": 1.7985612998927536e-14,
+      "residual": 5.52999793914984e-13
+    },
+    {
+      "frequency_hz": 1000.0,
+      "angle_deg": 30.0,
+      "transmission": 0.011949523318619861,
+      "reflection": 0.9880504766813535,
+      "tl_db": 19.226494189185306,
+      "energy_error": 2.6645352591003757e-14,
+      "residual": 3.8921372282099144e-13
+    },
+    {
+      "frequency_hz": 1000.0,
+      "angle_deg": -30.0,
+      "transmission": 0.011949523318619582,
+      "reflection": 0.9880504766812738,
+      "tl_db": 19.22649418918541,
+      "energy_error": 1.0669243266647754e-13,
+      "residual": 6.728124827549506e-13
+    }
+  ]
+}

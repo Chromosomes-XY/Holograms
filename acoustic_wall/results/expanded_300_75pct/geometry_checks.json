@@ -1,0 +1,24 @@
+{
+  "boundary_geometries_pass": true,
+  "clear_fraction": 0.75,
+  "mirror_T_error": 0.0,
+  "asymmetric_mirror_T_error": 1.4585554986012994e-13,
+  "asymmetric_dimensions_mm": [
+    68.0,
+    18.2,
+    18.4,
+    78.8,
+    20.3,
+    22.0,
+    89.6,
+    22.4,
+    25.6,
+    100.4,
+    24.5,
+    29.2,
+    50.8,
+    53.2,
+    116.4,
+    122.0
+  ]
+}

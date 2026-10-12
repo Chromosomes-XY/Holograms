@@ -1,0 +1,142 @@
+{
+  "status": "Initial fixed-geometry screening; not optimised or outdoor validated",
+  "geometry": {
+    "pitch_mm": 200,
+    "slat_width_mm": 40,
+    "depth_mm": 180,
+    "clear_fraction": 0.8,
+    "passage_width_mm": 15,
+    "lengths_mm": [
+      107,
+      86
+    ],
+    "mouth_axial_height_mm": 20,
+    "outer_wall_mm": 3,
+    "septum_mm": 4
+  },
+  "coarse_sampled_minimum": 940.0,
+  "one_khz": [
+    {
+      "h": 0.002,
+      "f": 1000.0,
+      "cavities": true,
+      "T": 0.7692013447667673,
+      "R": 0.2307986552332374,
+      "energy_error": 4.6629367034256575e-15,
+      "residual": 1.5570565995935364e-13,
+      "clear": 0.8000000000000002,
+      "grid": [
+        111,
+        102
+      ]
+    },
+    {
+      "h": 0.001,
+      "f": 1000.0,
+      "cavities": true,
+      "T": 0.7494365000679025,
+      "R": 0.25056349993210125,
+      "energy_error": 3.774758283725532e-15,
+      "residual": 4.3909054932987083e-13,
+      "clear": 0.8000000000000002,
+      "grid": [
+        220,
+        200
+      ]
+    },
+    {
+      "h": 0.0005,
+      "f": 1000.0,
+      "cavities": true,
+      "T": 0.7405396701799585,
+      "R": 0.2594603298200481,
+      "energy_error": 6.661338147750939e-15,
+      "residual": 1.2943911050232358e-12,
+      "clear": 0.8000000000000002,
+      "grid": [
+        440,
+        400
+      ]
+    }
+  ],
+  "fine_checks": [
+    {
+      "h": 0.001,
+      "f": 800.0,
+      "cavities": true,
+      "T": 0.8719735164620794,
+      "R": 0.12802648353793378,
+      "energy_error": 1.3322676295501878e-14,
+      "residual": 5.85123697313604e-13,
+      "clear": 0.8000000000000002,
+      "grid": [
+        220,
+        200
+      ]
+    },
+    {
+      "h": 0.001,
+      "f": 940.0,
+      "cavities": true,
+      "T": 0.0019502437285606247,
+      "R": 0.9980497562714326,
+      "energy_error": 6.772360450213455e-15,
+      "residual": 6.216458718351868e-13,
+      "clear": 0.8000000000000002,
+      "grid": [
+        220,
+        200
+      ]
+    },
+    {
+      "h": 0.001,
+      "f": 950.0,
+      "cavities": true,
+      "T": 0.0761781879825074,
+      "R": 0.9238218120174836,
+      "energy_error": 8.992806499463768e-15,
+      "residual": 5.912203872608983e-13,
+      "clear": 0.8000000000000002,
+      "grid": [
+        220,
+        200
+      ]
+    },
+    {
+      "h": 0.001,
+      "f": 1000.0,
+      "cavities": true,
+      "T": 0.7494365000679025,
+      "R": 0.25056349993210125,
+      "energy_error": 3.774758283725532e-15,
+      "residual": 4.3909054932987083e-13,
+      "clear": 0.8000000000000002,
+      "grid": [
+        220,
+        200
+      ]
+    },
+    {
+      "h": 0.001,
+      "f": 1250.0,
+      "cavities": true,
+      "T": 0.9322594761453464,
+      "R": 0.06774052385465522,
+      "energy_error": 1.5543122344752192e-15,
+      "residual": 2.6027835840770077e-13,
+      "clear": 0.8000000000000002,
+      "grid": [
+        220,
+        200
+      ]
+    }
+  ],
+  "max_energy_error": 1.9095836023552692e-14,
+  "assumptions": [
+    "Infinite periodic 2D array; normal incidence; c=343 m/s",
+    "Rigid lossless walls, open mouths; no insect screen or viscothermal impedance",
+    "Periodic transverse boundary, exact discrete modal radiation axial boundaries",
+    "Fixed geometry from concept drawing; no phase-gradient or broadband optimisation",
+    "80% clear per repeating cell; whole-wall posts/rails excluded"
+  ]
+}

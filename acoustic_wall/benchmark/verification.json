@@ -1,0 +1,8 @@
+{
+  "command": "OPENBLAS_NUM_THREADS=1 .venv/bin/python -m unittest acoustic_wall.test_solver acoustic_wall.test_phase_design acoustic_wall.test_benchmark",
+  "tests_run": 18,
+  "failures": 0,
+  "errors": 0,
+  "result": "OK",
+  "note": "Numerical verification, not validation against paper or experiment."
+}

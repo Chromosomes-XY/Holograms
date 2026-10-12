@@ -1,0 +1,3294 @@
+{
+  "parameters": {
+    "geometry": {
+      "pitch": 0.2,
+      "core_depth": 0.24,
+      "guide_length": 0.068,
+      "central_fraction": 0.75,
+      "wall": 0.004,
+      "rib_thickness": 0.01,
+      "rib_count": 10,
+      "slit_left": 0.002,
+      "slit_right": 0.003,
+      "offset_left": 0.0,
+      "offset_right": 0.0
+    },
+    "spacing": 0.0005,
+    "frequency": 1050.0,
+    "angle": -30.0
+  },
+  "diagnostics": {
+    "transmission": 0.4747070047279059,
+    "reflection": 0.525292995272081,
+    "tl_db": 3.235743598294974,
+    "energy_error": 1.3100631690576847e-14,
+    "residual": 1.970154431272095e-12,
+    "regional_amplitudes": [
+      2.299421462814837,
+      1.4047066427864585,
+      1.4840143716472174
+    ],
+    "regional_phase_deg": [
+      -73.34623508186333,
+      -5.204257948308739e-16,
+      157.3218399239155
+    ],
+    "target_amplitudes": [
+      1.0,
+      0.23404948156952599,
+      1.0
+    ],
+    "target_phase_deg": [
+      -157.5,
+      0.0,
+      157.5
+    ],
+    "regional_phase_errors_deg": [
+      84.15376491813667,
+      -5.204257948308739e-16,
+      -0.1781600760845072
+    ],
+    "phase_valid": true,
+    "target_match_error": 0.5164801745720753,
+    "aperture_width_fractions": [
+      0.09499999999999999,
+      0.7499999999999999,
+      0.09499999999999999
+    ],
+    "near_evanescent_pressure_squared_fraction": 0.8210300180559308,
+    "first_order_evanescent_rms": 1.409260309673228,
+    "first_order_directional_imbalance": 0.9261938561789123,
+    "propagating_pressure_rms": 0.688989843704406,
+    "evanescent_rms_distance_m": [
+      0.0,
+      0.025,
+      0.05,
+      0.1,
+      0.2
+    ],
+    "evanescent_pressure_rms": [
+      1.4757141476376923,
+      1.0809636301088497,
+      0.8297909242203656,
+      0.4958807485248112,
+      0.17775673982599416
+    ],
+    "modes": [
+      {
+        "order": 0,
+        "kx": -9.617120368132017,
+        "pressure_amplitude": 0.688989843704406,
+        "propagating": true,
+        "transmitted_power": 0.4747070047278218,
+        "decay_length_m": null
+      },
+      {
+        "order": 1,
+        "kx": 21.798806167765914,
+        "pressure_amplitude": 1.3830128633051544,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.09748468846744032
+      },
+      {
+        "order": 2,
+        "kx": 53.21473270366384,
+        "pressure_amplitude": 0.34603163983568913,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.02015556249006591
+      },
+      {
+        "order": 3,
+        "kx": 84.63065923956177,
+        "pressure_amplitude": 0.14475018325946298,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.012135383346542607
+      },
+      {
+        "order": 4,
+        "kx": 116.0465857754597,
+        "pressure_amplitude": 0.03783531997908383,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.008740542029657431
+      },
+      {
+        "order": 5,
+        "kx": 147.46251231135764,
+        "pressure_amplitude": 0.02911048538150912,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.006842916234654969
+      },
+      {
+        "order": 6,
+        "kx": 178.87843884725555,
+        "pressure_amplitude": 0.0446381298979606,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.005626737192347022
+      },
+      {
+        "order": 7,
+        "kx": 210.2943653831535,
+        "pressure_amplitude": 0.03610932485228056,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.004779652688787532
+      },
+      {
+        "order": 8,
+        "kx": 241.71029191905143,
+        "pressure_amplitude": 0.01645596936373437,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.004155394374991594
+      },
+      {
+        "order": 9,
+        "kx": 273.12621845494937,
+        "pressure_amplitude": 0.008961266248830906,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0036761236474440622
+      },
+      {
+        "order": 10,
+        "kx": 304.5421449908473,
+        "pressure_amplitude": 0.01834570149465042,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0032965378053701126
+      },
+      {
+        "order": 11,
+        "kx": 335.95807152674524,
+        "pressure_amplitude": 0.018845955476618777,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0029884547468828787
+      },
+      {
+        "order": 12,
+        "kx": 367.3739980626431,
+        "pressure_amplitude": 0.011467533415830462,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.002733413697015995
+      },
+      {
+        "order": 13,
+        "kx": 398.78992459854106,
+        "pressure_amplitude": 0.002438337601312958,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0025188119525747523
+      },
+      {
+        "order": 14,
+        "kx": 430.205851134439,
+        "pressure_amplitude": 0.007652804029963044,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.002335749924981256
+      },
+      {
+        "order": 15,
+        "kx": 461.62177767033694,
+        "pressure_amplitude": 0.010686485853479604,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0021777630052296645
+      },
+      {
+        "order": 16,
+        "kx": 493.0377042062349,
+        "pressure_amplitude": 0.008788678283049986,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.002040041513907573
+      },
+      {
+        "order": 17,
+        "kx": 524.4536307421329,
+        "pressure_amplitude": 0.00424848350914714,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0019189326488339813
+      },
+      {
+        "order": 18,
+        "kx": 555.8695572780308,
+        "pressure_amplitude": 0.002512437189540858,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0018116121877250562
+      },
+      {
+        "order": 19,
+        "kx": 587.2854838139287,
+        "pressure_amplitude": 0.004513382408059737,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.001715862038941251
+      },
+      {
+        "order": 20,
+        "kx": 618.7014103498267,
+        "pressure_amplitude": 0.004298241280220471,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0016299158380049233
+      },
+      {
+        "order": 21,
+        "kx": 650.1173368857246,
+        "pressure_amplitude": 0.00209200471874674,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0015523494741022646
+      },
+      {
+        "order": 22,
+        "kx": 681.5332634216226,
+        "pressure_amplitude": 0.0009741671870896422,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0014820019931842876
+      },
+      {
+        "order": 23,
+        "kx": 712.9491899575205,
+        "pressure_amplitude": 0.0029543487190136315,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0014179174752967589
+      },
+      {
+        "order": 24,
+        "kx": 744.3651164934183,
+        "pressure_amplitude": 0.0036223831866613793,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0013593016700059843
+      },
+      {
+        "order": 25,
+        "kx": 775.7810430293163,
+        "pressure_amplitude": 0.0030402720846623315,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0013054891943325938
+      },
+      {
+        "order": 26,
+        "kx": 807.1969695652142,
+        "pressure_amplitude": 0.0018499286176003628,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0012559184079307137
+      },
+      {
+        "order": 27,
+        "kx": 838.6128961011121,
+        "pressure_amplitude": 0.000737209015222494,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0012101119473770052
+      },
+      {
+        "order": 28,
+        "kx": 870.0288226370101,
+        "pressure_amplitude": 0.00010578127974490614,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.001167661485929731
+      },
+      {
+        "order": 29,
+        "kx": 901.444749172908,
+        "pressure_amplitude": 0.0001291600059501191,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.001128215685783327
+      },
+      {
+        "order": 30,
+        "kx": 932.860675708806,
+        "pressure_amplitude": 0.00014648182909918667,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0010914705887635119
+      },
+      {
+        "order": 31,
+        "kx": 964.2766022447039,
+        "pressure_amplitude": 0.00031044683034125704,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.001057161888350975
+      },
+      {
+        "order": 32,
+        "kx": 995.6925287806018,
+        "pressure_amplitude": 0.0005221497235620363,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0010250586668169178
+      },
+      {
+        "order": 33,
+        "kx": 1027.1084553164997,
+        "pressure_amplitude": 0.0007422153602962034,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000994958283283732
+      },
+      {
+        "order": 34,
+        "kx": 1058.5243818523977,
+        "pressure_amplitude": 0.0010315409409259353,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0009666821732485201
+      },
+      {
+        "order": 35,
+        "kx": 1089.9403083882955,
+        "pressure_amplitude": 0.0014126403114766346,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0009400723754122841
+      },
+      {
+        "order": 36,
+        "kx": 1121.3562349241936,
+        "pressure_amplitude": 0.0017134499757760176,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0009149886429942363
+      },
+      {
+        "order": 37,
+        "kx": 1152.7721614600914,
+        "pressure_amplitude": 0.0016778842900664586,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0008913060278924488
+      },
+      {
+        "order": 38,
+        "kx": 1184.1880879959895,
+        "pressure_amplitude": 0.0011882692700598628,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0008689128497774089
+      },
+      {
+        "order": 39,
+        "kx": 1215.6040145318873,
+        "pressure_amplitude": 0.0004216038032263473,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0008477089804042213
+      },
+      {
+        "order": 40,
+        "kx": 1247.0199410677853,
+        "pressure_amplitude": 0.0004853583211192531,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0008276043874963486
+      },
+      {
+        "order": 41,
+        "kx": 1278.4358676036832,
+        "pressure_amplitude": 0.0007782061103143532,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0008085178935058697
+      },
+      {
+        "order": 42,
+        "kx": 1309.8517941395812,
+        "pressure_amplitude": 0.0004435413064523065,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0007903761131403102
+      },
+      {
+        "order": 43,
+        "kx": 1341.267720675479,
+        "pressure_amplitude": 0.0004752411597610109,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0007731125403193494
+      },
+      {
+        "order": 44,
+        "kx": 1372.683647211377,
+        "pressure_amplitude": 0.0014621006967259036,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0007566667606012607
+      },
+      {
+        "order": 45,
+        "kx": 1404.099573747275,
+        "pressure_amplitude": 0.0020694616281538205,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0007409837694117156
+      },
+      {
+        "order": 46,
+        "kx": 1435.515500283173,
+        "pressure_amplitude": 0.0019550244378108723,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0007260133798539542
+      },
+      {
+        "order": 47,
+        "kx": 1466.9314268190708,
+        "pressure_amplitude": 0.001152321735052162,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0007117097066608313
+      },
+      {
+        "order": 48,
+        "kx": 1498.3473533549686,
+        "pressure_amplitude": 0.00029698234387428327,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000698030715105366
+      },
+      {
+        "order": 49,
+        "kx": 1529.7632798908667,
+        "pressure_amplitude": 0.0009813689542160669,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006849378255252004
+      },
+      {
+        "order": 50,
+        "kx": 1561.1792064267645,
+        "pressure_amplitude": 0.0012207203442440324,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006723955656218457
+      },
+      {
+        "order": 51,
+        "kx": 1592.5951329626625,
+        "pressure_amplitude": 0.0007370203407054,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006603712639335741
+      },
+      {
+        "order": 52,
+        "kx": 1624.0110594985604,
+        "pressure_amplitude": 0.00045597861492973826,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006488347789031043
+      },
+      {
+        "order": 53,
+        "kx": 1655.4269860344584,
+        "pressure_amplitude": 0.0013260823197075516,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006377582588087683
+      },
+      {
+        "order": 54,
+        "kx": 1686.8429125703562,
+        "pressure_amplitude": 0.001761560514407927,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006271159285332425
+      },
+      {
+        "order": 55,
+        "kx": 1718.2588391062543,
+        "pressure_amplitude": 0.0014873436214347532,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006168838997331459
+      },
+      {
+        "order": 56,
+        "kx": 1749.6747656421521,
+        "pressure_amplitude": 0.0006700491808717603,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006070400014667722
+      },
+      {
+        "order": 57,
+        "kx": 1781.0906921780502,
+        "pressure_amplitude": 0.00043599427744509726,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005975636287526984
+      },
+      {
+        "order": 58,
+        "kx": 1812.506618713948,
+        "pressure_amplitude": 0.0010518719135555502,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005884356068826551
+      },
+      {
+        "order": 59,
+        "kx": 1843.922545249846,
+        "pressure_amplitude": 0.0011122311946812863,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005796380696088712
+      },
+      {
+        "order": 60,
+        "kx": 1875.3384717857439,
+        "pressure_amplitude": 0.0006402886365731126,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005711543495781714
+      },
+      {
+        "order": 61,
+        "kx": 1906.754398321642,
+        "pressure_amplitude": 0.0003715997327182128,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000562968879599755
+      },
+      {
+        "order": 62,
+        "kx": 1938.1703248575398,
+        "pressure_amplitude": 0.0008915040314022773,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005550671035169201
+      },
+      {
+        "order": 63,
+        "kx": 1969.5862513934378,
+        "pressure_amplitude": 0.0010719521809495027,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005474353956099877
+      },
+      {
+        "order": 64,
+        "kx": 2001.0021779293356,
+        "pressure_amplitude": 0.0007781856797214933,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005400609875924861
+      },
+      {
+        "order": 65,
+        "kx": 2032.4181044652335,
+        "pressure_amplitude": 0.00021968984086318408,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000532931902378692
+      },
+      {
+        "order": 66,
+        "kx": 2063.8340310011313,
+        "pressure_amplitude": 0.00045324332661015904,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005260368939007595
+      },
+      {
+        "order": 67,
+        "kx": 2095.2499575370293,
+        "pressure_amplitude": 0.0007748212645093649,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005193653923402842
+      },
+      {
+        "order": 68,
+        "kx": 2126.6658840729274,
+        "pressure_amplitude": 0.0007448882698983781,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005129074542142461
+      },
+      {
+        "order": 69,
+        "kx": 2158.0818106088254,
+        "pressure_amplitude": 0.00045217642725653304,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005066537168205151
+      },
+      {
+        "order": 70,
+        "kx": 2189.497737144723,
+        "pressure_amplitude": 0.00017766740761915488,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005005953566049456
+      },
+      {
+        "order": 71,
+        "kx": 2220.913663680621,
+        "pressure_amplitude": 0.00028671399759311306,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004947240510616464
+      },
+      {
+        "order": 72,
+        "kx": 2252.329590216519,
+        "pressure_amplitude": 0.000319414084959635,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004890319438213885
+      },
+      {
+        "order": 73,
+        "kx": 2283.745516752417,
+        "pressure_amplitude": 0.00017905699442477893,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004835116126210896
+      },
+      {
+        "order": 74,
+        "kx": 2315.161443288315,
+        "pressure_amplitude": 5.660463946628591e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00047815603988066743
+      },
+      {
+        "order": 75,
+        "kx": 2346.577369824213,
+        "pressure_amplitude": 0.00023914756767732352,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00047295858564287013
+      },
+      {
+        "order": 76,
+        "kx": 2377.993296360111,
+        "pressure_amplitude": 0.00034175420242626574,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004679129626575455
+      },
+      {
+        "order": 77,
+        "kx": 2409.409222896009,
+        "pressure_amplitude": 0.0003607820479037872,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00046301321341460063
+      },
+      {
+        "order": 78,
+        "kx": 2440.8251494319065,
+        "pressure_amplitude": 0.0003366439928458257,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004582536889500718
+      },
+      {
+        "order": 79,
+        "kx": 2472.2410759678046,
+        "pressure_amplitude": 0.0003108975854591158,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00045362902926758764
+      },
+      {
+        "order": 80,
+        "kx": 2503.6570025037026,
+        "pressure_amplitude": 0.0002913385581627221,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004491341452333289
+      },
+      {
+        "order": 81,
+        "kx": 2535.0729290396002,
+        "pressure_amplitude": 0.0002450628126005038,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000444764201816678
+      },
+      {
+        "order": 82,
+        "kx": 2566.4888555754983,
+        "pressure_amplitude": 0.0001459657874363757,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00044051460256126014
+      },
+      {
+        "order": 83,
+        "kx": 2597.9047821113963,
+        "pressure_amplitude": 3.468584271766656e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004363809751822378
+      },
+      {
+        "order": 84,
+        "kx": 2629.3207086472944,
+        "pressure_amplitude": 8.852410464010604e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00043235915819568095
+      },
+      {
+        "order": 85,
+        "kx": 2660.736635183192,
+        "pressure_amplitude": 6.434248969791931e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004284451884947281
+      },
+      {
+        "order": 86,
+        "kx": 2692.15256171909,
+        "pressure_amplitude": 0.00010383270158848543,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004246352897952207
+      },
+      {
+        "order": 87,
+        "kx": 2723.568488254988,
+        "pressure_amplitude": 0.0003587051432498149,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00042092586188063007
+      },
+      {
+        "order": 88,
+        "kx": 2754.984414790886,
+        "pressure_amplitude": 0.0005830780000284291,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00041731347058249826
+      },
+      {
+        "order": 89,
+        "kx": 2786.4003413267837,
+        "pressure_amplitude": 0.0006501941931938048,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004137948384383692
+      },
+      {
+        "order": 90,
+        "kx": 2817.816267862682,
+        "pressure_amplitude": 0.0005014266637885397,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004103668359743606
+      },
+      {
+        "order": 91,
+        "kx": 2849.23219439858,
+        "pressure_amplitude": 0.00019788482097636545,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000407026473564196
+      },
+      {
+        "order": 92,
+        "kx": 2880.648120934478,
+        "pressure_amplitude": 0.0001875148939793958,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004037708938207121
+      },
+      {
+        "order": 93,
+        "kx": 2912.0640474703755,
+        "pressure_amplitude": 0.00036232118110931394,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004005973644796591
+      },
+      {
+        "order": 94,
+        "kx": 2943.4799740062736,
+        "pressure_amplitude": 0.0002961083479423574,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00039750327173904246
+      },
+      {
+        "order": 95,
+        "kx": 2974.8959005421716,
+        "pressure_amplitude": 9.195430940396356e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000394486114020357
+      },
+      {
+        "order": 96,
+        "kx": 3006.311827078069,
+        "pressure_amplitude": 0.00042072193359177294,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003915434961208818
+      },
+      {
+        "order": 97,
+        "kx": 3037.7277536139673,
+        "pressure_amplitude": 0.0006989267674429163,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00038867312372875
+      },
+      {
+        "order": 98,
+        "kx": 3069.1436801498653,
+        "pressure_amplitude": 0.0007240957580066418,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003858727982748305
+      },
+      {
+        "order": 99,
+        "kx": 3100.5596066857634,
+        "pressure_amplitude": 0.00047557637275741875,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00038314041209755635
+      },
+      {
+        "order": 100,
+        "kx": 3131.975533221661,
+        "pressure_amplitude": 0.00011797707359000303,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003804739438987564
+      },
+      {
+        "order": 101,
+        "kx": 3163.391459757559,
+        "pressure_amplitude": 0.0003354169069792148,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003778714544702837
+      },
+      {
+        "order": 102,
+        "kx": 3194.807386293457,
+        "pressure_amplitude": 0.00048298865582787823,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00037533108267282964
+      },
+      {
+        "order": 103,
+        "kx": 3226.223312829355,
+        "pressure_amplitude": 0.0003585553196383855,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00037285104164975764
+      },
+      {
+        "order": 104,
+        "kx": 3257.6392393652527,
+        "pressure_amplitude": 0.00013100798593933895,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00037042961526011854
+      },
+      {
+        "order": 105,
+        "kx": 3289.0551659011508,
+        "pressure_amplitude": 0.00039527707568571993,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00036806515471621536
+      },
+      {
+        "order": 106,
+        "kx": 3320.471092437049,
+        "pressure_amplitude": 0.0005990915615809846,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00036575607541219896
+      },
+      {
+        "order": 107,
+        "kx": 3351.887018972947,
+        "pressure_amplitude": 0.0005541598665707063,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00036350085393118255
+      },
+      {
+        "order": 108,
+        "kx": 3383.3029455088445,
+        "pressure_amplitude": 0.0002901158305459068,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00036129802521929667
+      },
+      {
+        "order": 109,
+        "kx": 3414.7188720447425,
+        "pressure_amplitude": 0.00011679201399127128,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003591461799159584
+      },
+      {
+        "order": 110,
+        "kx": 3446.1347985806406,
+        "pressure_amplitude": 0.00036287704049503354,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003570439618304084
+      },
+      {
+        "order": 111,
+        "kx": 3477.5507251165386,
+        "pressure_amplitude": 0.0004340885070945103,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00035499006555528935
+      },
+      {
+        "order": 112,
+        "kx": 3508.966651652436,
+        "pressure_amplitude": 0.0003036427886609563,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003529832342087003
+      },
+      {
+        "order": 113,
+        "kx": 3540.3825781883343,
+        "pressure_amplitude": 0.00011727546008466511,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00035102225729676976
+      },
+      {
+        "order": 114,
+        "kx": 3571.7985047242323,
+        "pressure_amplitude": 0.00023742669868906683,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00034910596868934786
+      },
+      {
+        "order": 115,
+        "kx": 3603.21443126013,
+        "pressure_amplitude": 0.0003290355437795267,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00034723324470193776
+      },
+      {
+        "order": 116,
+        "kx": 3634.630357796028,
+        "pressure_amplitude": 0.0002642242943381325,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003454030022774576
+      },
+      {
+        "order": 117,
+        "kx": 3666.046284331926,
+        "pressure_amplitude": 9.204669770661996e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003436141972618683
+      },
+      {
+        "order": 118,
+        "kx": 3697.462210867824,
+        "pressure_amplitude": 0.00012523725464499128,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003418658227681042
+      },
+      {
+        "order": 119,
+        "kx": 3728.8781374037217,
+        "pressure_amplitude": 0.00025169692190620663,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003401569076231199
+      },
+      {
+        "order": 120,
+        "kx": 3760.2940639396197,
+        "pressure_amplitude": 0.0002757274713423373,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003384865148932134
+      },
+      {
+        "order": 121,
+        "kx": 3791.7099904755178,
+        "pressure_amplitude": 0.00021387026996952448,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003368537404831079
+      },
+      {
+        "order": 122,
+        "kx": 3823.125917011416,
+        "pressure_amplitude": 0.00011854793035470457,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003352577118045663
+      },
+      {
+        "order": 123,
+        "kx": 3854.5418435473134,
+        "pressure_amplitude": 3.9727653896665806e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000333697586510596
+      },
+      {
+        "order": 124,
+        "kx": 3885.9577700832115,
+        "pressure_amplitude": 1.9333613234738277e-06,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00033217255129154913
+      },
+      {
+        "order": 125,
+        "kx": 3917.3736966191095,
+        "pressure_amplitude": 1.246918787981196e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00033068182072966645
+      },
+      {
+        "order": 126,
+        "kx": 3948.7896231550076,
+        "pressure_amplitude": 1.8882779889954496e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003292246362088274
+      },
+      {
+        "order": 127,
+        "kx": 3980.205549690905,
+        "pressure_amplitude": 3.51076112021727e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00032780026487647893
+      },
+      {
+        "order": 128,
+        "kx": 4011.621476226803,
+        "pressure_amplitude": 5.964049029121471e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003264079986549015
+      },
+      {
+        "order": 129,
+        "kx": 4043.0374027627013,
+        "pressure_amplitude": 9.689933536367156e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003250471532991483
+      },
+      {
+        "order": 130,
+        "kx": 4074.453329298599,
+        "pressure_amplitude": 0.0001591633606437627,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003237170674991595
+      },
+      {
+        "order": 131,
+        "kx": 4105.8692558344965,
+        "pressure_amplitude": 0.00023445693041840445,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00032241710202370657
+      },
+      {
+        "order": 132,
+        "kx": 4137.285182370394,
+        "pressure_amplitude": 0.00028134555249488113,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00032114663890396106
+      },
+      {
+        "order": 133,
+        "kx": 4168.701108906293,
+        "pressure_amplitude": 0.00025836720657881174,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003199050806546204
+      },
+      {
+        "order": 134,
+        "kx": 4200.11703544219,
+        "pressure_amplitude": 0.000156741320210934,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003186918495306437
+      },
+      {
+        "order": 135,
+        "kx": 4231.532961978089,
+        "pressure_amplitude": 3.9438752221881644e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003175063868177667
+      },
+      {
+        "order": 136,
+        "kx": 4262.948888513986,
+        "pressure_amplitude": 0.00011852434333471264,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003163481521550765
+      },
+      {
+        "order": 137,
+        "kx": 4294.364815049884,
+        "pressure_amplitude": 0.00013471984441401337,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003152166228880232
+      },
+      {
+        "order": 138,
+        "kx": 4325.780741585782,
+        "pressure_amplitude": 3.5211428168199936e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003141112934503427
+      },
+      {
+        "order": 139,
+        "kx": 4357.19666812168,
+        "pressure_amplitude": 0.00017272510411267596,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00031303167477345415
+      },
+      {
+        "order": 140,
+        "kx": 4388.612594657578,
+        "pressure_amplitude": 0.0003608114103843304,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003119772937219755
+      },
+      {
+        "order": 141,
+        "kx": 4420.028521193476,
+        "pressure_amplitude": 0.00044483467636375923,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00031094769255408136
+      },
+      {
+        "order": 142,
+        "kx": 4451.444447729374,
+        "pressure_amplitude": 0.00037131587615973465,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003099424284054964
+      },
+      {
+        "order": 143,
+        "kx": 4482.860374265272,
+        "pressure_amplitude": 0.00017015946313018077,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003089610727959886
+      },
+      {
+        "order": 144,
+        "kx": 4514.27630080117,
+        "pressure_amplitude": 0.00010728109630534485,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003080032111572899
+      },
+      {
+        "order": 145,
+        "kx": 4545.692227337067,
+        "pressure_amplitude": 0.00025519816795508,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00030706844238142925
+      },
+      {
+        "order": 146,
+        "kx": 4577.108153872966,
+        "pressure_amplitude": 0.00024951260525197936,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00030615637838852264
+      },
+      {
+        "order": 147,
+        "kx": 4608.5240804088635,
+        "pressure_amplitude": 9.776753855812332e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003052666437131153
+      },
+      {
+        "order": 148,
+        "kx": 4639.940006944761,
+        "pressure_amplitude": 0.0002023264917416469,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00030439887510822183
+      },
+      {
+        "order": 149,
+        "kx": 4671.35593348066,
+        "pressure_amplitude": 0.00040272872658847356,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003035527211662556
+      },
+      {
+        "order": 150,
+        "kx": 4702.771860016557,
+        "pressure_amplitude": 0.0004559275384362136,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00030272784195608377
+      },
+      {
+        "order": 151,
+        "kx": 4734.187786552455,
+        "pressure_amplitude": 0.0003294970885983908,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00030192390867548534
+      },
+      {
+        "order": 152,
+        "kx": 4765.603713088353,
+        "pressure_amplitude": 9.916926515096063e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003011406033183279
+      },
+      {
+        "order": 153,
+        "kx": 4797.019639624251,
+        "pressure_amplitude": 0.00018455711319468907,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003003776183558152
+      },
+      {
+        "order": 154,
+        "kx": 4828.435566160149,
+        "pressure_amplitude": 0.0003089917164089476,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002996346564311936
+      },
+      {
+        "order": 155,
+        "kx": 4859.851492696047,
+        "pressure_amplitude": 0.00026753319505286506,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002989114300673364
+      },
+      {
+        "order": 156,
+        "kx": 4891.267419231945,
+        "pressure_amplitude": 0.00011030813759217636,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029820766138665626
+      },
+      {
+        "order": 157,
+        "kx": 4922.683345767843,
+        "pressure_amplitude": 0.0001781136725036549,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029752308184282506
+      },
+      {
+        "order": 158,
+        "kx": 4954.099272303741,
+        "pressure_amplitude": 0.00031803096312506333,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029685743196380845
+      },
+      {
+        "order": 159,
+        "kx": 4985.515198839638,
+        "pressure_amplitude": 0.00032252361651499695,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002962104611057459
+      },
+      {
+        "order": 160,
+        "kx": 5016.931125375537,
+        "pressure_amplitude": 0.0001912472112316045,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002955819272172344
+      },
+      {
+        "order": 161,
+        "kx": 5048.347051911434,
+        "pressure_amplitude": 4.98226333495432e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029497159661359576
+      },
+      {
+        "order": 162,
+        "kx": 5079.762978447332,
+        "pressure_amplitude": 0.0001925158575260032,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002943792437607275
+      },
+      {
+        "order": 163,
+        "kx": 5111.1789049832305,
+        "pressure_amplitude": 0.0002599986833196714,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002938046510681627
+      },
+      {
+        "order": 164,
+        "kx": 5142.594831519128,
+        "pressure_amplitude": 0.00021385085547128425,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002932476086909774
+      },
+      {
+        "order": 165,
+        "kx": 5174.010758055027,
+        "pressure_amplitude": 0.00010284426000282022,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029270791434020925
+      },
+      {
+        "order": 166,
+        "kx": 5205.426684590924,
+        "pressure_amplitude": 7.388042127831687e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002921853731014634
+      },
+      {
+        "order": 167,
+        "kx": 5236.842611126822,
+        "pressure_amplitude": 0.00012496921378950498,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029167979726140136
+      },
+      {
+        "order": 168,
+        "kx": 5268.25853766272,
+        "pressure_amplitude": 0.0001122476600035994,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002911910061418237
+      },
+      {
+        "order": 169,
+        "kx": 5299.674464198618,
+        "pressure_amplitude": 4.455025287740575e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002907188259410726
+      },
+      {
+        "order": 170,
+        "kx": 5331.0903907345155,
+        "pressure_amplitude": 4.6517358232464345e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029026308958249346
+      },
+      {
+        "order": 171,
+        "kx": 5362.506317270414,
+        "pressure_amplitude": 0.00010994674157442877,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028982363656970985
+      },
+      {
+        "order": 172,
+        "kx": 5393.922243806312,
+        "pressure_amplitude": 0.00013863984413065047,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002894003128484798
+      },
+      {
+        "order": 173,
+        "kx": 5425.33817034221,
+        "pressure_amplitude": 0.00013829757964637683,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028899297067491004
+      },
+      {
+        "order": 174,
+        "kx": 5456.754096878108,
+        "pressure_amplitude": 0.00012626783282149954,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028860146848982163
+      },
+      {
+        "order": 175,
+        "kx": 5488.170023414005,
+        "pressure_amplitude": 0.00011657850402172457,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002882256707990669
+      },
+      {
+        "order": 176,
+        "kx": 5519.585949949904,
+        "pressure_amplitude": 0.00010727327276567039,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028786544805961333
+      },
+      {
+        "order": 177,
+        "kx": 5551.001876485801,
+        "pressure_amplitude": 8.361326792074428e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000287520676571214
+      },
+      {
+        "order": 178,
+        "kx": 5582.417803021699,
+        "pressure_amplitude": 3.987373710534564e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002871912383735012
+      },
+      {
+        "order": 179,
+        "kx": 5613.8337295575975,
+        "pressure_amplitude": 1.618213137894504e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028687702114834273
+      },
+      {
+        "order": 180,
+        "kx": 5645.249656093495,
+        "pressure_amplitude": 3.5488418444217186e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028657791812731435
+      },
+      {
+        "order": 181,
+        "kx": 5676.665582629393,
+        "pressure_amplitude": 7.890679323975943e-06,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002862938280041467
+      },
+      {
+        "order": 182,
+        "kx": 5708.081509165291,
+        "pressure_amplitude": 9.156865438719186e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028602465485201654
+      },
+      {
+        "order": 183,
+        "kx": 5739.497435701189,
+        "pressure_amplitude": 0.0002079518833292743,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002857703080455577
+      },
+      {
+        "order": 184,
+        "kx": 5770.913362237087,
+        "pressure_amplitude": 0.00029123528942168533,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002855307021874758
+      },
+      {
+        "order": 185,
+        "kx": 5802.329288772985,
+        "pressure_amplitude": 0.0002896870802357616,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028530575703965874
+      },
+      {
+        "order": 186,
+        "kx": 5833.7452153088825,
+        "pressure_amplitude": 0.00019054690082384563,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002850953974586809
+      },
+      {
+        "order": 187,
+        "kx": 5865.161141844781,
+        "pressure_amplitude": 4.9411740950763586e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002848995533356069
+      },
+      {
+        "order": 188,
+        "kx": 5896.577068380679,
+        "pressure_amplitude": 0.00012651457001482152,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002847181595400068
+      },
+      {
+        "order": 189,
+        "kx": 5927.992994916576,
+        "pressure_amplitude": 0.00017329052565944036,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002845511558681018
+      },
+      {
+        "order": 190,
+        "kx": 5959.408921452475,
+        "pressure_amplitude": 9.662543538202375e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002843984869949649
+      },
+      {
+        "order": 191,
+        "kx": 5990.824847988372,
+        "pressure_amplitude": 0.00010157503661487453,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002842601024307081
+      },
+      {
+        "order": 192,
+        "kx": 6022.24077452427,
+        "pressure_amplitude": 0.00028892469017514834,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002841359564805922
+      },
+      {
+        "order": 193,
+        "kx": 6053.656701060168,
+        "pressure_amplitude": 0.0003956016514616385,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028402600820900384
+      },
+      {
+        "order": 194,
+        "kx": 6085.072627596066,
+        "pressure_amplitude": 0.00035724866709255313,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002839302214072459
+      },
+      {
+        "order": 195,
+        "kx": 6116.4885541319645,
+        "pressure_amplitude": 0.00018795925983846874,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028384856456509775
+      },
+      {
+        "order": 196,
+        "kx": 6147.904480667862,
+        "pressure_amplitude": 7.471283752895234e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000283781010846103
+      },
+      {
+        "order": 197,
+        "kx": 6179.32040720376,
+        "pressure_amplitude": 0.0002253570171458929,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002837275380665508
+      },
+      {
+        "order": 198,
+        "kx": 6210.736333739658,
+        "pressure_amplitude": 0.00025383709131115506,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002836881286781203
+      },
+      {
+        "order": 199,
+        "kx": 6242.152260275556,
+        "pressure_amplitude": 0.00013812517912505307,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002836627697541644
+      },
+      {
+        "order": -200,
+        "kx": -6292.802427547718,
+        "pressure_amplitude": 0.00012080130209259596,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028365145297961297
+      },
+      {
+        "order": -199,
+        "kx": -6261.386501011821,
+        "pressure_amplitude": 0.0003011550140608219,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028365417464448046
+      },
+      {
+        "order": -198,
+        "kx": -6229.970574475923,
+        "pressure_amplitude": 0.00037590694064134315,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028367093564097087
+      },
+      {
+        "order": -197,
+        "kx": -6198.554647940025,
+        "pressure_amplitude": 0.0002972330105432226,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028370174146417367
+      },
+      {
+        "order": -196,
+        "kx": -6167.138721404127,
+        "pressure_amplitude": 0.00011111519863676972,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002837466022163533
+      },
+      {
+        "order": -195,
+        "kx": -6135.722794868229,
+        "pressure_amplitude": 0.0001287030088010303,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002838055326148377
+      },
+      {
+        "order": -194,
+        "kx": -6104.306868332331,
+        "pressure_amplitude": 0.00025558075402425296,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002838785520035159
+      },
+      {
+        "order": -193,
+        "kx": -6072.890941796433,
+        "pressure_amplitude": 0.00025216382203187884,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002839656843679644
+      },
+      {
+        "order": -192,
+        "kx": -6041.475015260535,
+        "pressure_amplitude": 0.00013633086126412324,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002840669583542182
+      },
+      {
+        "order": -191,
+        "kx": -6010.059088724637,
+        "pressure_amplitude": 9.467081892511595e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028418240729121926
+      },
+      {
+        "order": -190,
+        "kx": -5978.64316218874,
+        "pressure_amplitude": 0.00020615349650542615,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028431206921696847
+      },
+      {
+        "order": -189,
+        "kx": -5947.227235652841,
+        "pressure_amplitude": 0.00023255316536917257,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000284455986908423
+      },
+      {
+        "order": -188,
+        "kx": -5915.811309116943,
+        "pressure_amplitude": 0.0001537691208425046,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002846142079151783
+      },
+      {
+        "order": -187,
+        "kx": -5884.395382581046,
+        "pressure_amplitude": 3.413679132614952e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002847867845969844
+      },
+      {
+        "order": -186,
+        "kx": -5852.979456045147,
+        "pressure_amplitude": 0.00012729024725562983,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028497377416514995
+      },
+      {
+        "order": -185,
+        "kx": -5821.56352950925,
+        "pressure_amplitude": 0.00019505478244549311,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028517523872789306
+      },
+      {
+        "order": -184,
+        "kx": -5790.147602973352,
+        "pressure_amplitude": 0.0001860585403487859,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028539124533970425
+      },
+      {
+        "order": -183,
+        "kx": -5758.731676437454,
+        "pressure_amplitude": 0.00012370405837290791,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002856218660547934
+      },
+      {
+        "order": -182,
+        "kx": -5727.315749901556,
+        "pressure_amplitude": 5.214891262698759e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002858671779846974
+      },
+      {
+        "order": -181,
+        "kx": -5695.8998233656575,
+        "pressure_amplitude": 1.9273312080070384e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002861272633601328
+      },
+      {
+        "order": -180,
+        "kx": -5664.48389682976,
+        "pressure_amplitude": 2.1485751609579447e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002864022095971838
+      },
+      {
+        "order": -179,
+        "kx": -5633.067970293862,
+        "pressure_amplitude": 6.863387653764659e-06,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002866921093679224
+      },
+      {
+        "order": -178,
+        "kx": -5601.652043757964,
+        "pressure_amplitude": 1.8830611423579333e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002869970606755656
+      },
+      {
+        "order": -177,
+        "kx": -5570.236117222066,
+        "pressure_amplitude": 4.3230849594435444e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028731716693428046
+      },
+      {
+        "order": -176,
+        "kx": -5538.820190686169,
+        "pressure_amplitude": 6.760035580822788e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028765253705375607
+      },
+      {
+        "order": -175,
+        "kx": -5507.40426415027,
+        "pressure_amplitude": 9.950327106496217e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028800328552866945
+      },
+      {
+        "order": -174,
+        "kx": -5475.9883376143725,
+        "pressure_amplitude": 0.0001457725869825843,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002883695325331798
+      },
+      {
+        "order": -173,
+        "kx": -5444.572411078475,
+        "pressure_amplitude": 0.0001933964698353554,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002887514040205947
+      },
+      {
+        "order": -172,
+        "kx": -5413.156484542576,
+        "pressure_amplitude": 0.00021128037460269652,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028914903182836036
+      },
+      {
+        "order": -171,
+        "kx": -5381.740558006679,
+        "pressure_amplitude": 0.00017350080559926952,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028956255378853645
+      },
+      {
+        "order": -170,
+        "kx": -5350.32463147078,
+        "pressure_amplitude": 8.360568965815868e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00028999211384392765
+      },
+      {
+        "order": -169,
+        "kx": -5318.908704934883,
+        "pressure_amplitude": 4.1845879721163216e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029043786217005085
+      },
+      {
+        "order": -168,
+        "kx": -5287.492778398985,
+        "pressure_amplitude": 0.0001012681598239824,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029089995530313137
+      },
+      {
+        "order": -167,
+        "kx": -5256.076851863087,
+        "pressure_amplitude": 7.70379465734786e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029137855627432767
+      },
+      {
+        "order": -166,
+        "kx": -5224.660925327189,
+        "pressure_amplitude": 4.878573615022406e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029187383475040124
+      },
+      {
+        "order": -165,
+        "kx": -5193.244998791291,
+        "pressure_amplitude": 0.0002178461685298314,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002923859671810541
+      },
+      {
+        "order": -164,
+        "kx": -5161.829072255393,
+        "pressure_amplitude": 0.00035558742459436063,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000292915136953175
+      },
+      {
+        "order": -163,
+        "kx": -5130.413145719495,
+        "pressure_amplitude": 0.0003834923075538817,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002934615345522437
+      },
+      {
+        "order": -162,
+        "kx": -5098.997219183597,
+        "pressure_amplitude": 0.0002750395927881949,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002940253577311592
+      },
+      {
+        "order": -161,
+        "kx": -5067.581292647699,
+        "pressure_amplitude": 8.509565775969454e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029460681168677204
+      },
+      {
+        "order": -160,
+        "kx": -5036.165366111802,
+        "pressure_amplitude": 0.00014892545621491781,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002952061092444167
+      },
+      {
+        "order": -159,
+        "kx": -5004.749439575903,
+        "pressure_amplitude": 0.00024083417594041503,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029582347105075354
+      },
+      {
+        "order": -158,
+        "kx": -4973.3335130400055,
+        "pressure_amplitude": 0.00017818754227804165,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029645912577525073
+      },
+      {
+        "order": -157,
+        "kx": -4941.917586504108,
+        "pressure_amplitude": 7.27525256001943e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029711331032065226
+      },
+      {
+        "order": -156,
+        "kx": -4910.501659968209,
+        "pressure_amplitude": 0.00028447293199349076,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002977862700427963
+      },
+      {
+        "order": -155,
+        "kx": -4879.085733432312,
+        "pressure_amplitude": 0.000439836937449325,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0002984782589801718
+      },
+      {
+        "order": -154,
+        "kx": -4847.669806896414,
+        "pressure_amplitude": 0.0004303750620719241,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029918954009361675
+      },
+      {
+        "order": -153,
+        "kx": -4816.253880360516,
+        "pressure_amplitude": 0.0002556861153729595,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00029992038551658986
+      },
+      {
+        "order": -152,
+        "kx": -4784.837953824618,
+        "pressure_amplitude": 6.784887158636031e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003006710768164668
+      },
+      {
+        "order": -151,
+        "kx": -4753.42202728872,
+        "pressure_amplitude": 0.0002448904984051689,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00030144190526733847
+      },
+      {
+        "order": -150,
+        "kx": -4722.006100752822,
+        "pressure_amplitude": 0.0003149262388247586,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00030223317213481503
+      },
+      {
+        "order": -149,
+        "kx": -4690.590174216924,
+        "pressure_amplitude": 0.00021438807299842502,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00030304518897336934
+      },
+      {
+        "order": -148,
+        "kx": -4659.174247681026,
+        "pressure_amplitude": 9.30307222090805e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00030387827793677743
+      },
+      {
+        "order": -147,
+        "kx": -4627.758321145128,
+        "pressure_amplitude": 0.00027323300809708063,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003047327721022526
+      },
+      {
+        "order": -146,
+        "kx": -4596.342394609231,
+        "pressure_amplitude": 0.00038353862228461734,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00030560901580889774
+      },
+      {
+        "order": -145,
+        "kx": -4564.926468073332,
+        "pressure_amplitude": 0.000331344733485483,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000306507365011136
+      },
+      {
+        "order": -144,
+        "kx": -4533.510541537435,
+        "pressure_amplitude": 0.0001485304952562626,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003074281876478206
+      },
+      {
+        "order": -143,
+        "kx": -4502.094615001537,
+        "pressure_amplitude": 0.00010780299881162081,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00030837186402776166
+      },
+      {
+        "order": -142,
+        "kx": -4470.6786884656385,
+        "pressure_amplitude": 0.00026194296287835597,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003093387872324496
+      },
+      {
+        "order": -141,
+        "kx": -4439.262761929741,
+        "pressure_amplitude": 0.00029214146537739563,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003103293635368031
+      },
+      {
+        "order": -140,
+        "kx": -4407.846835393842,
+        "pressure_amplitude": 0.0001985406049728735,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000311344012848813
+      },
+      {
+        "order": -139,
+        "kx": -4376.430908857945,
+        "pressure_amplitude": 7.749412966613583e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003123831691690078
+      },
+      {
+        "order": -138,
+        "kx": -4345.014982322047,
+        "pressure_amplitude": 0.00013689815283073078,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00031344728107071825
+      },
+      {
+        "order": -137,
+        "kx": -4313.599055786149,
+        "pressure_amplitude": 0.00018011775749529594,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003145368122021778
+      },
+      {
+        "order": -136,
+        "kx": -4282.183129250251,
+        "pressure_amplitude": 0.0001317543531525843,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003156522418115551
+      },
+      {
+        "order": -135,
+        "kx": -4250.7672027143535,
+        "pressure_amplitude": 3.1583812562360414e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00031679406529608203
+      },
+      {
+        "order": -134,
+        "kx": -4219.351276178455,
+        "pressure_amplitude": 9.590909280283868e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003179627947765102
+      },
+      {
+        "order": -133,
+        "kx": -4187.935349642557,
+        "pressure_amplitude": 0.000167880922299198,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003191589596982014
+      },
+      {
+        "order": -132,
+        "kx": -4156.519423106659,
+        "pressure_amplitude": 0.0001884803646116508,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003203831074602395
+      },
+      {
+        "order": -131,
+        "kx": -4125.103496570761,
+        "pressure_amplitude": 0.0001721262954161574,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003216358040740353
+      },
+      {
+        "order": -130,
+        "kx": -4093.687570034863,
+        "pressure_amplitude": 0.0001447573400736167,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003229176348529853
+      },
+      {
+        "order": -129,
+        "kx": -4062.271643498965,
+        "pressure_amplitude": 0.00012494139671578432,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00032422920513484405
+      },
+      {
+        "order": -128,
+        "kx": -4030.855716963067,
+        "pressure_amplitude": 0.00010873009077184852,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003255711410385734
+      },
+      {
+        "order": -127,
+        "kx": -3999.439790427169,
+        "pressure_amplitude": 7.728605508732621e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00032694409025754224
+      },
+      {
+        "order": -126,
+        "kx": -3968.0238638912715,
+        "pressure_amplitude": 2.6933960494331458e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003283487228910685
+      },
+      {
+        "order": -125,
+        "kx": -3936.6079373553735,
+        "pressure_amplitude": 2.320702138788026e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003297857323164269
+      },
+      {
+        "order": -124,
+        "kx": -3905.1920108194754,
+        "pressure_amplitude": 2.646892714363215e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003312558361035761
+      },
+      {
+        "order": -123,
+        "kx": -3873.7760842835773,
+        "pressure_amplitude": 5.624957910717975e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00033275977697501234
+      },
+      {
+        "order": -122,
+        "kx": -3842.3601577476798,
+        "pressure_amplitude": 0.00019402745669101147,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003342983238133083
+      },
+      {
+        "order": -121,
+        "kx": -3810.9442312117817,
+        "pressure_amplitude": 0.0003432833092109658,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003358722727190701
+      },
+      {
+        "order": -120,
+        "kx": -3779.5283046758836,
+        "pressure_amplitude": 0.00042283023483703606,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00033748244812222266
+      },
+      {
+        "order": -119,
+        "kx": -3748.1123781399856,
+        "pressure_amplitude": 0.0003732590510193714,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003391297039497318
+      },
+      {
+        "order": -118,
+        "kx": -3716.696451604088,
+        "pressure_amplitude": 0.00019892408085687803,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00034081492485308257
+      },
+      {
+        "order": -117,
+        "kx": -3685.28052506819,
+        "pressure_amplitude": 7.345745998989594e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00034253902749905473
+      },
+      {
+        "order": -116,
+        "kx": -3653.864598532292,
+        "pressure_amplitude": 0.00021907355747648804,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00034430296192758684
+      },
+      {
+        "order": -115,
+        "kx": -3622.448671996394,
+        "pressure_amplitude": 0.0002216769601621555,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00034610771298077827
+      },
+      {
+        "order": -114,
+        "kx": -3591.0327454604962,
+        "pressure_amplitude": 6.219894993782182e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003479543018073643
+      },
+      {
+        "order": -113,
+        "kx": -3559.616818924598,
+        "pressure_amplitude": 0.00027994250310748843,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00034984378744730475
+      },
+      {
+        "order": -112,
+        "kx": -3528.2008923887,
+        "pressure_amplitude": 0.0005485787167176749,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00035177726850145843
+      },
+      {
+        "order": -111,
+        "kx": -3496.7849658528025,
+        "pressure_amplitude": 0.0006451381022648066,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00035375588489166946
+      },
+      {
+        "order": -110,
+        "kx": -3465.3690393169045,
+        "pressure_amplitude": 0.0005039817521754087,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00035578081971698487
+      },
+      {
+        "order": -109,
+        "kx": -3433.9531127810064,
+        "pressure_amplitude": 0.0001912809726267363,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003578533012121309
+      },
+      {
+        "order": -108,
+        "kx": -3402.5371862451084,
+        "pressure_amplitude": 0.00021355645360892706,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00035997460481483975
+      },
+      {
+        "order": -107,
+        "kx": -3371.121259709211,
+        "pressure_amplitude": 0.00041320475769614375,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003621460553491006
+      },
+      {
+        "order": -106,
+        "kx": -3339.7053331733127,
+        "pressure_amplitude": 0.0003672523709844418,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003643690293319453
+      },
+      {
+        "order": -105,
+        "kx": -3308.2894066374147,
+        "pressure_amplitude": 0.00013078322061652856,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00036664495741195626
+      },
+      {
+        "order": -104,
+        "kx": -3276.8734801015166,
+        "pressure_amplitude": 0.00035102084793660083,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003689753269483124
+      },
+      {
+        "order": -103,
+        "kx": -3245.457553565619,
+        "pressure_amplitude": 0.00063270040161847,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003713616847398717
+      },
+      {
+        "order": -102,
+        "kx": -3214.041627029721,
+        "pressure_amplitude": 0.0006746204574064844,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003738056399145282
+      },
+      {
+        "order": -101,
+        "kx": -3182.625700493823,
+        "pressure_amplitude": 0.00044697793956309924,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00037630886698989654
+      },
+      {
+        "order": -100,
+        "kx": -3151.209773957925,
+        "pressure_amplitude": 0.00010898539170965691,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003788731091172505
+      },
+      {
+        "order": -99,
+        "kx": -3119.7938474220273,
+        "pressure_amplitude": 0.00034273253589072844,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003815001815216097
+      },
+      {
+        "order": -98,
+        "kx": -3088.3779208861292,
+        "pressure_amplitude": 0.0005055508268418286,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003841919751519123
+      },
+      {
+        "order": -97,
+        "kx": -3056.961994350231,
+        "pressure_amplitude": 0.00040993693652155894,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00038695046055636166
+      },
+      {
+        "order": -96,
+        "kx": -3025.546067814333,
+        "pressure_amplitude": 0.0001626049200851896,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00038977769199928346
+      },
+      {
+        "order": -95,
+        "kx": -2994.1301412784355,
+        "pressure_amplitude": 0.00029356594190252193,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00039267581183720704
+      },
+      {
+        "order": -94,
+        "kx": -2962.7142147425375,
+        "pressure_amplitude": 0.0004845448156187203,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00039564705517338236
+      },
+      {
+        "order": -93,
+        "kx": -2931.2982882066394,
+        "pressure_amplitude": 0.00046047269579462994,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0003986937548115902
+      },
+      {
+        "order": -92,
+        "kx": -2899.882361670742,
+        "pressure_amplitude": 0.00023920544875019777,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00040181834653191907
+      },
+      {
+        "order": -91,
+        "kx": -2868.466435134844,
+        "pressure_amplitude": 0.00011124564164199745,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004050233747131578
+      },
+      {
+        "order": -90,
+        "kx": -2837.0505085989457,
+        "pressure_amplitude": 0.00034169772774207447,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00040831149832864524
+      },
+      {
+        "order": -89,
+        "kx": -2805.6345820630477,
+        "pressure_amplitude": 0.00043299508583743415,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00041168549734481796
+      },
+      {
+        "order": -88,
+        "kx": -2774.21865552715,
+        "pressure_amplitude": 0.0003633517837454633,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004151482795543506
+      },
+      {
+        "order": -87,
+        "kx": -2742.802728991252,
+        "pressure_amplitude": 0.00020453157102500957,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00041870288787869935
+      },
+      {
+        "order": -86,
+        "kx": -2711.386802455354,
+        "pressure_amplitude": 6.889464160847389e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00042235250817809707
+      },
+      {
+        "order": -85,
+        "kx": -2679.970875919456,
+        "pressure_amplitude": 6.88185718888072e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00042610047761060325
+      },
+      {
+        "order": -84,
+        "kx": -2648.5549493835583,
+        "pressure_amplitude": 5.8460719704563e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00042995029358577506
+      },
+      {
+        "order": -83,
+        "kx": -2617.1390228476603,
+        "pressure_amplitude": 9.216025697880749e-07,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00043390562336289147
+      },
+      {
+        "order": -82,
+        "kx": -2585.723096311762,
+        "pressure_amplitude": 7.023178611141293e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000437970314348522
+      },
+      {
+        "order": -81,
+        "kx": -2554.307169775864,
+        "pressure_amplitude": 0.0001370227756897468,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00044214840515362263
+      },
+      {
+        "order": -80,
+        "kx": -2522.8912432399666,
+        "pressure_amplitude": 0.00020555977867980517,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00044644413747633776
+      },
+      {
+        "order": -79,
+        "kx": -2491.4753167040685,
+        "pressure_amplitude": 0.0002990274462251198,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000450861968883368
+      },
+      {
+        "order": -78,
+        "kx": -2460.0593901681705,
+        "pressure_amplitude": 0.00042341710080327506,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004554065865702022
+      },
+      {
+        "order": -77,
+        "kx": -2428.643463632273,
+        "pressure_amplitude": 0.000528908637059619,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00046008292218883127
+      },
+      {
+        "order": -76,
+        "kx": -2397.227537096375,
+        "pressure_amplitude": 0.000533062476905655,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004648961678408548
+      },
+      {
+        "order": -75,
+        "kx": -2365.8116105604768,
+        "pressure_amplitude": 0.0003848408448713322,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004698517933442858
+      },
+      {
+        "order": -74,
+        "kx": -2334.3956840245787,
+        "pressure_amplitude": 0.00012853034541948662,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004749555648940392
+      },
+      {
+        "order": -73,
+        "kx": -2302.979757488681,
+        "pressure_amplitude": 0.00017735167936454462,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004802135652491776
+      },
+      {
+        "order": -72,
+        "kx": -2271.563830952783,
+        "pressure_amplitude": 0.00027129935735509904,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00048563221559471705
+      },
+      {
+        "order": -71,
+        "kx": -2240.147904416885,
+        "pressure_amplitude": 9.783641144943507e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004912182992423887
+      },
+      {
+        "order": -70,
+        "kx": -2208.731977880987,
+        "pressure_amplitude": 0.0003396928571213929,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0004969789873534625
+      },
+      {
+        "order": -69,
+        "kx": -2177.3160513450894,
+        "pressure_amplitude": 0.000844112429423937,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005029218668878833
+      },
+      {
+        "order": -68,
+        "kx": -2145.9001248091913,
+        "pressure_amplitude": 0.0011711481872665919,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005090549710079028
+      },
+      {
+        "order": -67,
+        "kx": -2114.4841982732933,
+        "pressure_amplitude": 0.0011191492645096842,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005153868121915213
+      },
+      {
+        "order": -66,
+        "kx": -2083.068271737395,
+        "pressure_amplitude": 0.0006676751358770195,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005219264183418718
+      },
+      {
+        "order": -65,
+        "kx": -2051.6523452014976,
+        "pressure_amplitude": 0.00017747914467887907,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005286833722137473
+      },
+      {
+        "order": -64,
+        "kx": -2020.2364186655996,
+        "pressure_amplitude": 0.0006189566349920688,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005356678545184449
+      },
+      {
+        "order": -63,
+        "kx": -1988.8204921297017,
+        "pressure_amplitude": 0.0007491664622158009,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005428906911137636
+      },
+      {
+        "order": -62,
+        "kx": -1957.4045655938037,
+        "pressure_amplitude": 0.0003706810566844801,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005503634047382562
+      },
+      {
+        "order": -61,
+        "kx": -1925.9886390579059,
+        "pressure_amplitude": 0.0005187513212903218,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005580982718087712
+      },
+      {
+        "order": -60,
+        "kx": -1894.5727125220078,
+        "pressure_amplitude": 0.0012921522282645641,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005661083848692092
+      },
+      {
+        "order": -59,
+        "kx": -1863.15678598611,
+        "pressure_amplitude": 0.0016786775557673394,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005744077213577574
+      },
+      {
+        "order": -58,
+        "kx": -1831.740859450212,
+        "pressure_amplitude": 0.0014328035887120705,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005830112194514809
+      },
+      {
+        "order": -57,
+        "kx": -1800.324932914314,
+        "pressure_amplitude": 0.000655242040028294,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0005919348618531259
+      },
+      {
+        "order": -56,
+        "kx": -1768.909006378416,
+        "pressure_amplitude": 0.00045847857067758365,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006011957685079506
+      },
+      {
+        "order": -55,
+        "kx": -1737.4930798425182,
+        "pressure_amplitude": 0.0010991245048750401,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000610812299381356
+      },
+      {
+        "order": -54,
+        "kx": -1706.0771533066202,
+        "pressure_amplitude": 0.0011392000397899755,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006208041685947629
+      },
+      {
+        "order": -53,
+        "kx": -1674.6612267707224,
+        "pressure_amplitude": 0.000563703045234388,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006311925714120111
+      },
+      {
+        "order": -52,
+        "kx": -1643.2453002348243,
+        "pressure_amplitude": 0.0006465233860652196,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006420003257969337
+      },
+      {
+        "order": -51,
+        "kx": -1611.8293736989265,
+        "pressure_amplitude": 0.0014423963586349454,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006532520305312148
+      },
+      {
+        "order": -50,
+        "kx": -1580.4134471630284,
+        "pressure_amplitude": 0.001706586783645621,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006649742421981688
+      },
+      {
+        "order": -49,
+        "kx": -1548.9975206271306,
+        "pressure_amplitude": 0.0012602450340136254,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006771956737124194
+      },
+      {
+        "order": -48,
+        "kx": -1517.5815940912325,
+        "pressure_amplitude": 0.0003785399053854328,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0006899474175195881
+      },
+      {
+        "order": -47,
+        "kx": -1486.1656675553347,
+        "pressure_amplitude": 0.0007841778496489698,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0007032631971188064
+      },
+      {
+        "order": -46,
+        "kx": -1454.749741019437,
+        "pressure_amplitude": 0.0013572570256874506,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0007171796511924047
+      },
+      {
+        "order": -45,
+        "kx": -1423.3338144835388,
+        "pressure_amplitude": 0.0013026318011311615,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0007317366553842217
+      },
+      {
+        "order": -44,
+        "kx": -1391.917887947641,
+        "pressure_amplitude": 0.0007334916364207864,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0007469776876790051
+      },
+      {
+        "order": -43,
+        "kx": -1360.501961411743,
+        "pressure_amplitude": 0.0003963108732777166,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000762950244435902
+      },
+      {
+        "order": -42,
+        "kx": -1329.0860348758451,
+        "pressure_amplitude": 0.0008298668841535502,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0007797063154638954
+      },
+      {
+        "order": -41,
+        "kx": -1297.670108339947,
+        "pressure_amplitude": 0.0009113081772873665,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0007973029281530582
+      },
+      {
+        "order": -40,
+        "kx": -1266.2541818040493,
+        "pressure_amplitude": 0.0005383015708046306,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0008158027726649476
+      },
+      {
+        "order": -39,
+        "kx": -1234.8382552681512,
+        "pressure_amplitude": 0.00018938139564517794,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0008352749226309427
+      },
+      {
+        "order": -38,
+        "kx": -1203.4223287322534,
+        "pressure_amplitude": 0.0007291088935850542,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0008557956688280378
+      },
+      {
+        "order": -37,
+        "kx": -1172.0064021963553,
+        "pressure_amplitude": 0.0010994190409265208,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0008774494870519268
+      },
+      {
+        "order": -36,
+        "kx": -1140.5904756604575,
+        "pressure_amplitude": 0.0012294451988355505,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0009003301660883845
+      },
+      {
+        "order": -35,
+        "kx": -1109.1745491245595,
+        "pressure_amplitude": 0.0012191191753825182,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000924542127560028
+      },
+      {
+        "order": -34,
+        "kx": -1077.7586225886616,
+        "pressure_amplitude": 0.0011905974007969335,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0009502019768453334
+      },
+      {
+        "order": -33,
+        "kx": -1046.3426960527636,
+        "pressure_amplitude": 0.0011586675858547696,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.000977440333694571
+      },
+      {
+        "order": -32,
+        "kx": -1014.9267695168658,
+        "pressure_amplitude": 0.0009931427505724551,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.001006404003225676
+      },
+      {
+        "order": -31,
+        "kx": -983.5108429809678,
+        "pressure_amplitude": 0.0005819323926465449,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0010372585635138856
+      },
+      {
+        "order": -30,
+        "kx": -952.0949164450699,
+        "pressure_amplitude": 8.609715940532806e-05,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0010701914661401394
+      },
+      {
+        "order": -29,
+        "kx": -920.678989909172,
+        "pressure_amplitude": 0.00036070843454604813,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.001105415772414718
+      },
+      {
+        "order": -28,
+        "kx": -889.263063373274,
+        "pressure_amplitude": 0.00017788898135680432,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0011431746827395622
+      },
+      {
+        "order": -27,
+        "kx": -857.8471368373761,
+        "pressure_amplitude": 0.0011849431045911278,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0011837470627970492
+      },
+      {
+        "order": -26,
+        "kx": -826.4312103014781,
+        "pressure_amplitude": 0.003036324974912696,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0012274542323286743
+      },
+      {
+        "order": -25,
+        "kx": -795.0152837655802,
+        "pressure_amplitude": 0.004789649881130674,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.001274668366474941
+      },
+      {
+        "order": -24,
+        "kx": -763.5993572296823,
+        "pressure_amplitude": 0.005447512488822294,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0013258229751199353
+      },
+      {
+        "order": -23,
+        "kx": -732.1834306937844,
+        "pressure_amplitude": 0.004344141874153838,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0013814260858775798
+      },
+      {
+        "order": -22,
+        "kx": -700.7675041578865,
+        "pressure_amplitude": 0.0017389425927656272,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0014420769813888097
+      },
+      {
+        "order": -21,
+        "kx": -669.3515776219886,
+        "pressure_amplitude": 0.0017975167881652482,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0015084876620151111
+      },
+      {
+        "order": -20,
+        "kx": -637.9356510860906,
+        "pressure_amplitude": 0.0034664372549886146,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.001581510667977664
+      },
+      {
+        "order": -19,
+        "kx": -606.5197245501927,
+        "pressure_amplitude": 0.002335947336493203,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.001662175574666837
+      },
+      {
+        "order": -18,
+        "kx": -575.1037980142947,
+        "pressure_amplitude": 0.0023003496332425644,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0017517374901963056
+      },
+      {
+        "order": -17,
+        "kx": -543.6878714783968,
+        "pressure_amplitude": 0.008465916271719214,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0018517424303142963
+      },
+      {
+        "order": -16,
+        "kx": -512.2719449424989,
+        "pressure_amplitude": 0.013698540875703782,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0019641168499298788
+      },
+      {
+        "order": -15,
+        "kx": -480.856018406601,
+        "pressure_amplitude": 0.014913279036704568,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.002091292437185145
+      },
+      {
+        "order": -14,
+        "kx": -449.44009187070304,
+        "pressure_amplitude": 0.010569458269038812,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0022363835271352627
+      },
+      {
+        "order": -13,
+        "kx": -418.0241653348051,
+        "pressure_amplitude": 0.0029222607658318757,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.002403445005544435
+      },
+      {
+        "order": -12,
+        "kx": -386.60823879890717,
+        "pressure_amplitude": 0.0087154630178704,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.00259785684708802
+      },
+      {
+        "order": -11,
+        "kx": -355.1923122630093,
+        "pressure_amplitude": 0.013200536563579519,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0028269144093699995
+      },
+      {
+        "order": -10,
+        "kx": -323.77638572711135,
+        "pressure_amplitude": 0.008636136067157147,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0031007657444462643
+      },
+      {
+        "order": -9,
+        "kx": -292.3604591912134,
+        "pressure_amplitude": 0.008457213212969895,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0034339603364965414
+      },
+      {
+        "order": -8,
+        "kx": -260.94453265531547,
+        "pressure_amplitude": 0.029507631467915577,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.003848132715054762
+      },
+      {
+        "order": -7,
+        "kx": -229.52860611941753,
+        "pressure_amplitude": 0.04846310209934122,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.004376929853896984
+      },
+      {
+        "order": -6,
+        "kx": -198.1126795835196,
+        "pressure_amplitude": 0.053862634896118894,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.0050757368758780385
+      },
+      {
+        "order": -5,
+        "kx": -166.69675304762168,
+        "pressure_amplitude": 0.037128958616122344,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.006042749469065879
+      },
+      {
+        "order": -4,
+        "kx": -135.28082651172375,
+        "pressure_amplitude": 0.020094290455161742,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.007470745721731535
+      },
+      {
+        "order": -3,
+        "kx": -103.86489997582581,
+        "pressure_amplitude": 0.08283713155811238,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.009799553153071924
+      },
+      {
+        "order": -2,
+        "kx": -72.44897343992788,
+        "pressure_amplitude": 0.16716691299229805,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.014318144967815674
+      },
+      {
+        "order": -1,
+        "kx": -41.033046904029945,
+        "pressure_amplitude": 0.2707213333905571,
+        "propagating": false,
+        "transmitted_power": 0.0,
+        "decay_length_m": 0.02759043367028428
+      }
+    ],
+    "notes": "Evanescent fraction is pressure-squared, NOT transmitted power. Exit regional averages are NOT isolated-channel S21. Evanescent fields alone do not prove a bound surface eigenmode."
+  },
+  "mesh": {
+    "dx_m": 0.0005,
+    "dz_m": 0.0005,
+    "shape": [
+      848,
+      400
+    ],
+    "central_clear_fraction": 0.75,
+    "total_line_of_sight_fraction": 0.775,
+    "actual_core_depth_m": 0.24,
+    "actual_guide_length_m_each": 0.068,
+    "total_structure_depth_m": 0.376,
+    "note": "2D extruded model; top/bottom frames and posts are not included"
+  }
+}

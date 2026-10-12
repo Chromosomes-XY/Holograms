@@ -1,0 +1,13 @@
+# Measured-noise optimisation
+
+Run `.venv/bin/python -m acoustic_wall.optimise_measured_noise`.
+
+Objective is the total remaining supplied A-weighted band power, divided by its unattenuated sum. All 30 supplied rows enter the accounting. The 20 kHz band has zero measured power, so its contribution is exactly zero and no transmission is invented. Gain is a power gain; transmission is a power ratio and is not squared. Band powers are not multiplied by bandwidth again.
+
+Within each nominal one-third-octave band, assume uniform power per Hz. To accommodate rounded nominal centre labels without overlapping or missing intervals, interior edges are geometric means of adjacent centres; outer edges use centre × 2^(±1/6). Supplied ear gain is held constant within each band. Gauss–Legendre quadrature calculates a band average, then multiplies by the measured band power. Five points per band in the search; nine-point fine-mesh finalist selection; seventeen-point independent quadrature check for the winner and the starting geometry. Mesh maxima: search 3 mm below 9 kHz upper-band edge, otherwise 1.5 mm; verification 1.5 mm throughout. The above-9-kHz bands together carry only 0.0504% of weighted input power: even completely unresolved transmission there changes J by at most 0.000504, so they remain at 1.5 mm rather than receiving an extra spatial refinement. No frequency violates the approximately 11-points-per-wavelength criterion. All outgoing propagating modes are included.
+
+48 deterministic local proposals vary the existing 16 parameters, with the previous design retained as baseline. A candidate may be rejected early only when its accumulated nonnegative band contributions already exceed the incumbent full objective; rejected candidates cannot replace the incumbent. This does not remove weak bands from any accepted full score. Reproducible cached evaluations and complete/pruned search history are saved. Invalidate caches if model changes.
+
+Geometry keeps 300 mm pitch, 225 mm clear opening and four independent smooth cavities. No remaining support blockage allowance. Normal-incidence optimisation only; angles must be reported separately until an incident directional power distribution is specified. This lossless periodic 2D study is not a measured yard attenuation rating.
+
+Additional dominant-band frequency refinement: run `python -m acoustic_wall.refine_measured_bands`. The 800, 1000 and 1250 Hz bands receive 33, then up to 65 Gauss points, stopping when the change in total J is below 0.002. Other bands retain 17 points. See report.json for achieved changes; this is a convergence check, not a strict error bound.

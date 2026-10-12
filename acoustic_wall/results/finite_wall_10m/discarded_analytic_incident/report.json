@@ -1,0 +1,53 @@
+{
+  "method": "Explicit finite-volume 2D scattered-field Helmholtz, sound-hard cavities, stretched-coordinate PML; analytic Hankel incident field",
+  "cells": 33,
+  "width_m": 9.9,
+  "depth_m": 0.3734,
+  "intended_height_m": 1.8,
+  "height_not_modelled": true,
+  "clear_fraction": 0.7499999999999999,
+  "source": {
+    "x": 0,
+    "z": -3,
+    "normalisation": "Unit magnitude at 1 m for each frequency before applying measured band power"
+  },
+  "mesh": {
+    "shape": [
+      267,
+      854
+    ],
+    "air_unknowns": 222276,
+    "maximum_cell_in_wall_m": 0.02,
+    "maximum_cell_away_m": 0.04,
+    "pml_thickness_m": 0.75
+  },
+  "frequencies_solved": [
+    25.0,
+    31.5,
+    40.0,
+    50.0,
+    63.0,
+    80.0,
+    100.0,
+    125.0,
+    160.0,
+    200.0,
+    250.0,
+    315.0,
+    400.0,
+    500.0,
+    630.0,
+    800.0,
+    1000.0,
+    1250.0,
+    1600.0
+  ],
+  "weighted_fraction_solved": 0.9485034474313405,
+  "limitations": [
+    "2D point source is a 3D line source; no finite-height diffraction or ground reflections",
+    "Coarse mesh, particularly above 1 kHz; not a converged performance estimate",
+    "One frequency at each supplied band centre; no within-band averaging",
+    "Whole-spectrum approximation adds all above-1600-Hz bands as unattenuated incoherent background",
+    "Band powers combine incoherently; pressure snapshots are illustrative single-frequency phases"
+  ]
+}

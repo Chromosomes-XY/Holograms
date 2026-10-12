@@ -1,0 +1,66 @@
+{
+  "case": {
+    "label": 0.4,
+    "side": 22.5,
+    "centre": 30,
+    "slits": [
+      2.61,
+      1.78
+    ],
+    "phase_pi": [
+      0.3,
+      1,
+      -0.3
+    ],
+    "amplitude": [
+      0.75,
+      1,
+      0.56
+    ],
+    "guide_ratio": 0.3
+  },
+  "step_m": 0.0002,
+  "width_convention": "inclusive",
+  "rib_layout": "centred",
+  "width_m": 0.075,
+  "length_m": 0.13720000000000002,
+  "core_m": 0.08575,
+  "guide_m": 0.025725,
+  "clear_widths_m": [
+    0.020499999999999997,
+    0.027999999999999997,
+    0.020499999999999997
+  ],
+  "nominal_openness": 0.4,
+  "central_clear_fraction": 0.3733333333333333,
+  "grid_shape": [
+    788,
+    384
+  ],
+  "ranges_m": [
+    [
+      0.001,
+      0.0215
+    ],
+    [
+      0.0235,
+      0.0515
+    ],
+    [
+      0.0535,
+      0.074
+    ]
+  ],
+  "isolated": null,
+  "slits_m": [
+    0.00261,
+    0.03,
+    0.0017800000000000001
+  ],
+  "frequency_hz": 1820.0,
+  "boundary": "rigid",
+  "T": 0.9999630812084074,
+  "R": 3.6918791464231015e-05,
+  "energy_error": 1.283417816466681e-13,
+  "residual": 3.3506837473984283e-12
+}

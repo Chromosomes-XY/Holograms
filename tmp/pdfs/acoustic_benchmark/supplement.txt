@@ -1,0 +1,190 @@
+Phased Gradient Ultra Open Metamaterials for Broadband Acoustic 
+Silencing 
+Zhiwei Yang 1,2, Ao Chen1,2, Xiaohang Xie 1,2, Stephan W. Anderson 2,3, and Xin 
+Zhang1,2,4,5,6* 
+1Department of Mechanical Engineering, Boston University, Boston, MA 02215, 
+United States. 
+2Photonics Center, Boston University, Boston, MA 02215, United States. 
+3Department of Radiology, Department of Radiology, Boston University Chobanian 
+& Avedisian School of Medicine, Boston, Massachusetts 02118, United States. 
+4Division of Materials Science & Engineering, Boston University, Boston, MA 
+02215, United States. 
+5Department of Electrical & Computer Engineering, Boston University, Boston, MA 
+02215, United States. 
+6Department of Biomedical Engineering, Boston University, Boston, MA 02215, 
+United States. 
+*Corresponding authors. E-mail(s): xinz@bu.edu 
+ 
+  
+Supplementary Note 1: Acoustic properties of super unit cells 
+Firstly, we would like to demonstrate that the acoustic properties of a single super unit 
+cell with a hard boundary on both sides are equal to those of a model consisting of two 
+super unit cells arranged in  reverse. We conduct simulations on  the pressure field 
+distributions of various models, as shown in Fig. S1. Model 1 represents a single super 
+unit cell with hard boundaries on both sides, model 2 represents two super unit cells 
+arranged in reverse with hard boundaries on both sides , and model 3 represents two 
+super unit cells arranged periodically with hard boundaries on both sides. To note that 
+unit cells with the same number represent same units. Comparing the pressure field 
+distributions of the three models, t he pressure field distribution of model 1 is same as 
+that of model 2 and different from that of model  3. This finding implies that model 1 
+can be regarded as equivalent to model 2 instead of model 3 . Therefore, the acoustic 
+properties of the PGUOM composed of a single super unit cell are not supposed to be 
+the same as PGUOM multiple super unit cells.  
+ 
+Fig. S1. Pressure field distribution of PGUOMs in different arrangements. (a) Pressure 
+field distribution of a super unit cell with hard boundaries on both sides. (b) Pressure 
+field distribution of  two super unit cells arranged in reverse. (c) Pressure field 
+distribution of two super unit cells arranged periodically. 
+  
+
+Supplementary Note 2: Effect of amplitude and width of unit cell on the 
+transmission of a PGUOM 
+We present transmission color maps of varied amplitudes for the P GUOM with 
+unevenly distributed unit cells, as shown in Fig. S 2. In this design, the phases of the 
+unit cells form a phase gradient, while the amplitude and the width of each unit cell 
+differ. We use “dL” to represent the width differences between unit cell or unit cell 3 
+and unit cell 2. The blue area indicates a transmission is close to 0, signifying a better 
+silencing effect, while the red area denotes a weaker silencing effect. According to Fig. 
+S2, when dL is small, a better noise reduction occurs when the amplitudes of the unit 
+cells are close. Conversely, when dL is large, a better noise reduction occurs when the 
+amplitudes of the shorter-length unit cell significantly exceed those of the longer-length 
+unit cells. 
+In analysis section, we set the amplitudes of the three units to 1 , however, in the 
+validation section, the usage of length-varying straight barriers revealed variations in 
+amplitude within each unit cell.  Therefore, we investigated the impact of amplitude 
+variations on the transmission of the  PGUOM. In Fig. S 3(a-f), we compared the 
+pressure field distribution for different amplitudes of the transmission wave within each 
+unit cell , noting  the amplitudes for the three -unit cells at the corner of each figure. 
+Remarkably, when the amplitudes of the side unit cells differ (as seen in Fig. S 3(a, c, 
+e)), the silencing effect is less pronounced. Conversely, when the amplitudes of the side 
+unit cells are uniform (as shown in Fig.S3(b, d, f)), the silencing effect is more effective. 
+Another difference between the analysis section and the validation section is the 
+frequency of the transmission dip. Our PGUOM targeted a frequency of 2000 Hz, the 
+observed frequencies of dips were at 1950 Hz and 2150 Hz. To address this, we 
+examined the pressure field distribution at frequencies of 1950 Hz, 2000 Hz, and 2150 
+Hz, as shown in Fig. S3(g-i). The pressure field distributions at 1950 Hz and 2150 Hz 
+resembled the ideal pressure field distribution in Fig. S 3(b), suggesting that the 
+mechanism of th e PGUOM remains effective. The frequency shift observed may be 
+attributed to the inaccuracies in the height of the waveguide. 
+ 
+ 
+Fig. S2. Transmission coefficient as a function  of the amplitudes of each unit cell of 
+PGUOM. The amplitude of center units (A2) and side units (A1 and A3), ranging from 
+0.1 to 1, while the phase gradient is maintained. Length differences between the center 
+units and side units are set ranging from 0 to 0.8. 
+  
+
+ 
+Fig. S3. Pressure field distributions of the theoretical and validated PGUOM. Pressure 
+field distributions of the theoretical P GUOM, with amplitudes of the three -unit cells 
+indicated in the lower right corner. (g -i) Pressure field distributions of the validated 
+PGUOM at specific frequencies: 1950 Hz, 2000 Hz, and 2150 Hz. 
+  
+
+Supplementary Note 3: Cylindrical PGUOM with a target frequency at 2000 Hz 
+To demonstrate the target frequency of the cylindrical PGUOM can be tuned to 2000 
+Hz with a similar outer radius of the design , we exhibit the simulation results of the 
+PGUOM with various patterns in Fig. S4 and Fig. S5. Fig. S4 uses the same pattern as 
+we used in the paper, fan shape slits  for both unit cell 1 and unit cell 3. Fig. S 4 uses a 
+different pattern, a circular shape slit is used for unit cell 1. Both patterns reduce the 
+fabrication resolution requirements. The design process is similar as we did in the paper: 
+we first adjust the degree/ radius of unit cell 1 and unit cell 3 of the PGUOM to achieve 
+a phase distribution spanning 2𝜋 with a similar amplitude, as shown in Fig. S4(b-c) 
+and Fig. S 5(b-c). Then, waveguides are added to achieve the transmission dip at the 
+target frequency. Corresponding pressure field distributions and transmission spectra 
+are plotted in Fig. S4(d-f) and Fig. S5(d-f). The simulation results demonstrate that the 
+target frequency of the design is tunable, and the pattern can be optimized if the 
+fabrication resolution cannot be satisfied. 
+ 
+ 
+Fig. S4. Illustration and simulation results for cylindrical PGUOM (Design 1). (a) 
+Illustration of the cylindrical PGUOM and its cross -section pattern. (b-c) Amplitude 
+and phase of the transmission wave for the inner and outer layer at 2000 Hz, varying 
+in angles. (d) Pressure field distribution of the cylindrical PGUOM at 2000 Hz. (e) 
+Transmission spectrum of the cylindrical PGUOM across the frequency ranging from 
+1900 Hz to 2300 Hz. 
+
+ 
+Fig. S5. Illustration and simulation results for cylindrical PGUOM (Design 2). (a) 
+Illustration of the cylindrical PGUOM and its cross -section pattern. (b-c) Amplitude 
+and phase of the transmission wave for the inner and outer layer at 2000 Hz, varying 
+in angle and radius, respectively. (d) Pressure field distribution of the cylindrical 
+PGUOM at 2000 Hz. (e) Transmission spectrum of the cylindrical PGUOM across the 
+frequency ranging from 1800 Hz to 2300 Hz. 
+ 
+  
+
+Supplementary Note 4: Limitation of the cylindrical PGUOM measurement setup 
+Fig. S6(a) illustrates the measurement setup for the cylindrical PGUOM, an impedance 
+tube. Fig. S 6(b-c) compares experimental results (red lines)  and simulation results 
+(black lines) for the abovementioned designs. Significant measurement errors become 
+evident as the frequency exceeds 2000 Hz. To understand this phenomenon, we 
+measured the transmission loss of an empty tube, as shown in Fig. S6(d). Ideally, the 
+transmission loss should be consistently zero across all frequencies . H owever, the 
+transmission loss becomes much more than zero when the frequency exceeds 2000 Hz. 
+This observation strongly indicates that our measurement setup is insufficient when 
+dealing with frequencies higher than 2000 Hz. As a result of this limitation,  the target 
+frequency is adjusted to 1500 Hz and the dimensions of the design are refined for the 
+validation of the design. 
+ 
+Fig. S 6. Experimental setup and simulation result s of the cylindrical PGUOM. (a) 
+Illustration of the e xperimental setup and a sample of the cylindrical PGUOM. (b-c) 
+Comparison of experimental results (red lines) and simulation results (black lines) for 
+the transmission loss of Design 1 and Design 2, respectively. (d) Experimental results 
+for the transmission loss of an empty tube shown in (a). 
+  
+
+Supplementary Note 5: Acoustic properties of rectangular PGUOM around 2000 
+Hz and cylindrical PGUOM around 1500 Hz 
+We simulated the transmission spectra of the rectangular PGUOMs and cylindrical 
+PGUOM at frequencies ranging from 1700 Hz to 2300 Hz and from 1000 Hz to 2000 
+Hz, respectively. The spectr a show a relatively broad sound silencing band . The 
+broadband sound silencing results from the special acoustic properties of PGUOM. Fig. 
+S7 shows the transmission wave’s amplitude and phase difference among unit cells of 
+rectangular PGUOMs and cylindrical PGUOM around the target frequencies. For all 
+designs, the transmission phase differences approximate 0.66π, and the amplitudes are 
+acceptable around target frequencies. 
+ 
+Fig. S7. Illustration and simulation results for rectangular and cylindrical PGUOM. (a) 
+Illustration of the rectangular PGUOM. (b-c) Amplitude and phase differences among 
+unit cell 1, unit cell 2 and unit cell 3 of rectangular P AUOM at frequencies ranging 
+from 1700 Hz to 2300 Hz. (d) Illustration of the cylindrical PGUOM. (e, f) Amplitude 
+and phase differences among unit cell 1, unit cell 2 and unit cell 3 of cylindrical 
+P AUOM at frequencies ranging from 1000 Hz to 2000 Hz. 
+  
+
+Supplementary Note 6: Thermoviscous losses effect on the transmission loss 
+Fig. S8 presents a comparison of the simulated transmission loss with and without the 
+inclusion of thermoviscous losses, at different openness levels. Thermoviscous losses 
+primarily arise within the narrow air channels of the structure, especially near rigid 
+boundaries. To assess their contribution, we conducted simulations both with and 
+without thermoviscous effects. The results show that thermoviscous losses reduce the 
+transmission peak and increase the transmission loss of the dip, but they barely shift the 
+center frequencies. This suggests that thermoviscous absorption plays a secondary role 
+in the overall silencing effect and is not the dominant mechanism in the PGUOM design. 
+ 
+Fig. S8. Simulated transmission loss of the cylindrical PGUOM with and without 
+thermoviscous losses at different openness levels. 
+  
+
+Supplementary Note 7: Experimental setup and validation of rectangular 
+PGUOM 
+In Fig. S 9(a), we present an image of the experimental setup for measuring the 
+rectangular PGUOMs. Two microphones are employed to record the incident and 
+transmitted sound pressure. A movable stage allows precise positioning of the 
+microphones for measurement. Additionally, two plates and resin walls or foams are 
+utilized to minimize acoustic wave losses and prevent noise interference from outside, 
+ensuring the accuracy of our measurement results. To maintain the consistency of our 
+simulations with experimental data, the models we built in the simulations are identical 
+to the experimental setup, as depicted in Fig. S 9(b-c), representing t he pressure field 
+distributions with rigid boundary conditions or PML boundary conditions. Although we 
+used point speaker instead of using planar speaker. The distributions clearly indicate 
+that the incident wave has transformed from a  point wave to a plane wave  before 
+interacting with the design . Furthermore, both designs effectively reduce the pressure 
+of the transmission field to nearly zero after the sound passes through them. 
+  
+ 
+Fig. S 9. Experimental setup and simulation results for rectangular PGUOM. (a) 
+Experimental set up for the rectangular PGUOM. (b) Pressure field distribution of the 
+PGUOM with PML boundary conditions . (c) Pressure field distribution of  PGUOM 
+with rigid boundary conditions. 

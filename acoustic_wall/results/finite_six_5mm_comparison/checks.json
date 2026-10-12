@@ -1,0 +1,12 @@
+{
+  "maximum_relative_linear_residual": 3.966985321599581e-13,
+  "frequency_case_solves": 57,
+  "same_mesh": true,
+  "filled_contains_cavity_solid": true,
+  "clear_fraction": 0.75,
+  "nonfinite_common_air_values": {
+    "no_wall": 0,
+    "filled": 0,
+    "cavities": 0
+  }
+}

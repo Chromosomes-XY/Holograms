@@ -63,6 +63,37 @@ class HologramAperture:
         return self.n_side * self.n_side
 
 
+@dataclass(frozen=True)
+class PlanarWallModel:
+    """Parallel fluid-wall-fluid layers measured from an aperture plane."""
+
+    frequency_hz: float
+    outer_sound_speed_m_s: float
+    outer_density_kg_m3: float
+    wall_offset_m: float
+    wall_thickness_m: float
+    wall_sound_speed_m_s: float
+    wall_density_kg_m3: float
+    inner_sound_speed_m_s: float
+    inner_density_kg_m3: float
+
+    def __post_init__(self):
+        positive_values = (
+            self.frequency_hz,
+            self.outer_sound_speed_m_s,
+            self.outer_density_kg_m3,
+            self.wall_thickness_m,
+            self.wall_sound_speed_m_s,
+            self.wall_density_kg_m3,
+            self.inner_sound_speed_m_s,
+            self.inner_density_kg_m3,
+        )
+        if any(value <= 0.0 for value in positive_values):
+            raise ValueError("Wall and medium properties must be positive.")
+        if self.wall_offset_m < 0.0:
+            raise ValueError("Wall offset must be non-negative.")
+
+
 def unit_vector(value):
     value = np.asarray(value, dtype=float)
     norm = np.linalg.norm(value)
@@ -163,23 +194,175 @@ def angular_spectrum_transfer(aperture, wavelength_m, distance_m, target_extent_
     return transfer
 
 
-def propagate_aperture(aperture_field, aperture, wavelength_m, distance_m, target_extent_m):
-    transfer = angular_spectrum_transfer(
-        aperture,
-        wavelength_m=wavelength_m,
-        distance_m=distance_m,
-        target_extent_m=target_extent_m,
+def _axial_wavenumber(wavenumber, transverse_wavenumber_sq):
+    return np.sqrt((wavenumber + 0.0j) ** 2 - transverse_wavenumber_sq)
+
+
+def _normal_impedance(density_kg_m3, omega_rad_s, axial_wavenumber):
+    safe_kz = np.where(
+        np.abs(axial_wavenumber) > 1e-12,
+        axial_wavenumber,
+        1e-12 + 0.0j,
     )
+    return density_kg_m3 * omega_rad_s / safe_kz
+
+
+def layered_angular_spectrum_transfer(
+    aperture,
+    distance_m,
+    target_extent_m,
+    wall_model,
+):
+    """Transfer through an outer fluid, acrylic wall, and inner fluid.
+
+    Transverse wavenumber is conserved at both parallel interfaces. Pressure
+    transmission includes angle-dependent normal impedance and the coherent
+    multiple reflections inside the wall slab.
+    """
+
+    key = (
+        "planar_wall",
+        round(float(distance_m), 12),
+        round(float(target_extent_m), 12),
+        wall_model,
+    )
+    if key in aperture.transfer_cache:
+        return aperture.transfer_cache[key]
+
+    n = aperture.n_side
+    omega = 2.0 * np.pi * wall_model.frequency_hz
+    k_outer = omega / wall_model.outer_sound_speed_m_s
+    k_wall = omega / wall_model.wall_sound_speed_m_s
+    k_inner = omega / wall_model.inner_sound_speed_m_s
+    ku = 2.0 * np.pi * fftfreq(n, d=aperture.dx)
+    kv = 2.0 * np.pi * fftfreq(n, d=aperture.dx)
+    kuv, kvv = np.meshgrid(ku, kv, indexing="xy")
+    k_perp2 = kuv**2 + kvv**2
+
+    target_half_depth_m = max(abs(distance_m), aperture.dx)
+    cutoff = k_outer / np.sqrt(
+        1.0 + 4.0 * target_half_depth_m**2
+        / (target_extent_m + aperture.width_m) ** 2
+    )
+    valid = k_perp2 <= cutoff**2
+    kz_outer = _axial_wavenumber(k_outer, k_perp2)
+    kz_wall = _axial_wavenumber(k_wall, k_perp2)
+    kz_inner = _axial_wavenumber(k_inner, k_perp2)
+
+    z_outer = _normal_impedance(
+        wall_model.outer_density_kg_m3,
+        omega,
+        kz_outer,
+    )
+    z_wall = _normal_impedance(
+        wall_model.wall_density_kg_m3,
+        omega,
+        kz_wall,
+    )
+    z_inner = _normal_impedance(
+        wall_model.inner_density_kg_m3,
+        omega,
+        kz_inner,
+    )
+    t_outer_wall = 2.0 * z_wall / (z_outer + z_wall)
+    t_wall_inner = 2.0 * z_inner / (z_wall + z_inner)
+    r_wall_outer = (z_outer - z_wall) / (z_outer + z_wall)
+    r_wall_inner = (z_inner - z_wall) / (z_inner + z_wall)
+    wall_phase = np.exp(1j * kz_wall * wall_model.wall_thickness_m)
+    slab_denominator = 1.0 - r_wall_outer * r_wall_inner * wall_phase**2
+    forward_wall_amplitude = t_outer_wall / slab_denominator
+    effective_reflection = (
+        forward_wall_amplitude * (1.0 + r_wall_inner * wall_phase**2) - 1.0
+    )
+
+    transfer = np.zeros((n, n), dtype=np.complex128)
+    if distance_m <= wall_model.wall_offset_m:
+        incident = np.exp(1j * kz_outer * distance_m)
+        reflected = effective_reflection * np.exp(
+            1j * kz_outer * (2.0 * wall_model.wall_offset_m - distance_m)
+        )
+        transfer[valid] = (incident + reflected)[valid]
+    elif distance_m <= wall_model.wall_offset_m + wall_model.wall_thickness_m:
+        distance_in_wall_m = distance_m - wall_model.wall_offset_m
+        field_in_wall = forward_wall_amplitude * (
+            np.exp(1j * kz_wall * distance_in_wall_m)
+            + r_wall_inner
+            * np.exp(
+                1j
+                * kz_wall
+                * (2.0 * wall_model.wall_thickness_m - distance_in_wall_m)
+            )
+        )
+        transfer[valid] = (
+            np.exp(1j * kz_outer[valid] * wall_model.wall_offset_m)
+            * field_in_wall[valid]
+        )
+    else:
+        slab_transmission = (
+            forward_wall_amplitude * t_wall_inner * wall_phase
+        )
+        distance_in_inner_m = (
+            distance_m
+            - wall_model.wall_offset_m
+            - wall_model.wall_thickness_m
+        )
+        transfer[valid] = (
+            np.exp(1j * kz_outer[valid] * wall_model.wall_offset_m)
+            * slab_transmission[valid]
+            * np.exp(1j * kz_inner[valid] * distance_in_inner_m)
+        )
+
+    aperture.transfer_cache[key] = transfer
+    return transfer
+
+
+def propagate_aperture(
+    aperture_field,
+    aperture,
+    wavelength_m,
+    distance_m,
+    target_extent_m,
+    propagation_model=None,
+):
+    if propagation_model is None:
+        transfer = angular_spectrum_transfer(
+            aperture,
+            wavelength_m=wavelength_m,
+            distance_m=distance_m,
+            target_extent_m=target_extent_m,
+        )
+    else:
+        transfer = layered_angular_spectrum_transfer(
+            aperture,
+            distance_m=distance_m,
+            target_extent_m=target_extent_m,
+            wall_model=propagation_model,
+        )
     return ifft2(fft2(aperture_field) * transfer)
 
 
-def adjoint_propagate(field_grad, aperture, wavelength_m, distance_m, target_extent_m):
-    transfer = angular_spectrum_transfer(
-        aperture,
-        wavelength_m=wavelength_m,
-        distance_m=distance_m,
-        target_extent_m=target_extent_m,
-    )
+def adjoint_propagate(
+    field_grad,
+    aperture,
+    wavelength_m,
+    distance_m,
+    target_extent_m,
+    propagation_model=None,
+):
+    if propagation_model is None:
+        transfer = angular_spectrum_transfer(
+            aperture,
+            wavelength_m=wavelength_m,
+            distance_m=distance_m,
+            target_extent_m=target_extent_m,
+        )
+    else:
+        transfer = layered_angular_spectrum_transfer(
+            aperture,
+            distance_m=distance_m,
+            target_extent_m=target_extent_m,
+            wall_model=propagation_model,
+        )
     return ifft2(fft2(field_grad) * np.conj(transfer))
 
 
@@ -253,9 +436,18 @@ def forward_pressure(
     wavelength_m,
     target_extent_m,
     distance_bin_m=None,
+    propagation_models=None,
 ):
+    if propagation_models is None:
+        propagation_models = [None] * len(apertures)
+    if len(propagation_models) != len(apertures):
+        raise ValueError("Provide one propagation model per aperture.")
     pressure = np.zeros(points_m.shape[0], dtype=np.complex128)
-    for aperture, aperture_field in zip(apertures, aperture_fields):
+    for aperture, aperture_field, propagation_model in zip(
+        apertures,
+        aperture_fields,
+        propagation_models,
+    ):
         u, v, s = point_local_coordinates(points_m, aperture.plane)
         forward = s > 0
         for distance, slice_mask in distance_groups(s, forward, distance_bin_m):
@@ -265,6 +457,7 @@ def forward_pressure(
                 wavelength_m,
                 float(distance),
                 target_extent_m,
+                propagation_model=propagation_model,
             )
             values, *_ = bilinear_sample(
                 propagated,
@@ -287,7 +480,12 @@ def amplitude_loss_and_gradient(
     wavelength_m,
     target_extent_m,
     distance_bin_m=None,
+    propagation_models=None,
 ):
+    if propagation_models is None:
+        propagation_models = [None] * len(apertures)
+    if len(propagation_models) != len(apertures):
+        raise ValueError("Provide one propagation model per aperture.")
     eps = 1e-12
     amp = np.abs(pressure)
     residual = amp / pressure_scale - desired_amp
@@ -301,7 +499,7 @@ def amplitude_loss_and_gradient(
     )
 
     aperture_grads = []
-    for aperture in apertures:
+    for aperture, propagation_model in zip(apertures, propagation_models):
         grad_aperture = np.zeros(aperture.shape, dtype=np.complex128)
         u, v, s = point_local_coordinates(points_m, aperture.plane)
         forward = s > 0
@@ -327,6 +525,7 @@ def amplitude_loss_and_gradient(
                 wavelength_m,
                 float(distance),
                 target_extent_m,
+                propagation_model=propagation_model,
             )
         aperture_grads.append(grad_aperture)
 
@@ -343,9 +542,14 @@ def initialize_from_focus_points(
     wavelength_m,
     target_extent_m,
     distance_bin_m=None,
+    propagation_models=None,
 ):
+    if propagation_models is None:
+        propagation_models = [None] * len(apertures)
+    if len(propagation_models) != len(apertures):
+        raise ValueError("Provide one propagation model per aperture.")
     aperture_fields = []
-    for aperture in apertures:
+    for aperture, propagation_model in zip(apertures, propagation_models):
         seed_field = np.zeros(aperture.shape, dtype=np.complex128)
         u, v, s = point_local_coordinates(np.asarray(focus_points_m), aperture.plane)
         for distance, point_mask in distance_groups(s, s > 0, distance_bin_m):
@@ -371,6 +575,7 @@ def initialize_from_focus_points(
                 wavelength_m,
                 float(distance),
                 target_extent_m,
+                propagation_model=propagation_model,
             )
         if np.max(np.abs(seed_field)) < 1e-12:
             seed_field = np.ones(aperture.shape, dtype=np.complex128)
@@ -424,6 +629,7 @@ def evaluate_amplitude_loss(
     wavelength_m,
     target_extent_m,
     distance_bin_m=None,
+    propagation_models=None,
 ):
     pressure = forward_pressure(
         points_m,
@@ -432,6 +638,7 @@ def evaluate_amplitude_loss(
         wavelength_m,
         target_extent_m,
         distance_bin_m=distance_bin_m,
+        propagation_models=propagation_models,
     )
     amp = np.abs(pressure)
     residual = amp / pressure_scale - desired_amp
@@ -456,6 +663,7 @@ def optimize_projected_phase(
     seed=5,
     initial_aperture_fields=None,
     distance_bin_m=None,
+    propagation_models=None,
 ):
     if initial_aperture_fields is None:
         rng = np.random.default_rng(seed)
@@ -476,6 +684,7 @@ def optimize_projected_phase(
             wavelength_m,
             target_extent_m,
             distance_bin_m=distance_bin_m,
+            propagation_models=propagation_models,
         )
         loss, amp, aperture_grads = amplitude_loss_and_gradient(
             points_m,
@@ -488,6 +697,7 @@ def optimize_projected_phase(
             wavelength_m,
             target_extent_m,
             distance_bin_m=distance_bin_m,
+            propagation_models=propagation_models,
         )
         grad_norm_sq = float(
             sum(np.vdot(grad, grad).real for grad in aperture_grads)
@@ -511,6 +721,7 @@ def optimize_projected_phase(
                 wavelength_m,
                 target_extent_m,
                 distance_bin_m=distance_bin_m,
+                propagation_models=propagation_models,
             )
             if candidate_loss <= loss - sigma * local_step * grad_norm_sq / 2.0:
                 break
@@ -549,7 +760,18 @@ def optimize_phase_adam(
     seed=5,
     initial_aperture_fields=None,
     distance_bin_m=None,
+    aperture_masks=None,
+    propagation_models=None,
 ):
+    if aperture_masks is None:
+        aperture_masks = [np.ones(aperture.shape, dtype=bool) for aperture in apertures]
+    if len(aperture_masks) != len(apertures):
+        raise ValueError("Provide one aperture mask per aperture.")
+    aperture_masks = [np.asarray(mask, dtype=bool) for mask in aperture_masks]
+    for aperture, mask in zip(apertures, aperture_masks):
+        if mask.shape != aperture.shape:
+            raise ValueError("Each aperture mask must match its aperture shape.")
+
     if initial_aperture_fields is None:
         rng = np.random.default_rng(seed)
         phases = [
@@ -567,7 +789,10 @@ def optimize_phase_adam(
     history = {"loss": [], "target_mean": [], "background_mean": []}
 
     for iteration in range(1, n_iter + 1):
-        aperture_fields = [np.exp(1j * phase) for phase in phases]
+        aperture_fields = [
+            np.exp(1j * phase) * mask
+            for phase, mask in zip(phases, aperture_masks)
+        ]
         pressure = forward_pressure(
             points_m,
             apertures,
@@ -575,6 +800,7 @@ def optimize_phase_adam(
             wavelength_m,
             target_extent_m,
             distance_bin_m=distance_bin_m,
+            propagation_models=propagation_models,
         )
         loss, amp, aperture_grads = amplitude_loss_and_gradient(
             points_m,
@@ -587,6 +813,7 @@ def optimize_phase_adam(
             wavelength_m,
             target_extent_m,
             distance_bin_m=distance_bin_m,
+            propagation_models=propagation_models,
         )
 
         for idx, (phase, field, grad_field) in enumerate(
@@ -611,7 +838,10 @@ def optimize_phase_adam(
                 f"background_mean={history['background_mean'][-1]:.6e}"
             )
 
-    return [np.exp(1j * phase) for phase in phases], history
+    return [
+        np.exp(1j * phase) * mask
+        for phase, mask in zip(phases, aperture_masks)
+    ], history
 
 
 def plot_results(

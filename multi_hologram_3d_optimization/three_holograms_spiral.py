@@ -105,7 +105,7 @@ def main():
 
     # Demand: a helix through [1, 3] x [-1, 1] x [-1, 1] cm.
     spiral_segments_m, spiral_points_m = make_spiral_segments()
-    spiral_tube_radius_m = 0.7e-3
+    spiral_tube_radius_m = 0.5e-3
     target_center_m = spiral_points_m.mean(axis=0)
     distance_bin_m = 0.75e-3
 

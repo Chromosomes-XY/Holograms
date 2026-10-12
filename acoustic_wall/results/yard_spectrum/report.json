@@ -1,0 +1,35 @@
+{
+  "opening_constraint": {
+    "minimum_clear_fraction": 0.75,
+    "central_clear_fraction": 0.75,
+    "total_straight_through_fraction": 0.775,
+    "scope": "Repeating 2D cell; whole-wall frames and posts must also be counted in final design"
+  },
+  "geometry": {
+    "pitch": 0.2,
+    "core_depth": 0.24,
+    "guide_length": 0.068,
+    "central_fraction": 0.75,
+    "wall": 0.004,
+    "rib_thickness": 0.01,
+    "rib_count": 10,
+    "slit_left": 0.002,
+    "slit_right": 0.003,
+    "offset_left": 0.0,
+    "offset_right": 0.0
+  },
+  "status": "incomplete mechanism/convergence validation",
+  "weighted_bandcentre_sum_before": 3.0379907430000004,
+  "weighted_bandcentre_sum_after_screening": 1.6667226790479208,
+  "screening_remaining_fraction": 0.5486266483491785,
+  "screening_reduction_db": 2.6072310130691188,
+  "share_800_to_1250": 0.7144435495733832,
+  "maximum_energy_error": 8.548717289613705e-14,
+  "method": "Band-centre power transmission multiplied by supplied power and supplied A-weighting gain; no bandwidth factor. 1 mm periodic FV sweep, 0.5 mm checks.",
+  "limitations": [
+    "Not band-integrated: narrow resonances may be missed",
+    "No new optimisation; saved 75%-clear candidate, not scaled Figure 3 duct",
+    "Solver and geometry validation incomplete; no outdoor noise-reduction claim",
+    "Two cells across narrowest slit in 1 mm sweep; high-frequency and resonant values require convergence checks"
+  ]
+}

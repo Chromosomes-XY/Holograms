@@ -1,0 +1,74 @@
+{
+  "status": "UNVALIDATED: mesh and method disagreement",
+  "frequency_hz": 1000,
+  "geometry": {
+    "core_mm": 171.5,
+    "guide_each_mm": 68.6,
+    "total_depth_mm": 308.7,
+    "computational_width_mm": 162,
+    "clear_channel_widths_mm": [
+      50,
+      50,
+      50
+    ],
+    "slits_mm": [
+      6.5,
+      4
+    ],
+    "rib_width_mm": 10,
+    "wall_mm": 4,
+    "central_clear_fraction": 0.30864197530864196
+  },
+  "runs": [
+    {
+      "bulk_step_mm": 4,
+      "edge_mm": 0.4,
+      "grid": [
+        271,
+        131
+      ],
+      "fv_T": 0.00577200102262052,
+      "fem_T": 0.00714200718122713
+    },
+    {
+      "bulk_step_mm": 1.2,
+      "edge_mm": 0.1,
+      "grid": [
+        560,
+        292
+      ],
+      "fv_T": 0.0420471570043818,
+      "fem_T": 0.5612547316857469
+    },
+    {
+      "bulk_step_mm": 0.6,
+      "edge_mm": 0.1,
+      "grid": [
+        760,
+        391
+      ],
+      "fv_T": 0.06209454561807288,
+      "fem_T": 0.9997124606180163
+    }
+  ],
+  "plotted_run": {
+    "bulk_step_mm": 1.2,
+    "edge_mm": 0.1,
+    "grid": [
+      560,
+      292
+    ],
+    "fv_T": 0.0420471570043818,
+    "fem_T": 0.5612547316857469
+  },
+  "max_pressure_amplitude": {
+    "fv": 14.946140600081012,
+    "fem": 51.90063636108489
+  },
+  "limitations": [
+    "Rigid lossless 2D duct, normal incidence",
+    "Published dimensions scaled by two; rib placement inferred",
+    "No optimisation; does not meet 75% clear-view target",
+    "No validated attenuation figure from these runs"
+  ]
+}

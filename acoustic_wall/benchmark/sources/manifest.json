@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "file": "paper.xml",
+      "sha256": "7d657aa76823035120a6adc8657e7d2a44167ad2576865c309576500a02baf98",
+      "bytes": 131845
+    },
+    {
+      "file": "paper.pdf",
+      "sha256": "82e480a079411f420c542cb6d468e7545450b192647986b7ac5fb2440b2c63ed",
+      "bytes": 10027903
+    },
+    {
+      "file": "supplement.pdf",
+      "sha256": "3e8a9826e217b18779b1b23b561c14b7fd0cc1274f31764e206ee55d209b25ab",
+      "bytes": 1378504
+    },
+    {
+      "file": "user_figure5.png",
+      "sha256": "0640b651f27b93bc189f5512be7f6fc94f99a3aa20ddcd2f02f139458d59c09d",
+      "bytes": 1602950
+    }
+  ],
+  "article_url": "https://www.nature.com/articles/s41598-025-04885-6",
+  "xml_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12214616/fullTextXML",
+  "supplement_archive_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12214616/supplementaryFiles",
+  "note": "Figure 5 image supplied by user. PDFs retained as read-only source material; figures in the report are new numerical plots."
+}

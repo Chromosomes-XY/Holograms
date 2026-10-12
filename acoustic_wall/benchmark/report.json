@@ -1,0 +1,232 @@
+{
+  "extra_refinement": [
+    {
+      "openness": 0.73,
+      "corner_step_m": 6.25e-06,
+      "T": 0.18732561883258317
+    }
+  ],
+  "status": "Paper reproduction NOT established",
+  "cases": [
+    {
+      "openness": 0.4,
+      "T_2000": 0.004406095833910734,
+      "TL_2000_db": 23.559460610468076,
+      "final_target_file": "o0.40_inclusive_centred_rigid_h0.2_corner0.0125_f2000.json",
+      "spectrum_rmse": 0.12038230976254567,
+      "compared_frequency_count": 23,
+      "curve_file_count": 31,
+      "paper_target_claim_T_below": 0.1,
+      "target_claim_reproduced": true,
+      "central_clear_fraction": 0.3733333333333333
+    },
+    {
+      "openness": 0.47,
+      "T_2000": 1.6895585999314175e-06,
+      "TL_2000_db": 57.72226740742884,
+      "final_target_file": "o0.47_inclusive_centred_rigid_h0.2_corner0.0125_f2000.json",
+      "spectrum_rmse": 0.15589782599837054,
+      "compared_frequency_count": 27,
+      "curve_file_count": 31,
+      "paper_target_claim_T_below": 0.1,
+      "target_claim_reproduced": true,
+      "central_clear_fraction": 0.43999999999999995
+    },
+    {
+      "openness": 0.53,
+      "T_2000": 0.08552364415118612,
+      "TL_2000_db": 10.679138021744778,
+      "final_target_file": "o0.53_inclusive_centred_rigid_h0.2_corner0.0125_f2000.json",
+      "spectrum_rmse": 0.23598562216471888,
+      "compared_frequency_count": 24,
+      "curve_file_count": 31,
+      "paper_target_claim_T_below": 0.1,
+      "target_claim_reproduced": true,
+      "central_clear_fraction": 0.5066666666666666
+    },
+    {
+      "openness": 0.6,
+      "T_2000": 0.00124253206115551,
+      "TL_2000_db": 29.05692396314325,
+      "final_target_file": "o0.60_inclusive_centred_rigid_h0.2_corner0.0125_f2000.json",
+      "spectrum_rmse": 0.3333507691211341,
+      "compared_frequency_count": 26,
+      "curve_file_count": 31,
+      "paper_target_claim_T_below": 0.1,
+      "target_claim_reproduced": true,
+      "central_clear_fraction": 0.5733333333333334
+    },
+    {
+      "openness": 0.67,
+      "T_2000": 0.102018388330761,
+      "TL_2000_db": 9.913215416613884,
+      "final_target_file": "o0.67_inclusive_centred_rigid_h0.2_corner0.0125_f2000.json",
+      "spectrum_rmse": 0.4697614264950133,
+      "compared_frequency_count": 30,
+      "curve_file_count": 31,
+      "paper_target_claim_T_below": 0.1,
+      "target_claim_reproduced": false,
+      "central_clear_fraction": 0.64
+    },
+    {
+      "openness": 0.73,
+      "T_2000": 0.18732561883258317,
+      "TL_2000_db": 7.274028240301033,
+      "final_target_file": "o0.73_inclusive_centred_rigid_h0.2_corner0.00625_f2000.json",
+      "spectrum_rmse": 0.5488358441962107,
+      "compared_frequency_count": 28,
+      "curve_file_count": 31,
+      "paper_target_claim_T_below": 0.1,
+      "target_claim_reproduced": false,
+      "central_clear_fraction": 0.7066666666666667
+    }
+  ],
+  "convergence": [
+    {
+      "openness": 0.4,
+      "T": [
+        0.003111898421893465,
+        0.0038927044042871505,
+        0.00422024614305856,
+        0.004245397681882899,
+        0.004308450978980486,
+        0.004406095833910734
+      ],
+      "last_change": 9.764485493024815e-05
+    },
+    {
+      "openness": 0.47,
+      "T": [
+        0.0014390504394909216,
+        0.00019439323030327516,
+        1.2928286284725627e-05,
+        1.6480793046445653e-05,
+        1.076824498521302e-06,
+        1.6895585999314175e-06
+      ],
+      "last_change": 6.127341014101156e-07
+    },
+    {
+      "openness": 0.53,
+      "T": [
+        0.13686019785400924,
+        0.10452306477837166,
+        0.09191564815734625,
+        0.09158834871785651,
+        0.08861313517109604,
+        0.08552364415118612
+      ],
+      "last_change": 0.0030894910199099207
+    },
+    {
+      "openness": 0.6,
+      "T": [
+        0.17158643714485258,
+        0.02102930420086808,
+        0.003910102332582483,
+        0.0036530889518105055,
+        0.0022532095183622,
+        0.00124253206115551
+      ],
+      "last_change": 0.0010106774572066898
+    },
+    {
+      "openness": 0.67,
+      "T": [
+        0.028473397331548612,
+        0.07844338656733137,
+        0.09561538691051105,
+        0.09635528136947025,
+        0.09868748927058656,
+        0.102018388330761
+      ],
+      "last_change": 0.003330899060174447
+    },
+    {
+      "openness": 0.73,
+      "T": [
+        0.6584104084473441,
+        0.011481757339858798,
+        0.13465365364709028,
+        0.13571648727640537,
+        0.1691136197296387,
+        0.18421637971963145
+      ],
+      "last_change": 0.015102759989992748
+    }
+  ],
+  "isolated_phase_error_deg": [
+    [
+      8.05517950662454,
+      0.24783487724688655
+    ],
+    [
+      12.194537166645617,
+      0.31893693320946065
+    ],
+    [
+      15.624346987668444,
+      3.6840190635448646
+    ],
+    [
+      23.153981772037298,
+      7.351314648037375
+    ],
+    [
+      34.68717809966197,
+      14.90519158217895
+    ],
+    [
+      54.31631832514515,
+      26.513453716525262
+    ],
+    [
+      78.46387089923462,
+      45.02235085345218
+    ]
+  ],
+  "isolated_amplitude_error": [
+    [
+      0.06424786555083806,
+      0.10987839902583518
+    ],
+    [
+      0.07302213447360362,
+      0.0996164205021155
+    ],
+    [
+      0.09341868700560785,
+      0.06193419603661854
+    ],
+    [
+      0.1127327252132515,
+      0.009592193815299188
+    ],
+    [
+      0.10991397580304774,
+      -0.06928632500824905
+    ],
+    [
+      0.02994785169278602,
+      -0.18691736600460462
+    ],
+    [
+      -0.23496802138597317,
+      -0.3732987600113339
+    ]
+  ],
+  "max_energy_error": 1.24145138613585e-11,
+  "max_linear_residual": 5.887560704076286e-11,
+  "solved_physical_cases": 602,
+  "maximum_field_amplitude": 18.839250353786074,
+  "reference_uncertainty_T": 0.02,
+  "reference_uncertainty_hz": 3,
+  "limitations": [
+    "No author CAD or COMSOL files supplied.",
+    "Width and axial end-placement conventions audited, not fitted to Figure 5.",
+    "Figure 5 lateral boundary is not unambiguously specified by its caption; rigid is the primary reconstruction, periodic is a sensitivity check.",
+    "No thermoviscosity or 3D extrusion; no fabrication validation.",
+    "20 Hz sweep can miss narrow peaks.",
+    "Independent-port model is a documented reconstruction, not an exact author-model reproduction."
+  ]
+}

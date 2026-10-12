@@ -1,0 +1,8 @@
+{
+  "region": "Area-integrated mean-square pressure over x=-4..4 m, z=0.7..3.5 m; not transmitted flux",
+  "coarse_1000_db": 5.376085407668736,
+  "fine_1000_db": 10.958769287980754,
+  "thicker_pml_1000_db": 5.376069047104908,
+  "approximate_whole_spectrum_region_db": 2.1293080157676645,
+  "note": "Fine/coarse differences are numerical sensitivity, not an error bound. Frequency bands are represented at their centres only."
+}

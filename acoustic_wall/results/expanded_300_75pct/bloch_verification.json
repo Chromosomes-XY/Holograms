@@ -1,0 +1,22 @@
+{
+  "normal_agreement_error": 2.0261570199409107e-15,
+  "uniform_axial_empty": {
+    "frequency_hz": 1250,
+    "angle_deg": 30,
+    "T": 1.0000000000000004,
+    "R": 5.516570029923354e-28,
+    "energy_error": 4.440892098500626e-16,
+    "residual": 9.624168741845268e-14,
+    "incident_mode_index": 1
+  },
+  "obstacle": {
+    "frequency_hz": 1000,
+    "angle_deg": 30,
+    "T": 0.09433348936790359,
+    "R": 0.9056665106320965,
+    "energy_error": 0.0,
+    "residual": 9.011418511009385e-14,
+    "incident_mode_index": 0
+  },
+  "mirror_angle_reversal_error": 1.1267375921164557e-13
+}

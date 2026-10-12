@@ -1,0 +1,363 @@
+{
+  "design": "/Users/Edward/Documents/GitHub/Holograms/acoustic_wall/results/expanded_300_75pct/report.json",
+  "angle_definition": "Horizontal incidence from the wall normal; both signs tested because cavity arrangement is asymmetric.",
+  "geometry": [
+    {
+      "name": "L1",
+      "side": "left",
+      "length": 88.3,
+      "width": 30.2,
+      "mouth": 37.2,
+      "start": 44.9
+    },
+    {
+      "name": "R1",
+      "side": "right",
+      "length": 83.0,
+      "width": 20.3,
+      "mouth": 34.2,
+      "start": 69.7
+    },
+    {
+      "name": "L2",
+      "side": "left",
+      "length": 75.6,
+      "width": 18.5,
+      "mouth": 36.8,
+      "start": 249.5
+    },
+    {
+      "name": "R2",
+      "side": "right",
+      "length": 78.3,
+      "width": 23.2,
+      "mouth": 35.5,
+      "start": 271.9
+    }
+  ],
+  "clear_fraction": 0.75,
+  "pitch_mm": 300,
+  "depth_mm": 360.2,
+  "summaries": [
+    {
+      "angle_deg": -60,
+      "weighted_mean_T": 0.2750731506020746,
+      "points": [
+        {
+          "frequency_hz": 800.0,
+          "angle_deg": -60,
+          "T": 0.49947723162340896,
+          "R": 0.5005227683765955,
+          "energy_error": 4.440892098500626e-15,
+          "residual": 4.574213997078636e-13,
+          "incident_mode_index": 1,
+          "mesh_m": 0.0015
+        },
+        {
+          "frequency_hz": 1000.0,
+          "angle_deg": -60,
+          "T": 0.13917519306794912,
+          "R": 0.8608248069320581,
+          "energy_error": 7.105427357601002e-15,
+          "residual": 3.2614643836934107e-13,
+          "incident_mode_index": 1,
+          "mesh_m": 0.0015
+        },
+        {
+          "frequency_hz": 1250.0,
+          "angle_deg": -60,
+          "T": 0.2467172130205082,
+          "R": 0.7532827869794898,
+          "energy_error": 1.9984014443252818e-15,
+          "residual": 3.4360797779685974e-13,
+          "incident_mode_index": 1,
+          "mesh_m": 0.0015
+        }
+      ]
+    },
+    {
+      "angle_deg": -30,
+      "weighted_mean_T": 0.35173126754541323,
+      "points": [
+        {
+          "frequency_hz": 800,
+          "angle_deg": -30,
+          "T": 0.7781262121322304,
+          "R": 0.22187378786776457,
+          "energy_error": 4.9960036108132044e-15,
+          "residual": 3.7234634086039996e-13,
+          "incident_mode_index": 0,
+          "mesh_m": 0.0015
+        },
+        {
+          "frequency_hz": 1000,
+          "angle_deg": -30,
+          "T": 0.15759393719517573,
+          "R": 0.8424060628048261,
+          "energy_error": 1.7763568394002505e-15,
+          "residual": 2.368307604456987e-13,
+          "incident_mode_index": 0,
+          "mesh_m": 0.0015
+        },
+        {
+          "frequency_hz": 1250,
+          "angle_deg": -30,
+          "T": 0.1158800953307944,
+          "R": 0.8841199046692048,
+          "energy_error": 8.881784197001252e-16,
+          "residual": 2.683613547993004e-13,
+          "incident_mode_index": 1,
+          "mesh_m": 0.0015
+        }
+      ]
+    },
+    {
+      "angle_deg": 0,
+      "weighted_mean_T": 0.4005687228761028,
+      "points": [
+        {
+          "frequency_hz": 800,
+          "angle_deg": 0,
+          "T": 0.8083842521177736,
+          "R": 0.191615747882225,
+          "energy_error": 1.3322676295501878e-15,
+          "residual": 3.109539585857413e-13,
+          "incident_mode_index": 0,
+          "mesh_m": 0.0015
+        },
+        {
+          "frequency_hz": 1000,
+          "angle_deg": 0,
+          "T": 0.1320371511334167,
+          "R": 0.8679628488665795,
+          "energy_error": 3.774758283725532e-15,
+          "residual": 2.4050541024782577e-13,
+          "incident_mode_index": 0,
+          "mesh_m": 0.0015
+        },
+        {
+          "frequency_hz": 1250,
+          "angle_deg": 0,
+          "T": 0.22583501057783098,
+          "R": 0.7741649894221678,
+          "energy_error": 1.2212453270876722e-15,
+          "residual": 2.153233632634362e-13,
+          "incident_mode_index": 0,
+          "mesh_m": 0.0015
+        }
+      ]
+    },
+    {
+      "angle_deg": 30,
+      "weighted_mean_T": 0.30679586373233564,
+      "points": [
+        {
+          "frequency_hz": 800,
+          "angle_deg": 30,
+          "T": 0.7616904524154433,
+          "R": 0.2383095475845531,
+          "energy_error": 3.552713678800501e-15,
+          "residual": 3.5134581229291083e-13,
+          "incident_mode_index": 0,
+          "mesh_m": 0.0015
+        },
+        {
+          "frequency_hz": 1000,
+          "angle_deg": 30,
+          "T": 0.19812323826565384,
+          "R": 0.8018767617343446,
+          "energy_error": 1.5543122344752192e-15,
+          "residual": 2.941753490775939e-13,
+          "incident_mode_index": 0,
+          "mesh_m": 0.0015
+        },
+        {
+          "frequency_hz": 1250,
+          "angle_deg": 30,
+          "T": 0.05557419852748778,
+          "R": 0.9444258014725111,
+          "energy_error": 1.1102230246251565e-15,
+          "residual": 2.296916898295984e-13,
+          "incident_mode_index": 1,
+          "mesh_m": 0.0015
+        }
+      ]
+    },
+    {
+      "angle_deg": 60,
+      "weighted_mean_T": 0.22528959470494858,
+      "points": [
+        {
+          "frequency_hz": 800.0,
+          "angle_deg": 60,
+          "T": 0.47965933947320294,
+          "R": 0.5203406605268054,
+          "energy_error": 8.43769498715119e-15,
+          "residual": 4.1309707006449824e-13,
+          "incident_mode_index": 1,
+          "mesh_m": 0.0015
+        },
+        {
+          "frequency_hz": 1000.0,
+          "angle_deg": 60,
+          "T": 0.1674031501514258,
+          "R": 0.8325968498485805,
+          "energy_error": 6.217248937900877e-15,
+          "residual": 4.079540677982688e-13,
+          "incident_mode_index": 1,
+          "mesh_m": 0.0015
+        },
+        {
+          "frequency_hz": 1250.0,
+          "angle_deg": 60,
+          "T": 0.12804659007370858,
+          "R": 0.8719534099262923,
+          "energy_error": 8.881784197001252e-16,
+          "residual": 3.0522231665517864e-13,
+          "incident_mode_index": 1,
+          "mesh_m": 0.0015
+        }
+      ]
+    }
+  ],
+  "fine_checks": [
+    {
+      "frequency_hz": 800.0,
+      "angle_deg": -60,
+      "T": 0.5020903940399966,
+      "R": 0.49790960596001205,
+      "energy_error": 8.659739592076221e-15,
+      "residual": 1.3091086245189867e-12,
+      "incident_mode_index": 1,
+      "mesh_m": 0.00075
+    },
+    {
+      "frequency_hz": 1000.0,
+      "angle_deg": -60,
+      "T": 0.13689281036681855,
+      "R": 0.8631071896331762,
+      "energy_error": 5.218048215738236e-15,
+      "residual": 9.482593494840864e-13,
+      "incident_mode_index": 1,
+      "mesh_m": 0.00075
+    },
+    {
+      "frequency_hz": 1250.0,
+      "angle_deg": -60,
+      "T": 0.24982188890324825,
+      "R": 0.7501781110967555,
+      "energy_error": 3.774758283725532e-15,
+      "residual": 9.773106039920649e-13,
+      "incident_mode_index": 1,
+      "mesh_m": 0.00075
+    },
+    {
+      "frequency_hz": 800.0,
+      "angle_deg": -30,
+      "T": 0.778284208965593,
+      "R": 0.22171579103440242,
+      "energy_error": 4.551914400963142e-15,
+      "residual": 1.059509749050302e-12,
+      "incident_mode_index": 0,
+      "mesh_m": 0.00075
+    },
+    {
+      "frequency_hz": 1000.0,
+      "angle_deg": -30,
+      "T": 0.16336015867766843,
+      "R": 0.8366398413223326,
+      "energy_error": 1.1102230246251565e-15,
+      "residual": 6.831035279788513e-13,
+      "incident_mode_index": 0,
+      "mesh_m": 0.00075
+    },
+    {
+      "frequency_hz": 1250.0,
+      "angle_deg": -30,
+      "T": 0.12428514416220343,
+      "R": 0.8757148558377935,
+      "energy_error": 3.1086244689504383e-15,
+      "residual": 7.61050117384775e-13,
+      "incident_mode_index": 1,
+      "mesh_m": 0.00075
+    },
+    {
+      "frequency_hz": 800.0,
+      "angle_deg": 30,
+      "T": 0.7621432322484856,
+      "R": 0.23785676775150935,
+      "energy_error": 5.10702591327572e-15,
+      "residual": 1.0038349702102343e-12,
+      "incident_mode_index": 0,
+      "mesh_m": 0.00075
+    },
+    {
+      "frequency_hz": 1000.0,
+      "angle_deg": 30,
+      "T": 0.2040656475994224,
+      "R": 0.795934352400582,
+      "energy_error": 4.440892098500626e-15,
+      "residual": 8.508196411106405e-13,
+      "incident_mode_index": 0,
+      "mesh_m": 0.00075
+    },
+    {
+      "frequency_hz": 1250.0,
+      "angle_deg": 30,
+      "T": 0.050398853835578045,
+      "R": 0.9496011461644212,
+      "energy_error": 7.771561172376096e-16,
+      "residual": 6.539235514423208e-13,
+      "incident_mode_index": 1,
+      "mesh_m": 0.00075
+    },
+    {
+      "frequency_hz": 800.0,
+      "angle_deg": 60,
+      "T": 0.48269119165479324,
+      "R": 0.517308808345219,
+      "energy_error": 1.2212453270876722e-14,
+      "residual": 1.1908787574609457e-12,
+      "incident_mode_index": 1,
+      "mesh_m": 0.00075
+    },
+    {
+      "frequency_hz": 1000.0,
+      "angle_deg": 60,
+      "T": 0.1651925656434084,
+      "R": 0.8348074343565771,
+      "energy_error": 1.4432899320127035e-14,
+      "residual": 1.1767973369789403e-12,
+      "incident_mode_index": 1,
+      "mesh_m": 0.00075
+    },
+    {
+      "frequency_hz": 1250.0,
+      "angle_deg": 60,
+      "T": 0.12067024657071689,
+      "R": 0.8793297534292808,
+      "energy_error": 2.3314683517128287e-15,
+      "residual": 8.62138164425506e-13,
+      "incident_mode_index": 1,
+      "mesh_m": 0.00075
+    }
+  ],
+  "max_energy_error": 1.6542323066914832e-14,
+  "empty_60deg": {
+    "frequency_hz": 1250,
+    "angle_deg": 60,
+    "T": 0.9999999999999991,
+    "R": 7.754809688313304e-26,
+    "energy_error": 8.881784197001252e-16,
+    "residual": 1.8875386044901803e-13,
+    "incident_mode_index": 1
+  },
+  "mirror_60deg_error": 9.50350909079134e-14,
+  "limits": [
+    "Fixed design; no angular reoptimisation",
+    "Normalised by incident power flux normal to wall; sums all transmitted propagating orders",
+    "1.5 mm full sweep, 0.75 mm spot checks; 25 Hz sampling may miss narrow resonances",
+    "Rigid lossless periodic 2D array; no screens, finite wall, ground or elevation-angle effects",
+    "Weighted mean uses the same interpolated spectral envelope at every angle; not total measured A-weighted noise reduction"
+  ]
+}

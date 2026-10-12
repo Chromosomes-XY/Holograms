@@ -1,0 +1,152 @@
+{
+  "comparison": "All cavity voids filled with rigid material; same external slat envelope, 75% opening, grids, depth, source, boundary treatment, and spectral assumptions",
+  "clear_fraction": 0.7499999999999999,
+  "width_m": 9.9,
+  "depth_m": 0.3734,
+  "source_x_m": 0,
+  "source_z_m": -3,
+  "receiver_region": "x=-4..4 m, z=0.7..3.5 m; area-integrated mean-square pressure, not transmitted flux",
+  "filled_insertion_loss_db": -0.3300127180678885,
+  "cavity_insertion_loss_db": 2.129052234738059,
+  "cavity_advantage_db": 2.4590649528059476,
+  "bands": [
+    {
+      "frequency": 25.0,
+      "no_wall": 4.822720680511159,
+      "filled": 5.0443723463377586,
+      "cavities": 5.063171871085045,
+      "cavity_advantage_db": -0.016155337239927018
+    },
+    {
+      "frequency": 31.5,
+      "no_wall": 4.654728027120542,
+      "filled": 4.903059448075352,
+      "cavities": 4.919767809374674,
+      "cavity_advantage_db": -0.014774475661750344
+    },
+    {
+      "frequency": 40.0,
+      "no_wall": 4.511738608501096,
+      "filled": 4.696432513467031,
+      "cavities": 4.7180093456898895,
+      "cavity_advantage_db": -0.019907108076875936
+    },
+    {
+      "frequency": 50.0,
+      "no_wall": 4.404226702147315,
+      "filled": 4.545960741675071,
+      "cavities": 4.579116344820967,
+      "cavity_advantage_db": -0.03155997197854158
+    },
+    {
+      "frequency": 63.0,
+      "no_wall": 4.316925655655559,
+      "filled": 4.551952834729605,
+      "cavities": 4.585065686739402,
+      "cavity_advantage_db": -0.03147808408532528
+    },
+    {
+      "frequency": 80.0,
+      "no_wall": 4.247733746833124,
+      "filled": 4.396290180851022,
+      "cavities": 4.4336402878283,
+      "cavity_advantage_db": -0.03674104153210378
+    },
+    {
+      "frequency": 100.0,
+      "no_wall": 4.1997601388145105,
+      "filled": 4.370849675946778,
+      "cavities": 4.419614428432491,
+      "cavity_advantage_db": -0.04818512405562403
+    },
+    {
+      "frequency": 125.0,
+      "no_wall": 4.164079927620519,
+      "filled": 4.259815877970084,
+      "cavities": 4.32992704460264,
+      "cavity_advantage_db": -0.07089750944331666
+    },
+    {
+      "frequency": 160.0,
+      "no_wall": 4.136306754202034,
+      "filled": 4.211057603780925,
+      "cavities": 4.291569470369163,
+      "cavity_advantage_db": -0.08224964869532342
+    },
+    {
+      "frequency": 200.0,
+      "no_wall": 4.118258389341052,
+      "filled": 4.176841841470167,
+      "cavities": 4.268001420420207,
+      "cavity_advantage_db": -0.09376524523691243
+    },
+    {
+      "frequency": 250.0,
+      "no_wall": 4.10465364999511,
+      "filled": 4.198748311001189,
+      "cavities": 4.274801096439179,
+      "cavity_advantage_db": -0.07796069960759097
+    },
+    {
+      "frequency": 315.0,
+      "no_wall": 4.093241252590515,
+      "filled": 4.2592809254977295,
+      "cavities": 4.295930717314701,
+      "cavity_advantage_db": -0.03720983274895318
+    },
+    {
+      "frequency": 400.0,
+      "no_wall": 4.081229401236738,
+      "filled": 4.287035780282716,
+      "cavities": 4.255429448307958,
+      "cavity_advantage_db": 0.032137135682277614
+    },
+    {
+      "frequency": 500.0,
+      "no_wall": 4.070229942228241,
+      "filled": 4.083351324054334,
+      "cavities": 4.158036016510147,
+      "cavity_advantage_db": -0.07871499398232212
+    },
+    {
+      "frequency": 630.0,
+      "no_wall": 4.133895359863346,
+      "filled": 4.434961348003183,
+      "cavities": 4.7610162289560725,
+      "cavity_advantage_db": -0.30809822684259197
+    },
+    {
+      "frequency": 800.0,
+      "no_wall": 4.146388124628705,
+      "filled": 5.097702305911087,
+      "cavities": 3.277479643654776,
+      "cavity_advantage_db": 1.9183446709679386
+    },
+    {
+      "frequency": 1000.0,
+      "no_wall": 4.162576159490334,
+      "filled": 4.828377851607862,
+      "cavities": 0.3338124067743005,
+      "cavity_advantage_db": 11.602987750651074
+    },
+    {
+      "frequency": 1250.0,
+      "no_wall": 4.189952429374365,
+      "filled": 3.776117018660938,
+      "cavities": 3.0016156235796827,
+      "cavity_advantage_db": 0.9969036701961742
+    },
+    {
+      "frequency": 1600.0,
+      "no_wall": 4.242975875718375,
+      "filled": 3.449088241125401,
+      "cavities": 3.938267043421474,
+      "cavity_advantage_db": -0.5760085569943442
+    }
+  ],
+  "limitations": [
+    "Horizontal 2D model; no 1.8 m finite-height effects or ground",
+    "Band-centre sampling through 1600 Hz, 94.9% of weighted power; remaining bands added unchanged to both designs",
+    "Five dominant bands use the same finer mesh as the prior cavity simulation; not spatially converged"
+  ]
+}

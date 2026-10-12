@@ -1,0 +1,112 @@
+{
+  "model": "lossless rigid 2D periodic; screening only; not paper-validated",
+  "geometry": {
+    "pitch": 0.162,
+    "core_depth": 0.1715,
+    "guide_length": 0.0686,
+    "central_fraction": 0.30864197530864196,
+    "wall": 0.004,
+    "rib_thickness": 0.01,
+    "rib_count": 10,
+    "slit_left": 0.004,
+    "slit_right": 0.0065
+  },
+  "initial_geometry": {
+    "pitch": 0.162,
+    "core_depth": 0.1715,
+    "guide_length": 0.0686,
+    "central_fraction": 0.30864197530864196,
+    "wall": 0.004,
+    "rib_thickness": 0.01,
+    "rib_count": 10,
+    "slit_left": 0.004,
+    "slit_right": 0.0065
+  },
+  "mesh": {
+    "dx_m": 0.002,
+    "dz_m": 0.002,
+    "shape": [
+      178,
+      81
+    ],
+    "central_clear_fraction": 0.30864197530864196,
+    "total_line_of_sight_fraction": 0.37037037037037035,
+    "actual_core_depth_m": 0.17200000000000001,
+    "actual_guide_length_m_each": 0.068,
+    "total_structure_depth_m": 0.308,
+    "note": "2D extruded model; top/bottom frames and posts are not included"
+  },
+  "frequencies": [
+    900.0,
+    1000.0,
+    1100.0
+  ],
+  "angles": [
+    0.0
+  ],
+  "baseline": [
+    {
+      "frequency_hz": 900.0,
+      "angle_deg": 0.0,
+      "transmission": 0.34021669228825907,
+      "reflection": 0.6597833077117289,
+      "tl_db": 4.682443821084059,
+      "energy_error": 1.199040866595169e-14,
+      "residual": 2.2430914248691973e-13
+    },
+    {
+      "frequency_hz": 1000.0,
+      "angle_deg": 0.0,
+      "transmission": 0.008273873635438873,
+      "reflection": 0.991726126364568,
+      "tl_db": 20.82291116248179,
+      "energy_error": 6.8833827526759706e-15,
+      "residual": 2.47605202784926e-13
+    },
+    {
+      "frequency_hz": 1100.0,
+      "angle_deg": 0.0,
+      "transmission": 0.08097851833351627,
+      "reflection": 0.9190214816664806,
+      "tl_db": 10.916301737946338,
+      "energy_error": 3.1086244689504383e-15,
+      "residual": 1.3705512162942882e-13
+    }
+  ],
+  "final": [
+    {
+      "frequency_hz": 900.0,
+      "angle_deg": 0.0,
+      "transmission": 0.34021669228825907,
+      "reflection": 0.6597833077117289,
+      "tl_db": 4.682443821084059,
+      "energy_error": 1.199040866595169e-14,
+      "residual": 2.2430914248691973e-13
+    },
+    {
+      "frequency_hz": 1000.0,
+      "angle_deg": 0.0,
+      "transmission": 0.008273873635438873,
+      "reflection": 0.991726126364568,
+      "tl_db": 20.82291116248179,
+      "energy_error": 6.8833827526759706e-15,
+      "residual": 2.47605202784926e-13
+    },
+    {
+      "frequency_hz": 1100.0,
+      "angle_deg": 0.0,
+      "transmission": 0.08097851833351627,
+      "reflection": 0.9190214816664806,
+      "tl_db": 10.916301737946338,
+      "energy_error": 3.1086244689504383e-15,
+      "residual": 1.3705512162942882e-13
+    }
+  ],
+  "baseline_score": 0.20227446067982768,
+  "final_score": 0.20227446067982768,
+  "unique_evaluations": 0,
+  "seed": 7,
+  "elapsed_s": 0.37818954199999993,
+  "objective": "0.7 mean power transmission + 0.3 worst power transmission; equal weights",
+  "measured_spectrum_used": false
+}

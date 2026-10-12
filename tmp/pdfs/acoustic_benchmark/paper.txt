@@ -1,0 +1,560 @@
+Phase gradient ultra open 
+metamaterials for broadband 
+acoustic silencing
+Zhiwei Yang1,2, Ao Chen1,2, Xiaohang Xie1,2, Stephan W. Anderson2,3 & Xin Zhang1,2,4,5,6
+Noise pollution is a persistent environmental concern with severe implications for human health and 
+resources. Acoustic metamaterials offer the potential for thin silencing devices; however, existing 
+designs often lack practical openness and are thereby limited by their functional bandwidths. This 
+paper introduces a novel approach utilizing a phase gradient ultra-open metamaterial (PGUOM) to 
+address these challenges. The PGUOM, characterized by a phase gradient across three unit cells, 
+efficiently transforms incident waves into spoof surface waves, effectively blocking sound while 
+allowing for a high degree of ventilation. Our design provides adjustable openness, accommodates 
+various boundary conditions, and ensures sustained broadband sound insulation. Theoretical, 
+numerical, and experimental validations demonstrate the efficacy of our concept. This innovative 
+approach represents a significant advancement in ventilated acoustic metamaterials, providing both 
+ventilation and high-performance, broadband sound insulation simultaneously.
+Noise pollution remains a pressing environmental concern with well-documented adverse effects on human 
+health, incurring substantial costs for recovery and mitigation1,2. Various noise control strategies have emerged 
+to address this issue, targeting noise sources, propagation, and receivers, with sound insulation and sound 
+absorption representing fundamental approaches 3,4. However, traditional designs often rely on materials 
+much thicker than the wavelength of sound waves to achieve the desired phase shift and wave amplitude for 
+effective attenuation5. Additionally, in real-world applications, maintaining ventilation is essential to the core 
+functionality of systems that require noise management, such as air conditioning systems, fans, or drones6. These 
+limitations call for innovative approaches in the realm of ultrathin ventilated silencer.
+The advent of metamaterials in the electromagnetic field has led to the development of acoustic metamaterials 
+(AMMs), enabling the creation of ultrathin silencing devices with unprecedented sound control capabilities7–9. 
+AMMs achieve sound silencing effects through locally resonant unit cells, including membranes10–12, Fabry-Pérot 
+(FP) resonators13,14, Helmholtz resonators15,16, and space coiling structures 17,18. To accommodate ventilation, 
+acoustic metamaterials incorporating barriers 19–21, windows 22–24, metacages 25,26, and sparse arrays 27–29 have 
+been extensively investigated. However, many existing designs struggle to effectively integrate airflow into the 
+sound attenuation process, resulting in a trade-off between openness and attenuation efficiency. Recently, coiled-
+up structures employing Fano-like destructive interference have shown promise in achieving both excellent 
+ventilation and high sound attenuation30,31. However, these designs often impose stringent conditions for sound 
+attenuation across different frequencies, resulting in a narrow working band.
+Phase gradient metasurfaces have garnered significant attention for their unparalleled wavefront 
+manipulation capabilities, enabling various applications such as anomalous refraction/reflection, focusing, beam 
+steering and holography32–40. Unlike traditional approaches where frequency selection is critical, phased arrays 
+offer flexibility through the determination of phase distribution and controllable phase shift/amplitude of the 
+responding wave field. Integrating the principles of phased arrays with coiled-up structures holds promise for 
+achieving a broadband ventilated sound silencer.
+This paper introduces a phase gradient ultra-open metamaterial (PGUOM), a high-efficiency, broadband, 
+ventilated sound insulator, as shown in Fig. 1. Each super unit cell in the design, composed of three unit cells, 
+forms a phase gradient spanning 2π, facilitating the transformation of incident plane waves into spoof surface 
+waves, effectively blocking sound while enabling a high degree of ventilation. Here, we analyze and demonstrate 
+how phased arrays achieve broadband ventilated sound silencing, implemented as either a rectangular PGUOM 
+1Department of Mechanical Engineering, Boston University, Boston, MA 02215, USA. 2Photonics Center, Boston 
+University, Boston, MA 02215, USA. 3Department of Radiology, Boston University Chobanian & Avedisian School 
+of Medicine, Boston, MA 02118, USA. 4Division of Materials Science & Engineering, Boston University, Boston, 
+MA 02215, USA. 5Department of Electrical & Computer Engineering, Boston University, Boston, MA 02215, USA. 
+6Department of Biomedical Engineering, Boston University, Boston, MA 02215, USA. email: xinz@bu.edu
+OPEN
+Scientific Reports |        (2025) 15:21434 1| https://doi.org/10.1038/s41598-025-04885-6
+www.nature.com/scientificreports
+
+(single super unit cell or multiple super unit cells), or as a cylindrical PGUOM. By selecting the appropriate 
+phase gradient, the openness of the design becomes adjustable. Furthermore, with the aid of length-varying 
+straight barriers and waveguides, we validated our design numerically and experimentally. The proposed design 
+offers a novel approach to ventilated acoustic metamaterials, providing a unique solution that simultaneously 
+achieves effective ventilation and sound insulation.
+Results
+Phase gradient ultra-open metamaterial (PGUOM)
+We begin by demonstrating the effectiveness of the phase gradient design in achieving an ultra-open 
+metamaterial silencer. Considering an incident acoustic plane wave perpendicularly interacting with a super 
+unit cell comprising three individual unit cells, as shown in Fig. 2a, one observes a structure with dimensions of 
+height H, width W, and thickness t. Each unit cell, denoted by width Wi, possesses distinct acoustic properties 
+characterized by the transmission coefficient amplitude Ai and phase shift φi. Acoustic rigid boundaries are 
+employed to separate adjacent unit cells, thus preventing cross-coupling.
+When the amplitudes of each unit cell are close and their phases form a phase gradient, the behavior of the 
+transmission wave follows the generalized Snell’ s Law:
+ sin(θtr )= dφ(x)
+dx
+λtr
+2π = λtr
+W
+φ
+2π  (1)
+where θtr  represents the transmission angles, λtr  denotes the wavelength of the transmission waves, dφ(x)/dx 
+describes the phase distribution function and φ represents the cumulative phase shift of the transmission wave 
+within the super unit cells. If sin(θtr ) exceeds 1, the transmission wave transforms into a spoof surface wave, 
+bounded at the interface, resulting in minimal amplitude41,42. T o achieve this transition, two conditions must be 
+met: first, the phase along a single super unit cell should span 2π, and second, the total length of the super unit 
+cell should be less than λtr .
+Figure 1. Illustration of the phase gradient ultra-open metamaterial (PGUOM) demonstrating simultaneous 
+ventilation and broadband sound ventilation. The PGUOM comprises of five super unit cells, each containing 
+three unit cells with a phase gradient.
+ 
+Scientific Reports |        (2025) 15:21434 2| https://doi.org/10.1038/s41598-025-04885-6
+www.nature.com/scientificreports/
+Figure 2b illustrates a super unit cell consisting of three evenly distributed unit cells, each meeting the 
+required conditions. The black line illustrates the phase gradient used, (dφ(x)/dx=2 π/75( rad/mm)), under 
+a reference frequency of 2000 Hz. The red dots on the figure represent the specific transmission wave phase 
+and locations of each unit cell. According to Eq. ( 1), the value of sin(θtr ) is 2.29 and significantly exceeds 1, 
+Figure 2. Analysis of the PGUOM. (a) Illustration of the PGUOM with evenly distributed unit cells. (b) Phase 
+gradient (black line) and distribution of the three unit cells (red dots) within a super unit cell. (c) Illustration of 
+the PGUOM with unevenly distributed unit cells. (d) Phase gradient (black line) and distribution of the three 
+unit cells (markers) within a super unit cell with different openness levels. (e–i) Pressure field distribution of 
+rectangular PGUOM and cylindrical PGUOM at target frequencies under periodic boundary, PML boundary, 
+hard boundary and soft boundary conditions. (j) Transmittance of the PGUOM under different openness 
+levels at 2000 Hz with phase optimized only (black line) and with both amplitude and phase optimized (red 
+line). (k,l) Pressure filed distribution of the PGUOM under different level of openness at 2000 Hz with phase 
+optimized only and with both amplitude and phase optimized, respectively. (m) The transmittance as a 
+function of amplitude of unit cell 1/3 (A1/A3) and unit cell 2 (A2) at 2000 Hz when the openness is 0.87.
+ 
+Scientific Reports |        (2025) 15:21434 3| https://doi.org/10.1038/s41598-025-04885-6
+www.nature.com/scientificreports/
+indicating that the transmission angle approaches 90◦ and the transmission wave becomes a spoof surface wave. 
+When the unit cells within a super unit cell are unevenly distributed (Fig. 2c), as long as the phase gradient is 
+preserved (Fig. 2d), the incidence wave can still be partially modulated. T o validate our theoretical analysis, 
+we employed COMSOL Multiphysics software to model the effect of phased arrays on the transmission wave. 
+W e designed ports with specific amplitude and phase, obtained the transmission spectrum and pressure field 
+distribution to assess the transmission response of the design. In the simulation, each unit cell is excited by 
+an individual port that provides a predefined amplitude and phase, allowing independent control over the 
+incident wavefront. These ports are configured to operate in isolation, thereby avoiding mutual interference 
+between adjacent unit cells. Perfectly matched layer (PML), periodic boundary, and hard boundary are applied 
+respectively to represent various boundary conditions, details about the simulations can be found in supporting 
+information (Fig. S1).
+In Fig. 2e, we present the simulated pressure field distribution of the transmission wave of a rectangular 
+PGUOM at 2000 Hz with periodic boundary conditions representing ideal phase gradient. The pressure of the 
+incident wave experiences a substantial decrease after passing the design compared to its peak value within the 
+design, indicating a sharp decay of the transmission wave in its initial propagation direction, with most of its 
+energy confined within the design. Additionally, at the interface of the design, the pressure alternates between 
+maximum and minimum values along the lateral direction, further confirming the transmission wave becomes 
+a spoof surface wave, consistent with our analytical results. It’ s worth noting that, according to Eq. (1), when the 
+width of a super unit cell is small, there are many combinations of frequency (wavelength) and design parameters 
+for the PGUOM that can still result in a value of sin(θtr ) larger than 1. Therefore, the design’ s working band 
+can be broadened if the conditions are also satisfied at other frequencies. Furthermore, this PGUOM design 
+incorporates a blank unit cell filled with air, positioned at the center of the super unit cell with a certain phase 
+shift, demonstrating its ventilation capabilities when the phased array is used as a broadband sound silencer.
+In addition to periodic boundary conditions, we perform simulations with PML boundary conditions, 
+hard boundary conditions on both sides and a configuration involving a cylindrical structure. The cylindrical 
+geometry inherently includes a symmetry axis and a rigid outer wall, which conceptually corresponds to a 
+combination of a soft boundary (zero-pressure condition) and a hard boundary (rigid wall) in a simplified 2D 
+representation. Figure 2f–h show the simulated pressure field distribution for PGUOMs under these boundary 
+conditions. Similar phenomena are observed, where the energy of the transmission wave enhances in the near 
+field and diminishes in the far field, indicating that the transmission wave transforms into a spoof surface wave. 
+Compared to periodic boundary conditions (representing the ideal case of an infinite phase gradient), hard 
+boundaries and soft boundaries slightly reduce the silencing effect, though the effect remains present. This can 
+be attributed to the unique properties of the spoof surface wave. Both soft boundary and hard boundary can 
+induce a superposition of two identity waves. When two spoof surface waves interact horizontally, since they 
+only propagate along the surface, their resultant wave remains confined to the surface without significant vertical 
+leakage. Figure 2i illustrates the simulated pressure field distribution of rectangular PGUOM composed of five 
+super unit cells. The pressure decreases as the wave passes through the design, and eventually approaches zero 
+in the far field, at a distance of approximately 5 meters. The flexibility of the boundary conditions enriches the 
+applications of the PGUOM in sound silencing. T o note, for cylindrical PGUOM, the cross-sectional areas of 
+each unit cell are used instead of the radius when considering the phase distribution function.
+PGUOM also offers the advantage of adjustable openness while remaining effective silencing effect. W e 
+characterized the openness of the design as openness= W 2/W , under the fixed condition W1 = W3. In Fig. 
+2c, we present an example of a rectangular PGUOM with unevenly distributed unit cells. T o sustain the required 
+phase gradient, as depicted in Fig. 2d, the phases of the transmission wave and the length of the three units must 
+satisfy the following relationships:
+ φ 1 = − openness+1
+2 × π + φ 2  (2)
+ φ 3 = openness+1
+2 × π + φ 2  (3)
+According to Eqs. (2) and (3), the phase of unit cell 1 or 3 is related to the openness of the design and the phase of 
+unit cell 2. Increasing the openness requires an increased phase difference between unit cell 1 or 3 and unit cell 2.
+When the phase of each unit cell within a super unit cell forms a phase gradient and the amplitudes are all 
+equal to 1, the simulated transmittance of the super unit cell and corresponding pressure field distributions under 
+different levels of openness can be obtained. The black line in Fig. 2j represents the simulated transmittance 
+(S2
+21) of the design at target frequency (2000 Hz) when the openness increases from 0.33 to 0.93, and Fig. 2k 
+depicts the pressure field distributions when the openness is 0.4, 0.47, 0.53, 0.60, 0.67, 0.73 and 0.80 at the target 
+frequency. When the openness is 0.33, the transmittance approaches 0, and the transmission wave exhibits clear 
+characteristics of the spoof surface wave (Fig. 2e). However, as the openness gradually increases, the transmission 
+wave begins to resemble a plane wave rather than a spoof surface wave (Fig. 2k), causing the transmittance to rise 
+to 0.55 and reducing the silencing effect.
+However, if the amplitude of each unit cell is also optimized, the silencing effect can be substantially improved. 
+In the optimization process, we assign the desired phase gradient to each unit cell via its corresponding port 
+and then sweep the input amplitude of each port. By monitoring the transmission coefficient, we identify 
+the amplitude and phase combination that results in minimal transmission (see Fig. S2 for details). Table 1 
+provides the optimal amplitudes of unit cells under different levels of openness, determined by targeting the 
+lowest possible transmittance. The red line in Fig. 2j represents the simulated transmittance of the design 
+Scientific Reports |        (2025) 15:21434 4| https://doi.org/10.1038/s41598-025-04885-6
+www.nature.com/scientificreports/
+with optimized amplitudes, and Fig. 2l illustrates the corresponding pressure field distributions. Although the 
+transmittance still increases with openness, it remains much lower comparing to the case where the amplitudes 
+are all one (black line). The transmittance remains at 0.05 even when the openness reaches 0.93. Moreover, the 
+transmission wave remains a spoof surface wave at high openness levels. Figure 2m plots the transmittance of the 
+design with different amplitudes of the unit cells at an openness of 0.87. The minimum transmittance (blue area) 
+occurs when the amplitude of unit cell 1 or 3 (A1 or A3) is large, while the amplitude of unit cell 2 (A2) is small.
+This can be explained by the Huygens-Fresnel principle. As depicted in Fig. 2a,c, when the width of each 
+unit cell is the same, the wavefront of the transmission wave is simple and follows the generalized Snell’ s law. 
+However, when the widths of unit cell are different, the wavefront becomes a superposition of two plane waves. 
+One wave (mode 1) follows the generalized Snell’s law while the other one (mode 2) only depends on the phase 
+shift of unit cell 2. Both the amplitude and width of each unit cell affect the intensity of these two modes. T o 
+suppress the intensity of mode 2 and improve the performance, the amplitude of unit cell 2 should be small when 
+its width is large.
+Design validation
+To validate our PGUOM designs, we utilized length-varying straight barriers to achieve the required amplitude 
+and phase by adjusting the ratio of the slit width to the unit cell width ( wi/Wi)43, as shown in the inset of Fig. 
+3b. For rectangular PGUOM, as shown in Fig. 3a, we evaluate its performance under a reference frequency of 
+2000 Hz. The width of each unit cell is set to Wi = 25 mm, ensuring the width of the super unit cell ( W = 75 
+mm) is smaller than the wavelength under this condition ( λ tr = 171.5 mm). Since we use a blank unit 
+cell at the position of unit cell 2 for ventilation, the height of the super unit cell is set to half the wavelength 
+(H = 85.75 mm), yielding an amplitude and phase of unit cell 2 at A2 =1  and φ2 = π. The thickness of the 
+wall, the barriers, and the super unit cell are set to tt =2  mm, h =5  mm, and t = 30 mm based on fabrication 
+consideration. Figure 3b depicts the amplitude and phase of the transmission wave of a unit cell with different 
+slit widths at 2000 Hz. As the ratio of the slit width to the unit cell width increases from 0 to 1, the phase spans 
+2π while the amplitude varies. When the ratio approaches 1, the unit cell resembles a blank unit cell, with the 
+amplitude close to 1 and the phase close to π. The slit widths within unit cell 1 and 3 are set to w1 =2  mm 
+and w 3 =3 .25 mm, respectively, resulting in the following amplitudes and phases: A 1 =0 .49, φ 1 =1 .67π, 
+A 3 =0 .69, and φ 3 =0 .34π, as shown in Fig. 3f. The phases of the unit cells (red line in Fig. 3f) form a phase 
+gradient of 0.66π/25 (rad/mm) and the amplitudes of the unit cells (black line in Fig. 3f) are acceptable (see Fig. 
+S3 for details), ensuring the generalized Snell’ s Law remains fulfilled for generating a spoof surface wave.
+The cylindrical PGUOM is transformed from the rectangular configuration by rotating the super unit cells 
+along its side in the propagation direction. This arrangement creates a cylindrical structure that preserves the 
+phase gradient characteristics of the rectangular design. T o achieve the desired phase gradient, we used modified 
+length-varying straight barriers. Additionally, we opted for a fan-shape slit rather than a circular ring slit, as the 
+fan shape provides a larger size for the same area and imposes fewer demands on 3D printing resolution, as shown 
+in Fig. 3c. Due to the limitation of our measurement setup, the target frequency is set to 1500 Hz as reference, and 
+the outer radius of the design is fixed at 49.75 mm (details can be found in the Figs. S4–S6). In order to maintain 
+the condition that the area of each unit cell should be equal, the radii of the three layers are set to r1 = 28.72 
+mm, r2 = 40.62 mm, and r3 = 49.75 mm. The height of the super unit cell is set to half the wavelength as well, 
+H = 114.33 mm, to fix the amplitude and phase of unit cell 2. The thickness of the wall, the barriers, and the 
+super unit cell are set to tt =2  mm, h =5  mm, and t = 30 mm based on fabrication consideration. Figure 3d,e 
+illustrates the phase and amplitude of the transmission wave at 1500 Hz for different angles of the fan-shaped 
+slits within unit cells 1 and 3. As the ratio increases, the phases of unit cell 1 and 3 increase, while the amplitudes 
+maintains larger than 0.5. Different from the results in Fig. 3b, the phase does not span 2π as θ1 increases from 
+0◦ to 90◦. This limitation is due to the structure of unit 1: as the angle of the fan-shape grows, the maximum 
+possible ratio of the slit area to the total area of unit cell 1 is capped at 0.35. Only if this ratio could reach 1 
+would the phase reach π, thus limiting the phase range within the unit cell 1. T o accommodate phase gradient 
+requirements, we set θ1/90◦ =0 .35 and θ2/90◦ =0 .26, resulting in the following transmission amplitudes 
+and phases for the three unit cells: A 1 =0 .56, A2 =1 , A 3 =0 .76, φ 1 = −0.34π, φ2 = π, and φ 3 =0 .32π, 
+respectively, as shown in Fig. 3g. The phases form a gradient, and the amplitudes are acceptable.
+Openness W 1 /W3 /mm W 2 /mm φ1 /π φ2 /π φ3 /π A 1 /A3 A2
+0.33 25 25 0.335
+1
+−0.335
+1
+1
+0.40 22.5 30 0.30 −0.30 0.9
+0.47 20 35 0.265 −0.265 0.8
+0.53 17.5 40 0.235 −0.235 0.7
+0.6 15 45 0.2 −0.2 0.6
+0.67 12.5 50 0.165 −0.165 0.5
+0.73 10 55 0.135 −0.135 0.4
+0.8 7.5 60 0.1 −0.1 0.3
+0.87 5 65 0.065 −0.065 0.2
+Table 1. Dimensions, transmission wave phases and optimized amplitudes of the unevenly distributed unit 
+cells of PGUOM with different openness.
+ 
+Scientific Reports |        (2025) 15:21434 5| https://doi.org/10.1038/s41598-025-04885-6
+www.nature.com/scientificreports/
+When the three unit cells are combined, the silencing effect is weak and diverges from the theoretical results, 
+as shown in Fig. 4a. Impedance mismatches within unit cells, along with reflections from adjacent unit cells, lead 
+to deviations in the transmission amplitude and phase, reducing the silencing effect. Additionally, the varying 
+amplitudes among each of the designed unit cell further diminish the performance. To improve the silencing 
+effect of the PGUOM, additional waveguides are introduced on both sides of each unit cell. Fine-tuning the 
+waveguide length allows for optimizing the transmission amplitude of each unit cell35, thereby achieving a more 
+effective silencing effect. As shown in Fig. 4a, the transmittance of the rectangular PGUOM and cylindrical 
+PGUOM at target frequencies (2000 Hz for rectangular PGUOM and 1500 Hz for cylindrical PGUOM) with 
+waveguides of varying heights are simulated. The transmission changes with increasing waveguide height, and 
+the optimal heights (dH) are selected as 0.4H for the rectangular PGUOM and 0.3H for the cylindrical PGUOM, 
+as these configurations yielded the lowest transmittance. Figure 4b–d illustrates the simulated pressure field 
+distribution of the rectangular PGUOM (with both single and an array of five super unit cells) and the cylindrical 
+Figure 3. ( a) Schematic diagram of the rectangular PGUOM design based on the length-varying straight 
+barriers. Parameter values: width of slit in each unit cell w1 =2  mm, w2 = 25 mm, and w 3 =3 .25 mm, 
+height of the silt h =5  mm, number of the barriers n = 10, thickness of the wall tt =2  mm, width of each 
+unit cell W1 = W2 = W3 = 25 mm, width of the phased array W = 75 mm, height of the phased array 
+H = 85.75 mm, thickness of the phased array t = 30 mm, height of the waveguide dH = 34.3 mm. (b) 
+Amplitude (black dots) and phase (red solid line) of the transmission wave at 2000 Hz with different wi/Wi. 
+Inset: illustration of a single element of the barriers. (c) Schematic diagram of the cylindrical PGUOM design 
+based on the length-varying straight barriers. Parameter values: angle of the silt within unit cell 1 and unit 3: 
+θ1 = 31.5◦, and θ2 = 23.4◦, height of the silt h =5  mm, number of the barriers n = 10, radii of unit cell 1, 
+unit cell 2 and unit cell 3: r1 = 28.72 mm, r2 = 40.62 mm, r3 = 49.75 mm, thickness of the wall tt =2  mm, 
+height of the phased array H = 114.33 mm, height of the waveguide dH = 34.3 mm. (d,e) Amplitude (black 
+dots) and phase (red solid line) of the transmission wave at 1500 Hz with different slit angle in unit cell 1 and 3 
+respectively. Inset: Cross-section view of the phased array region. (f,g) Amplitude (black solid line) and phase 
+(red solid line) of the transmission wave for different unit cells of the rectangular PGUOM (2000 Hz) and 
+cylindrical PGUOM (1500 Hz) respectively.
+ 
+Scientific Reports |        (2025) 15:21434 6| https://doi.org/10.1038/s41598-025-04885-6
+www.nature.com/scientificreports/
+PGUOM at their target frequencies. In each case, the pressure of the transmission wave decreases significantly 
+after passing through the design, with a spoof surface wave observed at the interface. The excellent sound 
+silencing effect demonstrated that our designs are useful for small-scale, large scale, or cylindrical applications.
+Next, we explore the broadband properties of the designs by simulating the transmission spectra of the 
+rectangular PGUOM and cylindrical PGUOM over frequency ranges of 1700-2300 Hz and 1000-2000 Hz, 
+respectively, as shown in Fig. 4e–g. A transmittance of 0.1 is set as the threshold for assessing the silencing effect. 
+For rectangular PGUOM with a single super unit cell, the transmittance spectrum show dips at 1950 Hz and 
+2150 Hz, with effective silencing bands between 1860–2050 Hz and 2120–2200 Hz. For the rectangular PGUOM 
+with five super unit cells, the spectrum shows a dip from 1890 to 2040 Hz. The cylindrical PGUOM spectrum has 
+a sharper dip between 1270 and 1300 Hz and a broader dip between 1500 and 1730 Hz. The broadband property 
+arises from the robust requirement of spoof surface wave generation. Around the target frequencies, the phase 
+Figure 4. ( a) Transmittance of the rectangular PGUOM (black dash line, 2000 Hz) and cylindrical PGUOM 
+(red dash line, 1500 Hz) with waveguide’s height ranging from 0.1H to H. (b–d) Pressure field distribution 
+of the rectangular PGUOM (2000 Hz), and cylindrical PGUOM (1500 Hz) with extra waveguides. (e,g) 
+Transmittance spectra of the rectangular PGUOM across a frequency range from 1700 Hz to 2300 Hz 
+consisting of single super unit cell or five super unit cells. (f) Transmittance spectra of the cylindrical PGUOM 
+across a frequency range from 1000 Hz to 2000 Hz. (h) Transmittance of the rectangular PGUOM with 
+waveguide height ranging from 0 to 0.4H across frequencies from 1700 Hz to 2900 Hz.
+ 
+Scientific Reports |        (2025) 15:21434 7| https://doi.org/10.1038/s41598-025-04885-6
+www.nature.com/scientificreports/
+gradients are approximately maintained, and the amplitudes are within an acceptable range (see Fig. S7 for 
+details), leading to a decrease in transmittance, though not to the ideal level. Figure 4h shows the transmission 
+spectra of the rectangular PGUOM with varying waveguide heights. As the waveguide height ( dH) increases, 
+the effective silencing band shifts to lower frequencies, enabling sound silencing at difference target frequencies 
+by adjusting waveguide height (dH).
+We also demonstrate that our design achieves sound silencing under varying degrees of openness. Based 
+on the openness level, we first calculated the required phased distribution and dimensions of each unit cell 
+using Eqs. ( 2) and ( 3). The slit within each unit cell was then adjusted to achieve the desired phase. Finally, 
+waveguides were added to both sides of each unit cell to enhance silencing at the target frequency. Further 
+optimizations of each unit cell’s dimensions and waveguide lengths were conducted based on simulation results. 
+Additional details on the super unit cells are provided in Tables 2 and 3. For the rectangular PGUOM, as 
+openness increases, both the unit cell width (W1 and W3) and slit width (w1 and w3) decrease. At an openness 
+level of 0.73, the difference between w1 and w3 falls below 0.1 mm, which exceeds 3D printing resolution and 
+presents fabrication challenges. Achieving higher openness levels is possible with finer 3D printing resolution, 
+allowing access to more precise design parameters for the PGUOM. Figure 5a,b show the transmittance 
+spectra and pressure field distribution of the rectangular PGUOM at different openness levels. In Fig. 5a, our 
+optimization process consistently achieves transmittance below 0.1 at 2000 Hz for openness levels from 0.4 
+to 0.73. Each openness level exhibits distinct broadband silencing characteristics, indicating no direct trade-
+off between openness and the effective working band. In Fig. 5b, the transmission wave pressure substantially 
+diminishes after passing through the rectangular PGUOM, reinforcing the sound silencing effect. Comparison 
+with theoretical results in Fig. 2k,l shows the effectiveness of waveguide integration for optimization. Figure 
+5c,d show the transmittance spectrum and pressure field distribution of the cylindrical PGUOM at different 
+openness levels. The transmittance spectra reveal an effective silencing effect, and the pressure field distribution 
+further confirms silencing at target frequency.
+Discussion
+To experimentally validate the PGUOM designs, we fabricated rectangular and cylindrical designs with varying 
+openness levels and characterized their acoustic silencing performance. Since it is challenging to measure the 
+transmittance of a rectangular PGUOM or the pressure field distribution of a cylindrical PGUOM, we opt to 
+measure the pressure field distribution of the rectangular design and the transmission loss of a cylindrical design 
+separately. Figure 6a,b show the setup used to measure the pressure field distribution and transmission loss of the 
+designs. Further details are provided in the method section. Figure 6c displays the pressure field distributions of 
+rectangular PGUOMs with different openness level at 2000 Hz, 2104 Hz, 2200 Hz under hard boundary (resin 
+walls). In our setup, the pressure of the incident wave at each frequency was recorded by the first microphone, 
+while the transmitted pressure was measured by the second microphone. The pressure field distribution was then 
+obtained by dividing the transmitted pressure by the incident pressure, effectively normalizing the incident wave 
+to 1 Pa. The “max” value shown in the legend corresponds to 1 Pa. Therefore, the pressure field shown in Fig. 
+6c reflects the real pressure amplitudes and can be directly interpreted in terms of the transmission coefficient. 
+After passing through the design, the pressure of the transmitted wave decreases significantly and remains low 
+Openness R 1 /mm R 2 /mm θ1 /π θ2 /π φ1 /π φ2 /π φ3 /π A1 A2 A3
+0.33 28.72 40.62 0.18 0.13 −0.34 1 0.32 0.56 1 0.76
+0.40 27.25 41.62 0.35 0.09 0.3 1 −0.30 0.87 1 0.57
+0.47 25.61 42.65 0.39 0.10 0.26 1 −0.25 0.91 1 0.67
+0.53 24.12 43.51 0.25 0.10 0.22 1 −0.27 0.93 1 0.64
+0.60 22.25 44.50 0.28 0.17 0.19 1 −0.21 0.96 1 0.74
+0.67 20.21 45.46 0.35 0.10 0.17 1 −0.19 0.97 1 0.78
+Table 3. Dimensions, transmission wave phases and amplitudes of the unit cells of cylindrical PGUOM with 
+different openness (R 3 = 49.75 mm).
+ 
+Openness W 1 /W3 /mm W 2 /mm w 1 /mm w 3 /mm φ1 /π φ2 /π φ3 /π A1 A2 A3
+0.33 25 25 3.25 2.00 0.33
+1
+−0.33 0.69
+1
+0.49
+0.40 22.5 30 2.61 1.78 0.30 −0.30 0.75 0.56
+0.47 20 35 2.10 1.54 0.27 −0.26 0.79 0.64
+0.53 17.5 40 1.63 1.30 0.23 −0.22 0.85 0.73
+0.60 15 45 1.23 1.02 0.19 −0.21 0.89 0.75
+0.67 12.5 50 0.89 0.78 0.18 −0.16 0.91 0.84
+0.73 10 55 0.58 0.53 0.15 −0.12 0.93 0.90
+Table 2. Dimensions, transmission wave phases and amplitudes of the unit cells of rectangular PGUOM with 
+different openness.
+ 
+Scientific Reports |        (2025) 15:21434 8| https://doi.org/10.1038/s41598-025-04885-6
+www.nature.com/scientificreports/
+Figure 5. ( a) Transmittance spectra of the rectangular PGUOM with different levels of openness across a 
+frequency range from 1700 Hz to 2300 Hz. (b) Pressure field distribution of the transmission wave of the 
+rectangular PGUOM at 2000 Hz with different openness levels. Openness of the PGUOM: 0.4, 0.47, 0.53, 0.6, 
+0.67, and 0.73. Length of the waveguide dH for different openness levels: 0.3H, 0.2H, 0.1H, 0.5H, 0.5H, and 
+0.5H. (c) Transmittance spectra of the cylindrical PGUOM with different openness levels across a frequency 
+range from 1150 Hz to 1750 Hz. (d) Pressure field distribution of the transmission wave of the cylindrical 
+PGUOM at 1500 Hz with varying levels of openness. Openness of the PGUOM: 0.4, 0.47, 0.53, 0.6, and 0.67. 
+Length of the waveguide dH for different levels of openness: 0.38H, 0.63H, 0.3H, 0.5H, and 0.19H.
+ 
+Scientific Reports |        (2025) 15:21434 9| https://doi.org/10.1038/s41598-025-04885-6
+www.nature.com/scientificreports/
+throughout the remaining area, aligning well with the simulation results. The experimental results demonstrate 
+the sound attenuation effect at various frequencies. Differences between the simulation and experimental results 
+could be attributed to factors such as fabrication resolution and the sound absorption or reflection properties of 
+the foam or the resin walls used in the experimental setup.
+Figure 6d compares the simulated (black lines) and measured (red dots) transmission loss of cylindrical 
+PGUOMs at various openness levels. For the simulations, thermoviscous losses close to the structure were 
+considered, which decreases the peak transmission loss. The experimental results show multiple transmission loss 
+peaks for different designs. The observed difference between simulated results and measured results is primarily 
+due to the connecting component added among unit cells during fabrication. Additional minor deviations 
+could stem from fabrication inaccuracies in the experimental samples and slight simulation discrepancies in the 
+acoustic properties. Although thermoviscous loss affects the transmission performance of our design to some 
+extent, the primary mechanism responsible for the silencing effect is the conversion of incident waves into spoof 
+surface waves. Further details are provided in the supporting information (Fig. S8).
+In conclusion, this work presents a pioneering approach in the form of a phased gradient ultra open 
+metamaterial, aiming to tackle the challenges associated with broadband, openness-adjustable, and ventilated 
+sound silencing. The design, comprising three unit cells forming a phase gradient, effectively transforms 
+incident waves into spoof surface waves at target frequency across different configurations. The significant 
+reduction in sound pressure observed in the far field underscores the broad silencing band achieved by the 
+PGUOM. Additionally, incorporating a blank, air-filled unit cell at the center of the super unit cell enables 
+effective ventilation while maintaining strong sound silencing capabilities. Furthermore, the study demonstrates 
+Figure 6. ( a,b) Illustration of the experimental for measuring the rectangular PGUOMs and cylindrical 
+PGUOMs. (c) Measured pressure field distribution of the transmitted wave through rectangular PGUOMs 
+with different openness levels under hard boundary conditions, at frequencies of 2000 Hz, 2104 Hz, and 2200 
+Hz. The incident wave is normalized to 1 Pa, and the “max” value shown in the legend corresponds to 1 Pa. (d) 
+Simulated (black line) and measured (red dots) transmission loss of the cylindrical PGUOM across a frequency 
+range from 600 Hz to 1600 Hz at different openness levels.
+ 
+Scientific Reports |        (2025) 15:21434 10| https://doi.org/10.1038/s41598-025-04885-6
+www.nature.com/scientificreports/
+the adjustability of the openness without compromising the silencing efficiency. Numerical and experimental 
+validations corroborate the effectiveness of the PGUOM design, with analytical, simulation, and experimental 
+results aligning closely. Overall, the versatility of PGUOM, coupled with its ability to adapt to different boundary 
+conditions and offer tunable broad working bands, renders it suitable for a wide range of applications. Compared 
+to other studies on broadband ventilated sound silencers 44,45, our work achieves a broadband sound silencing 
+effect with a high openness of up to 0.73. The final PGUOM structure has a total thickness ranging from 102.9 
+mm to 171.5 mm and a length of 75 mm along the direction of spoof surface wave propagation. The measured 
+average transmittance across the working frequency band is approximately 0.1, corresponding to a transmission 
+loss of around 10 dB.
+However, it’s important to acknowledge a limitation of the design, namely its sensitivity to the fabrication 
+resolution of 3D printing. High target frequencies or large openness values may lead to dimensions approaching 
+the limit of 3D printing resolution, potentially affecting the performance of the PGUOM. Nevertheless, with 
+ongoing advancements in 3D printing materials 46–48, there is considerable potential to enhance the design’s 
+functionalities and overcome fabrication challenges.
+In summary, the PGUOM design represents a promising approach for addressing the complex requirements 
+of broadband ventilated sound silencing, offering a versatile and adaptable solution with potential for further 
+development and application in diverse fields.
+Methods
+Numerical simulations
+All simulations were performed with finite element solver COMSOL Multiphysics 6.2 (available at  h t t p s : / / w w w 
+. c o m s o l . c o m     ) using the pressure acoustic module in the frequency domain and thermoviscous acoustic module 
+in the frequency domain. Ports are used to provide incident with certain amplitude and phase. Rigid boundary, 
+periodic boundary and perfectly matched layer boundary are used to represent boundary conditions under 
+different situations. All unit cells are considered as perfectly rigid medium. At the reflection and transmission 
+regions, perfectly matched layer has been implemented to mitigate the subsequent reflections.
+Fabrication and characterization
+The PGUOMs were fabricated using the stereolithography (SLA) 3D printing technique. A commercial 3D 
+printer (Formlabs Form 3+ SLA Printer) with a resolution of 25 microns was used. Two experimental setups 
+are used to verify the attenuation effect for the planar design and cylindrical design respectively, as shown in 
+the supporting information (Fig. S6 and S9). In the case of the planar sample measurement, acrylic sheets of 
+dimensions 61 cm× 91 cm× 0.6 cm and dimensions 30 cm× 61 cm× 0.2 cm placed in parallel with a spacing of 
+3 cm to create reflection and transmission domains. Domain boundaries were confined with an absorbing foam 
+6 cm in thickness to mitigate the back reflection. A loudspeaker was placed at one end of the reflection domain 
+to generate a plane wave. One microphone was placed near the speaker and another microphone was fixed on a 
+stage at the end of the sample. By adjusting the stage’ s position, the microphone could measure the field pressure 
+at various locations. The spacing between adjacent measurement locations is 6.5 mm × 6.4 mm. As for the 
+cylindrical design, an impedance tube setup (100 mm B&K 4206-T large impedance tube) was used to measure 
+the transmission loss. The sample was placed in the sample holder, and four microphones are placed in the front 
+and rear waveguides to assess the sample’ s acoustic response.
+Data availability
+The authors declare that all data supporting the results of the study are available within the paper and/or its 
+Supplementary Materials.
+Received: 31 January 2025; Accepted: 29 May 2025
+References
+ 1. Slabbekoorn, H. Noise pollution. Curr. Biol. 29, R957–R960 (2019).
+ 2. Thompson, R. et al. Noise pollution and human cognition: An updated systematic review and meta-analysis of recent evidence. 
+Environ. Int. 158, 106905 (2022).
+ 3. Tao, Y ., Ren, M., Zhang, H. & Peijs, T. Recent progress in acoustic materials and noise control strategies-a review. Appl. Mater. 
+Today 24, 101141 (2021).
+ 4. Gao, N. et al. Acoustic metamaterials for noise reduction: a review. Adv. Mater. Technol. 7, 2100698 (2022).
+ 5. Ma, G. & Sheng, P . Acoustic metamaterials: From local resonances to broad horizons. Sci. Adv. 2, e1501595 (2016).
+ 6. Liao, G. et al. Acoustic metamaterials: A review of theories, structures, fabrication approaches, and applications. Adv. Mater. 
+Technol. 6, 2000787 (2021).
+ 7. Liu, L. et al. Broadband metasurfaces with simultaneous control of phase and amplitude. Adv. Mater. 26, 5031–5036 (2014).
+ 8. Cummer, S. A., Christensen, J. & Alù, A. Controlling sound with acoustic metamaterials. Nat. Rev. Mater. 1, 1–13 (2016).
+ 9. Assouar, B. et al. Acoustic metasurfaces. Nat. Rev. Mater. 3, 460–472 (2018).
+ 10. Mei, J. et al. Dark acoustic metamaterials as super absorbers for low-frequency sound. Nat. Commun. 3, 756 (2012).
+ 11. Wang, X., Zhao, H., Luo, X. & Huang, Z. Membrane-constrained acoustic metamaterials for low frequency sound insulation. Appl. 
+Phys. Lett. 108 (2016).
+ 12. Hsu, J.-C., Alwi, H., Lin, T.-Y . & Lai, J.-F . Deep-subwavelength manipulation of waterborne acoustic waves using homogeneous 
+membrane-type reflective metasurfaces. AIP Adv. 14 (2024).
+ 13. Liu, C. R., Wu, J. H., Y ang, Z. & Ma, F . Ultra-broadband acoustic absorption of a thin microperforated panel metamaterial with 
+multi-order resonance. Compos. Struct. 246, 112366 (2020).
+ 14. Zhu, Y . et al. Nonlocal acoustic metasurface for ultrabroadband sound absorption. Phys. Rev. B 103, 064102 (2021).
+Scientific Reports |        (2025) 15:21434 11| https://doi.org/10.1038/s41598-025-04885-6
+www.nature.com/scientificreports/
+ 15. Seo, S.-H. & Kim, Y .-H. Silencer design by using array resonators for low-frequency band noise reduction. J. Acoust. Soci. Am. 118, 
+2332–2338 (2005).
+ 16. Zhu, Y . & Assouar, B. Multifunctional acoustic metasurface based on an array of helmholtz resonators. Phys. Rev. B 99, 174109 
+(2019).
+ 17. Liang, Z. & Li, J. Extreme acoustic metamaterial by coiling up space. Phys. Rev. Lett. 108, 114301 (2012).
+ 18. Zhang, C. & Hu, X. Three-dimensional single-port labyrinthine acoustic metamaterial: Perfect absorption with large bandwidth 
+and tunability. Phys. Rev. Appl. 6, 064025 (2016).
+ 19. Wu, X. et al. High-efficiency ventilated metamaterial absorber at low frequency. Appl. Phys. Lett. 112 (2018).
+ 20. Xu, Z.-X. et al. Topology-optimized omnidirectional broadband acoustic ventilation barrier. Phys. Rev. Appl. 14, 054016 (2020).
+ 21. Su, Z., Zhu, Y ., Gao, S., Luo, H. & Zhang, H. High-efficient and broadband acoustic insulation in a ventilated channel with acoustic 
+metamaterials. Front. Mech. Eng. 8, 857788 (2022).
+ 22. Ge, Y ., Sun, H.-X., Yuan, S.-Q. & Lai, Y . Broadband unidirectional and omnidirectional bidirectional acoustic insulation through 
+an open window structure with a metasurface of ultrathin hooklike meta-atoms. Appl. Physi. Lett. 112 (2018).
+ 23. Ge, Y ., Sun, H.-X., Yuan, S.-Q. & Lai, Y . Switchable omnidirectional acoustic insulation through open window structures with 
+ultrathin metasurfaces. Phys. Rev. Mater. 3, 065203 (2019).
+ 24. Shi, J., Liu, C., Liu, X. & Lai, Y . Ventilative meta-window with broadband low-frequency acoustic insulation. J. Appl. Phys. 129 
+(2021).
+ 25. Shen, C., Xie, Y ., Li, J., Cummer, S. A. & Jing, Y . Acoustic metacages for sound shielding with steady air flow. J. Appl. Phys. 123 
+(2018).
+ 26. Liu, C. et al. Three-dimensional soundproof acoustic metacage. Phys. Rev. Lett. 127, 084301 (2021).
+ 27. Cheng, Y . et al. Ultra-sparse metasurface for high reflection of low-frequency sound based on artificial mie resonances. Nat. Mater. 
+14, 1013–1019 (2015).
+ 28. Lee, T., Nomura, T., Dede, E. M. & Iizuka, H. Ultrasparse acoustic absorbers enabling fluid flow and visible-light controls. Phys. 
+Rev. Appl. 11, 024022 (2019).
+ 29. Gao, S., Zhu, Y ., Su, Z., Zeng, H. & Zhang, H. Broadband ventilated sound insulation in a highly sparse acoustic meta-insulator 
+array. Phys. Rev. B 106, 184107 (2022).
+ 30. Zhang, H.-l. et al. Omnidirectional ventilated acoustic barrier. Appl. Phys. Lett. 111 (2017).
+ 31. Ghaffarivardavagh, R., Nikolajczyk, J., Anderson, S. & Zhang, X. Ultra-open acoustic metamaterial silencer based on fano-like 
+interference. Phys. Rev. B 99, 024302 (2019).
+ 32. Zhang, P . et al. Generation of acoustic self-bending and bottle beams by phase engineering. Nat. Commun. 5, 4316 (2014).
+ 33. Marzo, A. et al. Holographic acoustic elements for manipulation of levitated objects. Nat. Commun. 6, 8661 (2015).
+ 34. Li, J., Shen, C., Díaz-Rubio, A., Tretyakov, S. A. & Cummer, S. A. Systematic design and experimental demonstration of bianisotropic 
+metasurfaces for scattering-free manipulation of acoustic wavefronts. Nat. Commun. 9, 1342 (2018).
+ 35. Zhu, Y . et al. Fine manipulation of sound via lossy metamaterials with independent and arbitrary reflection amplitude and phase. 
+Nat. Commun. 9, 1632 (2018).
+ 36. Jin, Y ., Kumar, R., Poncelet, O., Mondain-Monval, O. & Brunet, T. Flat acoustics with soft gradient-index metasurfaces. Nat. 
+Commun. 10, 143 (2019).
+ 37. Quan, L. & Alù, A. Passive acoustic metasurface with unitary reflection based on nonlocality. Phys. Rev. Appl. 11, 054077 (2019).
+ 38. Park, J. H., Kim, Y . Y ., Ma, P . S. & Lee, J. S. Broad and sharp-transient sound absorption band in phase-gradient metasurface lined 
+with thin porous layer. Appl. Acoust. 218, 109884 (2024).
+ 39. Chen, A.-L., Wang, Y .-S., Wang, Y .-F ., Zhou, H.-T. & Yuan, S.-M. Design of acoustic/elastic phase gradient metasurfaces: principles, 
+functional elements, tunability, and coding. Appl. Mech. Rev. 74, 020801 (2022).
+ 40. Guo, J. & Cheng, H. Acoustic metasurface development for transmitted wavefront manipulation using a level set-based topology 
+optimization approach. J. Sound Vib. 579, 118382 (2024).
+ 41. Cselyuszka, N., Alù, A. & Janković, N. Spoof-fluid-spoof acoustic waveguide and its applications for sound manipulation. Phys. 
+Rev. Appl. 12, 054014 (2019).
+ 42. Ward, G., Hibbins, A., Sambles, J. & Smith, J. The waveguiding of sound using lines of resonant holes. Sci. Rep. 9, 11508 (2019).
+ 43. Fan, X. et al. Ultrabroadband and reconfigurable transmissive acoustic metascreen. Adv. Func. Mater. 33, 2300752 (2023).
+ 44. Dong, R., Mao, D., Wang, X. & Li, Y . Ultrabroadband acoustic ventilation barriers via hybrid-functional metasurfaces. Phys. Rev. 
+Appl. 15, 024044 (2021).
+ 45. Sun, M., Fang, X., Mao, D., Wang, X. & Li, Y . Broadband acoustic ventilation barriers. Phys. Rev. Appl. 13, 044028 (2020).
+ 46. Sim, S., Hui, Y . & Tirrell, D. A. 3d-printable cellular composites for the production of recombinant proteins. Biomacromol 23, 
+4687–4695 (2022).
+ 47. Zhang, F . et al. A review of 3d printed porous ceramics. J. Eur. Ceram. Soc. 42, 3351–3373 (2022).
+ 48. Tan, H. W ., Choong, Y ., Kuo, C. N., Low, H. Y . & Chua, C. K. 3d printed electronics: Processes, materials and future trends. Prog. 
+Mater Sci. 127, 100945 (2022).
+Acknowledgements
+The authors would like to thank Boston University Photonics Center and the Rajen Kilachand Fund for Integrat-
+ed Life Science and Engineering for funding and technical support.
+Author contributions
+X. Z., and Z. Y . conceived the study. Z. Y ., and X. Z. conducted the numerical modeling and theoretical analysis, 
+Z. Y ., X. X., and X. Z. constructed the metamaterials. Z. Y ., A. C., and X. Z. designed and conducted the experi-
+ments. All authors participated in discussing the results. X. Z., S. W . A., and Z. Y . wrote the manuscript.
+Declarations
+Competing interests
+Provisional patent is filed based on the findings of this paper, detailed information is provided below. 
+Provisional Patent Name: PHASED ARRAY ULTRA OPEN METAMATERIALS FOR BROADBAND 
+ACOUSTIC SILENCING. Inventors: Xin Zhang, Zhiwei Y ang, Ao Chen, Stephan Anderson; U.S. Provisional 
+Application No.: 63/549,846; BU Ref.: BU-2024-010; BL Ref. No.: BOS-0072PR (56136.03184); File date: 
+02/05/2024. A PCT Patent Application has also been submitted claiming priority from this provisional patent, 
+Title: PHASED ARRAY ULTRA OPEN METAMATERIALS FOR BROADBAND ACOUSTIC SILENCING. 
+Inventors: Xin Zhang, Zhiwei Y ang, Ao Chen, Stephan Anderson; PCT Patent Application No. PCT/
+US2025/014569; BU Ref.: BU-2024-010; CM Ref. No.: 264003-0072PCT (BOS-0072PCT); filed date: February 
+Scientific Reports |        (2025) 15:21434 12| https://doi.org/10.1038/s41598-025-04885-6
+www.nature.com/scientificreports/
+5, 2025. All the other authors have no competing interest.
+Additional information
+Supplementary Information The online version contains supplementary material available at  h t t p s : / / d o i . o r g / 1 
+0 . 1 0 3 8 / s 4 1 5 9 8 - 0 2 5 - 0 4 8 8 5 - 6     .  
+Correspondence and requests for materials should be addressed to X.Z.
+Reprints and permissions information is available at www.nature.com/reprints.
+Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and 
+institutional affiliations.
+Open Access  This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 
+4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in 
+any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide 
+a link to the Creative Commons licence, and indicate if you modified the licensed material. Y ou do not have 
+permission under this licence to share adapted material derived from this article or parts of it. The images or 
+other third party material in this article are included in the article’s Creative Commons licence, unless indicated 
+otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence 
+and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to 
+obtain permission directly from the copyright holder. To view a copy of this licence, visit  h t t p : / / c r e a t i v e c o m m o 
+n s . o r g / l i c e n s e s / b y - n c - n d / 4 . 0 /     .  
+© The Author(s) 2025 
+Scientific Reports |        (2025) 15:21434 13| https://doi.org/10.1038/s41598-025-04885-6
+www.nature.com/scientificreports/

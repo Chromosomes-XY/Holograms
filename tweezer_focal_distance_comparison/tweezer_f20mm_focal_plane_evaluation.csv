@@ -1,0 +1,7 @@
+quantity,x_mm,y_mm
+pressure_amplitude_fwhm,0.5430227591735456,0.5430227591735456
+intensity_fwhm,0.39236332874595836,0.39236332874595836
+pressure_amplitude_half_max_left,-0.2715113795867728,
+pressure_amplitude_half_max_right,0.27151137958677274,
+intensity_half_max_left,-0.19618166437297918,
+intensity_half_max_right,0.19618166437297918,

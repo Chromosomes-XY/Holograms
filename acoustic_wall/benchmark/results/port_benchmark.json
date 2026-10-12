@@ -1,0 +1,87 @@
+{
+  "rows": [
+    {
+      "openness": 0.3333333333333333,
+      "paper_centre_amplitude": 1.0,
+      "phase_only_T": 5.711031323499411e-28,
+      "paper_amplitude_T": 5.711031323499411e-28,
+      "local_optimum_centre": 0.9999949230950117,
+      "local_optimum_T": 2.8638946343818406e-12,
+      "energy_error": 3.9968028886505635e-15
+    },
+    {
+      "openness": 0.4,
+      "paper_centre_amplitude": 0.9,
+      "phase_only_T": 0.0022400199121217963,
+      "paper_amplitude_T": 5.812989411365073e-05,
+      "local_optimum_centre": 0.8816777435986397,
+      "local_optimum_T": 3.193501549547078e-15,
+      "energy_error": 6.439293542825908e-15
+    },
+    {
+      "openness": 0.4666666666666667,
+      "paper_centre_amplitude": 0.8,
+      "phase_only_T": 0.012055383392192405,
+      "paper_amplitude_T": 0.000325784432059043,
+      "local_optimum_centre": 0.7647202736627028,
+      "local_optimum_T": 4.74939930839513e-14,
+      "energy_error": 3.1086244689504383e-15
+    },
+    {
+      "openness": 0.5333333333333333,
+      "paper_centre_amplitude": 0.7,
+      "phase_only_T": 0.034794341762611355,
+      "paper_amplitude_T": 0.0009669904311941791,
+      "local_optimum_centre": 0.6502517062482986,
+      "local_optimum_T": 1.057868088042983e-16,
+      "energy_error": 3.552713678800501e-15
+    },
+    {
+      "openness": 0.6,
+      "paper_centre_amplitude": 0.6,
+      "phase_only_T": 0.07639320225001452,
+      "paper_amplitude_T": 0.0021501057954719746,
+      "local_optimum_centre": 0.5393458077930079,
+      "local_optimum_T": 8.213006822809042e-13,
+      "energy_error": 4.440892098500626e-15
+    },
+    {
+      "openness": 0.6666666666666666,
+      "paper_centre_amplitude": 0.5,
+      "phase_only_T": 0.14287759831800328,
+      "paper_amplitude_T": 0.003988709429134734,
+      "local_optimum_centre": 0.433012895363367,
+      "local_optimum_T": 3.629679020689963e-14,
+      "energy_error": 4.218847493575595e-15
+    },
+    {
+      "openness": 0.7333333333333333,
+      "paper_centre_amplitude": 0.3999999999999999,
+      "phase_only_T": 0.23982686479252405,
+      "paper_amplitude_T": 0.006438017845498597,
+      "local_optimum_centre": 0.33219901475612373,
+      "local_optimum_T": 6.87320756254551e-13,
+      "energy_error": 2.4424906541753444e-15
+    },
+    {
+      "openness": 0.8,
+      "paper_centre_amplitude": 0.29999999999999993,
+      "phase_only_T": 0.37184225467303944,
+      "paper_amplitude_T": 0.009113655599867904,
+      "local_optimum_centre": 0.23776418565208857,
+      "local_optimum_T": 8.354379858538311e-15,
+      "energy_error": 1.0880185641326534e-14
+    },
+    {
+      "openness": 0.8666666666666667,
+      "paper_centre_amplitude": 0.19999999999999996,
+      "phase_only_T": 0.5420596252316443,
+      "paper_amplitude_T": 0.01096179544056552,
+      "local_optimum_centre": 0.15048369098695114,
+      "local_optimum_T": 1.5140913018815453e-12,
+      "energy_error": 3.552713678800501e-15
+    }
+  ],
+  "normalisation": "sum of incoming port powers",
+  "limitations": "Independent incoming fundamental modes with rigid separators. Not an exact replication of unpublished COMSOL port setup."
+}
